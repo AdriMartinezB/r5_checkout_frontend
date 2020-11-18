@@ -1,0 +1,114 @@
+.header{
+  align-items: center;
+  background-color: #361F73;
+  color: #FFFFFF;
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  top: 0px;
+  width: 100%;
+}
+
+.header__img {
+  width: 70px;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu--botones ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.header__menu--botones li {
+  margin: 10px 10px;
+}
+
+.header__menu--botones li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  max-width: 200px;
+  /*font-variant: small-caps;*/
+}
+
+.header__menu--botones li a:hover {
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+}
+
+.header__menu--buscador input{
+  height: 40px;
+  background-color: rgba(250, 248, 248, 0.3);
+  border: 1px solid white;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  padding: 0px 20px;
+  font-family: 'Public Sans', sans-serif;
+}
+
+::placeholder {
+  color: white;
+}
+
+.header__menu--hamburguesa{
+  display: none;
+}
+
+input#abrir-cerrar {
+  visibility:hidden;
+  position: absolute;
+}
+
+.toggle-button {
+  display:block;
+  width:30px;
+  height:30px;
+  position:relative;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.toggle-button:before, .toggle-button:after {
+  position:absolute;
+  display:block;
+  content:" ";
+  width: calc(100% / 2);
+  box-sizing: border-box;
+  left: calc(100% / 4);
+  transition: all 0.2s ease-out;
+}
+
+.toggle-button:before {
+  top: calc(100% / 4);
+  height:calc(100% / 4);
+  border-top:1px solid #FFFFFF;
+  border-bottom:1px solid #FFFFFF;
+  background-color: transparent;
+}
+
+.toggle-button:after {
+  height:1px;
+  background-color:#FFFFFF;
+  bottom:calc(100% / 4);
+}
+
+input#abrir-cerrar:checked + .toggle-button:before, input#abrir-cerrar:checked + .toggle-button:after {
+  top:calc(100% / 2);
+  height:1px;
+  border-bottom:0;
+}
+
+input#abrir-cerrar:checked + .toggle-button:before {
+  transform: rotate(45deg); 
+}
+
+input#abrir-cerrar:checked + .toggle-button:after {
+  transform: rotate(-45deg);
+}
