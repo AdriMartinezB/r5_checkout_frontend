@@ -10,6 +10,8 @@ https://www.figma.com/file/G40h3lcCyzmNSRXrdl3o7K/P%C3%A1gina_Web?node-id=0%3A1
 
 npm install
 
+npm install react-router-dom --save
+
 # correr en navegador
 
 npm run start
