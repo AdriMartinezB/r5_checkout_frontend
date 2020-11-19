@@ -12,8 +12,8 @@ const App = () => (
   <BrowserRouter>
     <Layout>
       <Switch>
-        <Route exact path='/' component={Confirmacion} />
-        <Route exact path='/pago' component={Pago} />
+        <Route exact path='/confirmacion/' component={Confirmacion} />
+        <Route exact path='/pago/' component={Pago} />
         <Route exact path='/cesta/' component={Cesta} />
         <Route exact path='/ups/' component={PageUps} />
       </Switch>
