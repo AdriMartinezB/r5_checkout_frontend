@@ -4,13 +4,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 400px;
+  height: 100%;
   width: 400px;
   border-radius: 12px;
   margin: 10px;
 }
 
-.Soat h1 {
+.Soat--descuento {
+  margin: 20px 30px;
+}
+
+.Soat--descuento h1 {
   font-size: 36px;
   font-weight: bold;
   align-self: center;
@@ -18,15 +22,14 @@
   text-shadow: 0px 4px rgba(0, 0, 0, 0.5);
 }
 
-.Soat--descuento {
-  margin: 20px 30px;
+.Soat--descuento p {
   font-size: 18px;
   font-weight: 900;
   color: #fff;
   text-align: center;
 }
 
-.Soat--descuento Link {
+.Soat--descuento a {
   font-size: 18px;
   font-weight: 900;
   color: #00ce9d;
@@ -35,6 +38,10 @@
 }
 
 .Soat--terminos {
+  margin: 20px 30px;
+}
+
+.Soat--terminos p {
   font-size: 12px;
   font-weight: 700;
   color: #fff;

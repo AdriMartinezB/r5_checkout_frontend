@@ -8,7 +8,7 @@ const Slider = () => {
     <div className='slider'>
       <h1>SOAT</h1>
       <p>Hasta $75.000 de descuento en tu SOAT</p>
-      <Link to='/soat/'>
+      <Link to='/cotizacion/'>
         <button>Cotiza Gratis</button>
       </Link>
     </div>

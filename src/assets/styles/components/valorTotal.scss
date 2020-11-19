@@ -1,7 +1,7 @@
-.placa {
+.valor {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 400px;
   height: 100%;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
@@ -11,42 +11,46 @@
   padding-bottom: 10px;
   padding-top: 10px;
 }
-.placa h1 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #00ce9d;
-  text-align: center;
-}
 
-.placa input {
+.valor-title {
+  width: 350px;
+  height: 100%;
+  background: #391a7d;
+  border-radius: 12px 12px 0 0;
   border: none;
-  background: #fff;
-  border-radius: 12px;
-  width: 200px;
-  height: 50px;
   align-self: center;
-  margin-bottom: 10px;
-  color: #000;
-  font-size: 16px;
+}
+
+.valor-title p {
+  font-size: 18px;
   font-weight: 700;
+  color: #fff;
   text-align: center;
+}
+
+.valor-precio {
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
   border: none;
-  text-transform: uppercase;
+  align-self: center;
+  padding-top: 10px;
 }
 
-::placeholder {
-  color: #c4c4c4;
-  font-size: 16px;
-  font-weight: 700;
+.valor-precio h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #000;
   text-align: center;
 }
 
-.placa--Link {
+.valor--Link {
   align-self: center;
   justify-self: center;
 }
 
-.placa--button {
+.valor--button {
   width: 250px;
   height: 50px;
   background: #ff4500;
