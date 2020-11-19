@@ -1,0 +1,64 @@
+.pago {
+  background: linear-gradient(
+    to top,
+    rgba(0, 206, 157, 0.39),
+    rgba(57, 26, 125, 0.85)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pago-title {
+  font-size: 36px;
+  font-weight: bold;
+  align-self: center;
+  color: #fff;
+  text-shadow: 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.elegir {
+  padding: 0 90px;
+  width: 400px;
+  height: 65px;
+  background: #00ce9d;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-style: SemiBold;
+  font-size: 22px;
+  line-height: 21, 15px;
+  line-height: 100%;
+  vertical-align: Center;
+  color: #fff;
+}
+
+.containerList {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: none;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.pagar {
+  width: 400px;
+  height: 40px;
+  background: #ff4500;
+  border: none;
+  margin-bottom: 10px;
+  font-style: SemiBold;
+  font-size: 18px;
+  line-height: 21px;
+  line-height: 100%;
+  vertical-align: Center;
+  color: #fff;
+}

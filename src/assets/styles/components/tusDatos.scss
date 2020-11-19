@@ -1,0 +1,60 @@
+.Datos {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  border: none;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.Datos-title {
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #00ce9d;
+  text-align: center;
+}
+
+.Datos-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 100%;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  border: none;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.Datos-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 7px 20px;
+}
+
+.Datos-info h2 {
+  align-self: center;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: medium;
+  color: #000;
+}
+
+.Datos-info p {
+  align-self: center;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: regular;
+  color: #000;
+}

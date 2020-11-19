@@ -5,12 +5,14 @@ import '../assets/styles/App.scss';
 import PageUps from '../containers/PageUps';
 import Layout from '../components/Layout';
 import Cesta from '../pages/Cesta';
+import Pago from '../pages/Pago';
 
 const App = () => (
   <BrowserRouter>
     <Layout>
       <Switch>
-        <Route exact path='/' component={Cesta} />
+        <Route exact path='/' component={Pago} />
+        <Route exact path='/cesta/' component={Cesta} />
         <Route exact path='/ups/' component={PageUps} />
       </Switch>
     </Layout>

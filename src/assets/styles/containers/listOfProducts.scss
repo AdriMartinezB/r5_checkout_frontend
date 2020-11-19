@@ -3,4 +3,11 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+.listOfItems li {
+  margin-top: 10px;
 }

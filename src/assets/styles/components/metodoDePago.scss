@@ -1,0 +1,33 @@
+.Method {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  border: none;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.Method-title {
+  font-size: 18px;
+  color: #000;
+  align-self: center;
+  justify-self: center;
+  margin-top: 5px;
+}
+
+.Method-img {
+  text-align: center;
+  width: 400px;
+}
+
+.Method-img img {
+  display: inline-block;
+  height: 50px;
+  object-fit: contain;
+  margin: 20px 5px 0 5px;
+}

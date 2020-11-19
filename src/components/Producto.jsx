@@ -21,8 +21,8 @@ const Producto = () => (
         <p>COP $455.400</p>
         <p>Seguro valido por un año</p>
         <div className='product-main_info_subtotal'>
-          <p>Subtotal</p>
-          <p>$455.400</p>
+          <p className='subtotal-title'>Subtotal</p>
+          <p className='subtotal-price'>$455.400</p>
         </div>
         <button>Agregar bono de descuento</button>
       </div>

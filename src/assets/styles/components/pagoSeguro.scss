@@ -3,10 +3,13 @@
   flex-direction: column;
   width: 400px;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   border: none;
-  padding: 14px 40px 14px 40px;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .Pay-title {
@@ -16,6 +19,7 @@
   width: auto;
   margin: 16px;
   object-fit: contain;
+  margin: 10px;
 }
 
 .Pay-subtitle {
@@ -24,16 +28,19 @@
   font-size: 18px;
   color: #00ce9d;
   font-weight: bold;
+  margin: 10px;
 }
 
 .Safe {
   display: flex;
+  padding: 0 40px 0 40px;
 }
 
 .Safe img {
   height: 40px;
   width: auto;
   margin-right: 10px;
+  align-self: center;
 }
 
 .Safe p {
