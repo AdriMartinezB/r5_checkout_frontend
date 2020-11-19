@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../assets/styles/pages/pago.scss';
+import Resumen from '../components/Resumen';
 import TusDatos from '../components/TusDatos';
 import ListOfProducts from '../containers/ListOfProducts';
 
@@ -13,7 +14,8 @@ const Pago = () => {
       <div className='containerList'>
         <ListOfProducts />
       </div>
-      <button className='pagar'>COMPRAR</button>
+      <Resumen />
+      <button className='pagar'>PAGAR $518.400</button>
     </div>
   );
 

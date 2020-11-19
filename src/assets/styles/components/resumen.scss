@@ -1,0 +1,83 @@
+.Resumen {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  border: none;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.Resumen-title {
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+  margin-left: 18px;
+}
+
+.Resumen-info-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+  border-top: solid 1px rgba($color: #707070, $alpha: 0.3);
+  border-bottom: solid 1px rgba($color: #707070, $alpha: 0.3);
+}
+
+.Resumen-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 7px 20px;
+}
+
+.Resumen-info h2 {
+  align-self: center;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: medium;
+  color: #000;
+}
+
+.Resumen-info p {
+  align-self: center;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: regular;
+  color: #000;
+}
+
+.Resumen-total {
+  margin: 7px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Resumen-total h2 {
+  align-self: center;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 900;
+  font-style: black;
+  color: #391a7d;
+}
+
+.Resumen-total p {
+  align-self: center;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 900;
+  font-style: black;
+  color: #391a7d;
+}
