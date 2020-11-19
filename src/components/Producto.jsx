@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/components/producto.scss';
-//import moto from '../assets/img/moto.jpg';
-//import trash from '../assets/img/trash.svg';
+import moto from '../assets/img/Product/moto.jpg';
+import trash from '../assets/img/Product/trash.png';
 
 const Producto = () => (
   <section className='product-section'>
@@ -10,11 +10,11 @@ const Producto = () => (
         <input type='checkbox' name='checkbox' id='1' />
         Producto
       </h2>
-      <button><img src='' alt='trash' /></button>
+      <button><img src={trash} alt='trash' /></button>
     </div>
 
     <div className='product-main'>
-      <img src='' alt='trash' />
+      <img src={moto} alt='image product' />
 
       <div className='product-main_info'>
         <p>Soat placa BLMN </p>
