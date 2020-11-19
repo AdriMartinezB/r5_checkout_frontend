@@ -1,0 +1,66 @@
+.valor {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  border: none;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.valor-title {
+  width: 350px;
+  height: 100%;
+  background: #391a7d;
+  border-radius: 12px 12px 0 0;
+  border: none;
+  align-self: center;
+}
+
+.valor-title p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.valor-precio {
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  border: none;
+  align-self: center;
+  padding-top: 10px;
+}
+
+.valor-precio h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #000;
+  text-align: center;
+}
+
+.valor--Link {
+  align-self: center;
+  justify-self: center;
+}
+
+.valor--button {
+  width: 250px;
+  height: 50px;
+  background: #ff4500;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  font-style: SemiBold;
+  font-size: 18px;
+  line-height: 21px;
+  line-height: 100%;
+  color: #fff;
+  margin: 10px;
+}

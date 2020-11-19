@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../assets/styles/pages/pago.scss';
 import Resumen from '../components/Resumen';
@@ -15,7 +16,9 @@ const Pago = () => {
         <ListOfProducts />
       </div>
       <Resumen />
-      <button className='pagar'>PAGAR $518.400</button>
+      <Link to='/confirmacion/'>
+        <button className='pagar'>PAGAR $518.400</button>
+      </Link>
     </div>
   );
 

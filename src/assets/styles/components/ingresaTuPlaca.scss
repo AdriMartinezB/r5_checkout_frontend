@@ -1,0 +1,62 @@
+.placa {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  border: none;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.placa h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #00ce9d;
+  text-align: center;
+}
+
+.placa input {
+  border: none;
+  background: #fff;
+  border-radius: 12px;
+  width: 200px;
+  height: 50px;
+  align-self: center;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+}
+
+::placeholder {
+  color: #c4c4c4;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.placa--Link {
+  align-self: center;
+  justify-self: center;
+}
+
+.placa--button {
+  width: 250px;
+  height: 50px;
+  background: #ff4500;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  font-style: SemiBold;
+  font-size: 18px;
+  line-height: 21px;
+  line-height: 100%;
+  color: #fff;
+  margin: 10px;
+}

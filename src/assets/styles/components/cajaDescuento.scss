@@ -1,0 +1,29 @@
+.Descuento {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  background: #00ce9d;
+  border-radius: 12px;
+  border: none;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.Descuento h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.Descuento p {
+  font-size: 30px;
+  font-weight: 700;
+  color: #391a7d;
+  text-align: center;
+  margin: 10px;
+}
