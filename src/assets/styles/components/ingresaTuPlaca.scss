@@ -1,0 +1,36 @@
+.placa {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  border: none;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.placa h1 {
+}
+
+.placa input {
+}
+
+.placa button {
+  width: 250px;
+  height: 50px;
+  background: #ff4500;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  font-style: SemiBold;
+  font-size: 18px;
+  line-height: 21px;
+  line-height: 100%;
+  vertical-align: Center;
+  color: #fff;
+  align-self: center;
+  justify-self: center;
+  margin: 10px;
+}

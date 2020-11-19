@@ -3,6 +3,8 @@ import React from 'react';
 import '../assets/styles/components/header.scss';
 import { Link } from 'react-router-dom';
 import logo from '../assets/img/logo.png';
+import bell from '../assets/img/Header/notifications.png';
+import carrito from '../assets/img/Header/carrito1.png';
 
 const Header = () => (
   <header className='header'>
@@ -26,6 +28,12 @@ const Header = () => (
         <form>
           <input type='text' placeholder='¿Qué buscas?' />
         </form>
+      </div>
+      <div className='header__menu--noticifaciones'>
+        <img src={bell} alt='notificaciones' />
+        <Link to='/cesta'>
+          <img src={carrito} alt='carrito' />
+        </Link>
       </div>
     </div>
   </header>
