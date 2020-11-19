@@ -1,0 +1,44 @@
+.Pay {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  border: none;
+  padding: 14px 40px 14px 40px;
+}
+
+.Pay-title {
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: auto;
+  margin: 16px;
+  object-fit: contain;
+}
+
+.Pay-subtitle {
+  justify-content: center;
+  align-self: center;
+  font-size: 18px;
+  color: #00ce9d;
+  font-weight: bold;
+}
+
+.Safe {
+  display: flex;
+}
+
+.Safe img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.Safe p {
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+  align-self: center;
+}
