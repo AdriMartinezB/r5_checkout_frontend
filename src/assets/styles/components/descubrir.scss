@@ -1,0 +1,45 @@
+
+
+.descubrir__contenedor--form{
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 25px;
+  width: 60%;
+  padding: 15px 10px;
+  margin: auto;
+  text-align: center;
+}
+
+.descubrir__contenedor--form input{
+  width: 85%;
+  margin: 5px auto;
+  border: none;
+  border-radius: 10px;
+  height: 35px;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+::placeholder {
+  color: rgb(182, 171, 171);
+}
+
+.descubrir__contenedor--form button{
+  padding: 10px ;
+  width: 70%;
+  max-width: 250;
+  min-width: 150px;
+  background: #FF4500;
+  font-size: 20px;
+  color: #FFFFFF;
+  border-radius: 15px;
+  border: none;
+  margin: 10px 0;
+}
+
+
+
+@media only screen and (max-width: 550px) {
+  .descubrir__contenedor--form{
+    width: 90%;
+  }
+}

@@ -1,0 +1,26 @@
+.precio-figura{
+  width: 60%;
+  margin: auto;
+}
+
+.figura{
+  width: 100%;
+  height: 150px;
+  padding-top: 10px;
+  background: #00CE9D;
+  border-radius: 10px;
+  text-align: center;
+  color: #FFFFFF;
+  clip-path: polygon(0% 0%, 100% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.figura b{
+  font-size: 20px;
+}
+
+
+@media only screen and (max-width: 550px) {
+  .precio-figura{
+    width: 90%;
+  }
+}
