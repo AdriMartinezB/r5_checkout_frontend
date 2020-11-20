@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/descubrir.scss';
@@ -16,11 +15,15 @@ const Descubrir = () => (
       </form>
       <p className='letra-menuda'>
         Al continuar aceptas nuestros
-        <a href='/'>Términos y condiciones</a>
+        <Link to='/'>
+          <p>Términos y condiciones</p>
+        </Link>
         {' '}
         &
         {' '}
-        <a href='/'>Política de Privacidad</a>
+        <Link to='/'>
+          <p>Política de Privacidad</p>
+        </Link>
         {' '}
         para el tratamiento de tus datos.
       </p>

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React from 'react';
 import '../assets/styles/components/beneficios.scss';
 
@@ -20,7 +21,9 @@ const Beneficios = () => (
           <p>
             20% de descuento en moda Dafiti.com.co Válido hasta el 30 de noviembre o agotar existencias. Terminos y condiciones
             {' '}
-            <a>Aquí</a>
+            <Link to='/'>
+              <p><span>Aquí</span></p>
+            </Link>
           </p>
         </div>
         <div className='beneficio '>
@@ -28,7 +31,9 @@ const Beneficios = () => (
           <p>
             Bono de $40.000 para hacer mercado en cornershop. Aplica para clientes que compraron su anterior SOAT con Grupo R5 Válido hasta el 30 de noviembre o agotar existencias. Terminos y condiciones
             {' '}
-            <a> Aquí</a>
+            <Link to='/'>
+              <p><span>Aquí</span></p>
+            </Link>
           </p>
         </div>
         <div className='beneficio'>
