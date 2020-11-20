@@ -8,7 +8,7 @@ const IngresaTuPlaca = () => {
     <section className='placa'>
       <h1>Métodos de Pago</h1>
       <input type='text' name='Placa' placeholder='ABC123' id='' />
-      <Link className='placa--Link' to='cotizacionFinal'>
+      <Link className='placa--Link' to='/cotizacionFinal'>
         <button className='placa--button'>Cotizar Gratis</button>
       </Link>
     </section>
