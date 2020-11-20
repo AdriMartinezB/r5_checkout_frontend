@@ -1,12 +1,13 @@
 import React from 'react';
 
 import '../assets/styles/pages/cotizacion.scss';
-import Soat from '../containers/Soat';
+
+import CotizacionFinal from '../containers/CotizacionFinal';
 
 const Cotizacion = () => {
   return (
-    <div className='cotizacion'>
-      <Soat />
+    <div className='cotizacion-container'>
+      <CotizacionFinal />
     </div>
   );
 

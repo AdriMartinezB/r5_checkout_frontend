@@ -1,0 +1,29 @@
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.naranja {
+  width: 70%;
+  height: 40px;
+  background: #ff4500;
+  border: none;
+  border-radius: 12px;
+  margin: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+}
+
+.verde {
+  width: 70%;
+  height: 40px;
+  background: #00ce9d;
+  border: none;
+  border-radius: 12px;
+  margin: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+}

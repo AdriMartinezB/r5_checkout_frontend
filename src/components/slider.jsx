@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ButtomComponent from './ButtomComponent';
 
 import '../assets/styles/components/slider.scss';
 
@@ -8,9 +8,7 @@ const Slider = () => {
     <div className='slider'>
       <h1>SOAT</h1>
       <p>Hasta $75.000 de descuento en tu SOAT</p>
-      <Link to='/cotizacion/'>
-        <button>Cotiza Gratis</button>
-      </Link>
+      <ButtomComponent location='/ingresaPlaca' color='naranja' name='Cotiza Gratis' />
     </div>
   );
 };

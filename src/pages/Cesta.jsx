@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import '../assets/styles/pages/cesta.scss';
+import ButtomComponent from '../components/ButtomComponent';
 import MetodoDePago from '../components/MetodoDePago';
 
 import PagoSeguro from '../components/PagoSeguro';
@@ -12,9 +12,7 @@ const Cesta = () => {
     <div className='cesta'>
       <h1 className='cesta-title'>Tu Cesta</h1>
       <ListOfProducts />
-      <Link to='/pago/'>
-        <button className='comprar'>COMPRAR</button>
-      </Link>
+      <ButtomComponent location='/pago' color='naranja' name='COMPRAR' />
       <PagoSeguro />
       <MetodoDePago />
     </div>

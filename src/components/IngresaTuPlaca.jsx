@@ -1,16 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import '../assets/styles/components/ingresaTuPlaca.scss';
+import ButtomComponent from './ButtomComponent';
 
 const IngresaTuPlaca = () => {
   return (
     <section className='placa'>
       <h1>Métodos de Pago</h1>
       <input type='text' name='Placa' placeholder='ABC123' id='' />
-      <Link className='placa--Link' to='/cotizacionFinal'>
-        <button className='placa--button'>Cotizar Gratis</button>
-      </Link>
+      <ButtomComponent location='/cotizacion' color='naranja' name='Cotiza Gratis' />
     </section>
   );
 };

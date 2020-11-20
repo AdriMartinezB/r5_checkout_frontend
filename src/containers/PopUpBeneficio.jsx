@@ -4,17 +4,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/containers/popUpBeneficio.scss';
 import Beneficios from '../components/Beneficios';
+import ButtomComponent from '../components/ButtomComponent';
 
 const PopUpBeneficio = () => (
   <section className='popUpBeneficios'>
-    <Link to='/cotizacion' id='close' className='close'><span>&times;</span></Link>
+    <Link to='/ingresaPlaca' id='close' className='close'><span>&times;</span></Link>
 
     <Beneficios />
 
     <div className='boton__continuar'>
-      <Link to='/cotizacion'>
-        <button type='button'>Continuar</button>
-      </Link>
+      <ButtomComponent location='/ingresaPlaca' color='naranja' name='Continuar' />
     </div>
   </section>
 );
