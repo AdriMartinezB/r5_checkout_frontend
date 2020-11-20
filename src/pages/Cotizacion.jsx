@@ -1,14 +1,20 @@
 import React from 'react';
 
-import '../assets/styles/pages/cotizacion.scss';
+import Figura from '../components/Figura';
+import Descubrir from '../components/Descubrir';
+import Vehiculo from '../components/Vehiculo';
 
-import CotizacionFinal from '../containers/CotizacionFinal';
+import '../assets/styles/pages/cotizacion.scss';
 
 const Cotizacion = () => {
   return (
-    <div className='cotizacion-container'>
-      <CotizacionFinal />
-    </div>
+    <section className='cotizacion-container'>
+      <div className='cotizacion-group'>
+        <Figura />
+        <Descubrir />
+        <Vehiculo />
+      </div>
+    </section>
   );
 
 };

@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ButtomComponent from './ButtomComponent';
 import '../assets/styles/components/descubrir.scss';
 
 const Descubrir = () => (
@@ -10,9 +10,7 @@ const Descubrir = () => (
       <form>
         <input name='celular' className='input' type='text' placeholder='Celular' />
         <input name='correo' className='input' type='text' placeholder='Correo' />
-        <Link to='/descuento'>
-          <button type='button'>Descubrir Descuento</button>
-        </Link>
+        <ButtomComponent location='/descuento' color='naranja' name='Descubrir Descuento' />
       </form>
       <p className='letra-menuda'>
         Al continuar aceptas nuestros

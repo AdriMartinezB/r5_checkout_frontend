@@ -7,11 +7,14 @@ import ValorTotal from '../components/ValorTotal';
 
 const Descuento = () => {
   return (
-    <div className='descuento'>
-      <CajaDescuento />
-      <ValorTotal />
-      <Beneficios />
-    </div>
+    <section className='descuento'>
+      <div className='descuento-group'>
+        <CajaDescuento />
+        <ValorTotal />
+        <Beneficios />
+      </div>
+    </section>
+
   );
 
 };
