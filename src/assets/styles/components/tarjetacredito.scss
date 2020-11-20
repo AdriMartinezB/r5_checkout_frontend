@@ -1,0 +1,110 @@
+.tarjetacredito {
+  width: 400px;
+  background: linear-gradient(to bottom,  #361F73, #00CE9D);
+  border-radius: 25px;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+}
+
+.tarjetacredito__titulo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -1px 10px;
+}
+
+.tarjetacredito__titulo h2{
+  color: #00CE9D;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing:2px;
+  width: 100%;
+  text-align: center;
+}
+
+.close {
+  text-decoration: none;
+  font-size: 33px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.2s;
+  background: #00CE9D;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+}
+
+.close:hover {
+  background: #60AFF0;
+}
+
+.tarjetacredito__contenedor{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+
+.tarjetacredito__contenedor--form{
+  border-radius: 10px;
+  margin: 15px;
+  padding: 5px 0;
+}
+
+.tarjetacredito__contenedor--form h3{
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  border-bottom: 1px solid grey;
+  padding-bottom: 8px;
+}
+
+.tarjetacredito__contenedor--form input{
+  width: 95%;
+  margin: 5px auto;
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+::placeholder {
+  color: rgb(182, 171, 171);
+}
+
+
+.tarjetacredito__contenedor--form button{
+  padding: 10px ;
+  width: 70%;
+  max-width: 250;
+  min-width: 150px;
+  background: #00CE9D;
+  font-size: 20px;
+  color: #FFFFFF;
+  border-radius: 15px;
+  border: none;
+  margin: 10px 0;
+}
+
+.pagoseguro{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: -1px 10px;
+}
+
+.pagoseguro img{
+  width: 18px;
+  margin-right: 8px;
+}
+
+@media only screen and (max-width: 500px) {
+  .tarjetacredito{
+    width: 90%;
+  }
+}
