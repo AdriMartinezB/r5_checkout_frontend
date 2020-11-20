@@ -1,14 +1,15 @@
-.vehiculo{
+.vehiculo {
   background: rgba(255, 255, 255, 0.7);
   border-radius: 25px;
-  width: 60%;
+  width: 400px;
   padding: 10px;
   padding-bottom: 25px;
   margin: auto;
+  margin-bottom: 10px;
 }
 
-.vehiculo h2{
-  color: #00CE9D;
+.vehiculo h2 {
+  color: #00ce9d;
   font-size: 20px;
   text-align: center;
 }
@@ -17,12 +18,11 @@
   padding: 10px 10px 0 10px;
   text-align: center;
   color: grey;
-  font-family: 'Overpass', sans-serif;;
+  font-family: "Overpass", sans-serif;
 }
 
-
-.vehiculo__datos{
-  background: #FFFFFF;
+.vehiculo__datos {
+  background: #ffffff;
   width: 90%;
   margin: 0 auto;
   border-radius: 10px;
@@ -31,7 +31,7 @@
 }
 
 @media only screen and (max-width: 550px) {
-  .vehiculo{
+  .vehiculo {
     width: 90%;
     margin: auto;
   }

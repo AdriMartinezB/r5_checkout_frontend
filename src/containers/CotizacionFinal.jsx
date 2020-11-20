@@ -6,7 +6,7 @@ import Vehiculo from '../components/Vehiculo';
 
 import '../assets/styles/containers/listOfProducts.scss';
 
-const Cotizacion = () => {
+const CotizacionFinal = () => {
   return (
     <div>
       <Figura />
@@ -16,4 +16,4 @@ const Cotizacion = () => {
   );
 };
 
-export default Cotizacion;
+export default CotizacionFinal;

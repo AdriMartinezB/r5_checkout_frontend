@@ -11,12 +11,14 @@ import Home from '../pages/Home';
 import Cotizacion from '../pages/Cotizacion';
 import Confirmacion from '../pages/Confirmacion';
 import Descuento from '../pages/Descuento';
+import UltimaCotizacion from '../pages/UltimaCotizacion';
 
 const App = () => (
   <BrowserRouter>
     <Layout>
       <Switch>
         <Route exact path='/' component={Home} />
+        <Route exact path='/cotizacionFinal' component={UltimaCotizacion} />
         <Route exact path='/popUpBeneficio' component={PopUpBeneficio} />
         <Route exact path='/cotizacion/' component={Cotizacion} />
         <Route exact path='/descuento/' component={Descuento} />
