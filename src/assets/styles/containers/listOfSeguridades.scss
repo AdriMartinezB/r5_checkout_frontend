@@ -1,0 +1,14 @@
+.Safe-List {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0;
+  list-style-type: none;
+  width: 85%;
+}
+
+.Safe-List li {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}

@@ -1,9 +1,9 @@
 import React from 'react';
 
 import '../assets/styles/pages/descuento.scss';
-import Beneficios from '../components/Beneficios';
 import CajaDescuento from '../components/CajaDescuento';
 import ValorTotal from '../components/ValorTotal';
+import ListOfBeneficios from '../containers/ListOfBeneficios';
 
 const Descuento = () => {
   return (
@@ -11,7 +11,7 @@ const Descuento = () => {
       <div className='descuento-group'>
         <CajaDescuento />
         <ValorTotal />
-        <Beneficios />
+        <ListOfBeneficios />
       </div>
     </section>
 

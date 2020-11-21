@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import ButtomComponent from './ButtomComponent';
+import ButtonComponent from './ButtonComponent';
 import '../assets/styles/components/descubrir.scss';
+import TerminosYCondiciones from './TerminosYCondiciones';
 
 const Descubrir = () => (
   <section className='descubrir'>
@@ -10,18 +11,10 @@ const Descubrir = () => (
       <form>
         <input name='celular' className='input' type='text' placeholder='Celular' />
         <input name='correo' className='input' type='text' placeholder='Correo' />
-        <ButtomComponent location='/descuento' color='naranja' name='Descubrir Descuento' />
+        <ButtonComponent location='/descuento' color='naranja' name='Descubrir Descuento' />
       </form>
-      <p className='letra-menuda'>
-        Al continuar aceptas nuestros
-        <a href='/'>Términos y condiciones</a>
-        {' '}
-        &
-        {' '}
-        <a href='/'>Política de Privacidad</a>
-        {' '}
-        para el tratamiento de tus datos.
-      </p>
+
+      <TerminosYCondiciones />
     </div>
   </section>
 );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ButtonComponent from './ButtonComponent';
 
 import '../assets/styles/components/valorTotal.scss';
 
@@ -14,9 +14,8 @@ const ValorTotal = () => {
         <h1>$455.400</h1>
       </div>
 
-      <Link className='valor--Link' to='/cesta'>
-        <button className='valor--button'>Agregar a la Cesta</button>
-      </Link>
+      <ButtonComponent location='/cesta' color='naranja' name='Agregar a la Cesta' />
+
     </section>
   );
 };

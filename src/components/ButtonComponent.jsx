@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import '../assets/styles/components/buttomComponent.scss';
 
-const ButtomComponent = ({ location, name, color }) => {
+const ButtonComponent = ({ location, name, color }) => {
   return (
     <Link className='link' to={location}>
       <button className={color}>{name}</button>
@@ -12,4 +12,4 @@ const ButtomComponent = ({ location, name, color }) => {
 
 };
 
-export default ButtomComponent;
+export default ButtonComponent;

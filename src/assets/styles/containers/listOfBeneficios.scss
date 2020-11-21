@@ -1,18 +1,16 @@
-.listOfItems {
+.listOfBeneficios {
   list-style: none;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  width: 85%;
   margin: 0;
   padding: 0;
   padding-bottom: 10px;
-  width: 85%;
-  height: auto;
 }
 
-.listOfItems li {
+.listOfBeneficios li {
   margin-top: 10px;
-  align-self: center;
-  justify-content: center;
+  width: 100%;
 }

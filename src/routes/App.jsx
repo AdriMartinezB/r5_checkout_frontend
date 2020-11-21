@@ -5,7 +5,7 @@ import '../assets/styles/App.scss';
 import PageUps from '../containers/PageUps';
 import Layout from '../components/Layout';
 import PopUpBeneficio from '../containers/PopUpBeneficio';
-import Cesta from '../pages/Cesta';
+import TuCesta from '../pages/Tucesta';
 import Pago from '../pages/Pago';
 import Home from '../pages/Home';
 import IngresaPlaca from '../pages/IngresaPlaca';
@@ -24,7 +24,7 @@ const App = () => (
         <Route exact path='/descuento/' component={Descuento} />
         <Route exact path='/confirmacion/' component={Confirmacion} />
         <Route exact path='/pago/' component={Pago} />
-        <Route exact path='/cesta/' component={Cesta} />
+        <Route exact path='/cesta/' component={TuCesta} />
         <Route exact path='/ups/' component={PageUps} />
       </Switch>
     </Layout>
