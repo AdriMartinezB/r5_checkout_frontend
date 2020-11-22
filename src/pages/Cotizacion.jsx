@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Figura from '../components/Figura';
 import Descubrir from '../components/Descubrir';
 import Vehiculo from '../components/Vehiculo';

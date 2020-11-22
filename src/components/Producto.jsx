@@ -1,3 +1,5 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import '../assets/styles/components/producto.scss';
 import moto from '../assets/img/Product/moto.jpg';
