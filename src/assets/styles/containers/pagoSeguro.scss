@@ -1,7 +1,7 @@
 .Pay {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 85%;
   height: 100%;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
@@ -29,23 +29,4 @@
   color: #00ce9d;
   font-weight: bold;
   margin: 10px;
-}
-
-.Safe {
-  display: flex;
-  padding: 0 40px 0 40px;
-}
-
-.Safe img {
-  height: 40px;
-  width: auto;
-  margin-right: 10px;
-  align-self: center;
-}
-
-.Safe p {
-  font-size: 14px;
-  color: #000;
-  font-weight: 400;
-  align-self: center;
 }

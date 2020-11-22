@@ -1,21 +1,22 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../assets/styles/containers/popUpBeneficio.scss';
-import Beneficios from '../components/Beneficios';
+import ButtonClose from '../components/ButtonClose';
+
+import ButtonComponent from '../components/ButtonComponent';
+import ListOfBeneficios from './ListOfBeneficios';
 
 const PopUpBeneficio = () => (
   <section className='popUpBeneficios'>
-    <Link to='/cotizacion' id='close' className='close'><span>&times;</span></Link>
+    <ButtonClose location='/ingresaPlaca' />
 
-    <Beneficios />
+    <h1 className='close--title'>Beneficios</h1>
 
-    <div className='boton__continuar'>
-      <Link to='/cotizacion'>
-        <button type='button'>Continuar</button>
-      </Link>
-    </div>
+    <ListOfBeneficios />
+
+    <ButtonComponent location='/ingresaPlaca' color='naranja' name='Continuar' />
+
   </section>
 );
 

@@ -1,5 +1,5 @@
 .precio-figura {
-  width: 400px;
+  width: 100%;
   margin: auto;
   margin-bottom: 10px;
 }
@@ -9,10 +9,10 @@
   height: 150px;
   padding-top: 10px;
   background: #00ce9d;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
   color: #ffffff;
-  clip-path: polygon(0% 0%, 100% 0, 100% 50%, 50% 100%, 0 50%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
 }
 
 .figura b {

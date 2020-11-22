@@ -1,0 +1,28 @@
+.seguridadesComponent {
+  display: flex;
+  width: auto;
+  height: auto;
+}
+
+.seguridadesComponent--img {
+  margin: 0;
+  align-self: center;
+}
+
+.seguridadesComponent--img img {
+  height: 50px;
+  margin: 10px 0 0 0;
+  object-fit: contain;
+}
+
+.seguridadesComponent--descripcion {
+  margin: auto;
+}
+
+.seguridadesComponent--descripcion p {
+  margin: 10px 20px;
+  font-size: 15px;
+  color: #000;
+  font-weight: 400;
+  text-align: justify;
+}

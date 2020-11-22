@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import IngresaTuPlaca from '../components/IngresaTuPlaca';
 
 import '../assets/styles/containers/soat.scss';
+import TerminosYCondiciones from '../components/TerminosYCondiciones';
 
 const Soat = () => {
   return (
@@ -19,11 +20,7 @@ const Soat = () => {
 
       <IngresaTuPlaca />
 
-      <div className='Soat--terminos'>
-        <p>
-          Al continuar aceptas nuestros Términos y Condiciones & Política de Privacidad para el tratamiento de tus datos.
-        </p>
-      </div>
+      <TerminosYCondiciones />
 
     </section>
   );

@@ -11,37 +11,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.close {
-  text-decoration: none;
-  font-size: 33px;
-  text-align: center;
-  color: #ffffff;
-  cursor: pointer;
-  transition: 0.2s;
-  background: #00ce9d;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  display: inline-block;
-  align-self: flex-end;
-}
-
-.close:hover {
-  background: #60aff0;
-}
-
-.boton__continuar {
-  text-align: center;
-  margin-top: 5px;
-}
-
-.boton__continuar button {
-  padding: 10px;
-  width: 250px;
-  background: #ff4500;
-  font-size: 20px;
-  color: #ffffff;
-  border-radius: 15px;
-  border: none;
-}

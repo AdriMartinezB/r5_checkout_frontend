@@ -1,13 +1,20 @@
 import React from 'react';
 
+import Figura from '../components/Figura';
+import Descubrir from '../components/Descubrir';
+import Vehiculo from '../components/Vehiculo';
+
 import '../assets/styles/pages/cotizacion.scss';
-import Soat from '../containers/Soat';
 
 const Cotizacion = () => {
   return (
-    <div className='cotizacion'>
-      <Soat />
-    </div>
+    <section className='cotizacion-container'>
+      <div className='cotizacion-group'>
+        <Figura />
+        <Descubrir />
+        <Vehiculo />
+      </div>
+    </section>
   );
 
 };

@@ -1,6 +1,6 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ButtonComponent from './ButtonComponent';
 
 import '../assets/styles/components/slider.scss';
 
@@ -9,9 +9,7 @@ const Slider = () => {
     <div className='slider'>
       <h1>SOAT</h1>
       <p>Hasta $75.000 de descuento en tu SOAT</p>
-      <Link to='/cotizacion/'>
-        <button>Cotiza Gratis</button>
-      </Link>
+      <ButtonComponent location='/ingresaPlaca' color='naranja' name='Cotiza Gratis' />
     </div>
   );
 };

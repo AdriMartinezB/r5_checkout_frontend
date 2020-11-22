@@ -1,20 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import '../assets/styles/pages/cesta.scss';
+import '../assets/styles/containers/cesta.scss';
+import ButtonComponent from '../components/ButtonComponent';
 import MetodoDePago from '../components/MetodoDePago';
 
-import PagoSeguro from '../components/PagoSeguro';
-import ListOfProducts from '../containers/ListOfProducts';
+import PagoSeguro from './PagoSeguro';
+import ListOfProducts from './ListOfProducts';
 
 const Cesta = () => {
   return (
     <div className='cesta'>
       <h1 className='cesta-title'>Tu Cesta</h1>
       <ListOfProducts />
-      <Link to='/pago/'>
-        <button className='comprar'>COMPRAR</button>
-      </Link>
+      <ButtonComponent location='/pago' color='naranja' name='COMPRAR' />
       <PagoSeguro />
       <MetodoDePago />
     </div>

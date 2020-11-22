@@ -9,3 +9,15 @@
   align-items: center;
   justify-content: center;
 }
+
+.descuento-group {
+  background: linear-gradient(to top, rgba(0, 206, 157, 0.39), #391a7dd9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 400px;
+  border-radius: 12px;
+  margin: 10px;
+}

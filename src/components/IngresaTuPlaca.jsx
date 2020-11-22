@@ -1,17 +1,15 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import '../assets/styles/components/ingresaTuPlaca.scss';
+import ButtonComponent from './ButtonComponent';
 
 const IngresaTuPlaca = () => {
   return (
     <section className='placa'>
       <h1>Métodos de Pago</h1>
-      <input type='text' name='Placa' placeholder='ABC123' id='' />
-      <Link className='placa--Link' to='/cotizacionFinal'>
-        <button className='placa--button'>Cotizar Gratis</button>
-      </Link>
+      <input type='text' name='Placa' placeholder='ABC123' id='Placa' />
+      <ButtonComponent location='/cotizacion' color='naranja' name='Cotiza Gratis' />
     </section>
   );
 };
