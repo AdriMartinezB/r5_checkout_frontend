@@ -2,9 +2,9 @@ import React from 'react';
 
 import Figura from '../components/Figura';
 import Descubrir from '../components/Descubrir';
-import Vehiculo from '../components/Vehiculo';
 
 import '../assets/styles/pages/cotizacion.scss';
+import DatosVehiculares from '../containers/DatosVehiculares';
 
 const Cotizacion = () => {
   return (
@@ -12,7 +12,7 @@ const Cotizacion = () => {
       <div className='cotizacion-group'>
         <Figura />
         <Descubrir />
-        <Vehiculo />
+        <DatosVehiculares />
       </div>
     </section>
   );
