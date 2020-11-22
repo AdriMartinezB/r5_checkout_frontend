@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react';
 import '../assets/styles/components/producto.scss';
+import { Link } from 'react-router-dom';
 import moto from '../assets/img/Product/moto.jpg';
 import trash from '../assets/img/Product/trash.png';
 
