@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-/* eslint-disable react/button-has-type */
-/* eslint-disable jsx-a11y/img-redundant-alt */
-=======
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable react/jsx-no-undef */
->>>>>>> debee2add614131db4c42a472a6bb8d86fbef838
 import React from 'react';
 import '../assets/styles/components/producto.scss';
 import { Link } from 'react-router-dom';
