@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 import '../assets/styles/components/buttomComponent.scss';
 
-const ButtonComponent = ({ location, name, color }) => {
+const ButtonComponent = ({ location, name, color, enable, props }) => {
   return (
-    <Link className='link' to={location}>
-      <button className={color}>{name}</button>
+    <Link className='link' to={location} props={props}>
+      <button className={color} disabled={enable}>{name}</button>
     </Link>
   );
 

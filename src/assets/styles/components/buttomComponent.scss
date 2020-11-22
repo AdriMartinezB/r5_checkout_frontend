@@ -30,11 +30,14 @@
   color: #fff;
 }
 
-.naranja:hover,
+.naranja:enabled,.naranja:hover,
 .naranja:focus {
   outline: none;
   cursor: pointer;
   background: rgba($color: #e24500, $alpha: 1);
+}
+.naranja:disabled {
+  background: rgba($color: #f5c4b0, $alpha: 1);
 }
 
 .verde:hover,
