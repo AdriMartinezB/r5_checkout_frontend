@@ -24,6 +24,9 @@ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-l
 loader de imagenes----------
 npm install --save-dev file-loader
 
+REDUX ----------------
+npm install redux react-redux --save
+
 # correr en navegador
 
 npm run start

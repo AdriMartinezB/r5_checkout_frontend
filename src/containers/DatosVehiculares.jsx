@@ -7,8 +7,8 @@ import TuVehiculo from '../components/TuVehiculo';
 const DatosVehiculares = () => {
   return (
     <div className='Vehi--Container'>
-      <TusDatos />
-      <TuVehiculo />
+      <TusDatos nombre='Pedro' apellido='Sanchez' placa='VGD242' />
+      <TuVehiculo marca='Mazda' modelo='adadd' linea='nose' />
     </div>
   );
 };
