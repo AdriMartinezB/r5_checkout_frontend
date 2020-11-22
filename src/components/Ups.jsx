@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import '../assets/styles/components/ups.scss';
@@ -6,7 +7,9 @@ const Ups = () => (
   <section className='ups'>
     <div className='ups__titulo'>
       <h2>¡Upss!</h2>
-      <a href='#' id='close' className='close'><span>&times;</span></a>
+      <Link to='/'>
+        <p id='close' className='close'><span>&times;</span></p>
+      </Link>
     </div>
     <div className='ups__contenedor'>
       <img className='ups__contenedor--img' src='../assets/img/calendar.png' alt='calendario' />
@@ -17,7 +20,9 @@ const Ups = () => (
           <input name='nombre' className='input' type='text' placeholder='Nombre' />
           <input name='celular' className='input' type='text' placeholder='Celular' />
           <input name='correo' className='input' type='text' placeholder='Correo' />
-          <button type='button' onClick=''>Enviar</button>
+          <Link to='/'>
+            <button type='button'>Enviar</button>
+          </Link>
         </form>
       </div>
     </div>

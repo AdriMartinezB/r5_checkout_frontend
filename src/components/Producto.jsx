@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable react/jsx-no-undef */
 import React from 'react';
 import '../assets/styles/components/producto.scss';
 import moto from '../assets/img/Product/moto.jpg';
@@ -10,7 +12,9 @@ const Producto = () => (
         <input type='checkbox' name='checkbox' id='1' />
         Producto
       </h2>
-      <button><img src={trash} alt='trash' /></button>
+      <Link to='/'>
+        <button type='button'><img src={trash} alt='trash' /></button>
+      </Link>
     </div>
 
     <div className='product-main'>
@@ -24,7 +28,9 @@ const Producto = () => (
           <p className='subtotal-title'>Subtotal</p>
           <p className='subtotal-price'>$455.400</p>
         </div>
-        <button>Agregar bono de descuento</button>
+        <Link to='/'>
+          <button type='button'>Agregar bono de descuento</button>
+        </Link>
       </div>
 
     </div>
