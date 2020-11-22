@@ -7,7 +7,7 @@ const IngresaTuPlaca = () => {
   return (
     <section className='placa'>
       <h1>Métodos de Pago</h1>
-      <input type='text' name='Placa' placeholder='ABC123' id='' />
+      <input type='text' name='Placa' placeholder='ABC123' id='Placa' />
       <ButtonComponent location='/cotizacion' color='naranja' name='Cotiza Gratis' />
     </section>
   );

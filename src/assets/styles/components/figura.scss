@@ -1,7 +1,7 @@
 .precio-figura {
-  width: 80%;
+  width: 100%;
   margin: auto;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 .figura {
@@ -9,9 +9,16 @@
   height: 135px;
   padding-top: 10px;
   background: #00ce9d;
+<<<<<<< HEAD
   text-align: center;
   color: #ffffff;
   border-radius: 10% 10% 50% 50% / 10% 10% 30% 30% ;
+=======
+  border-radius: 12px;
+  text-align: center;
+  color: #ffffff;
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+>>>>>>> 27899825960a052be731a2ba9fb88b246bb4f68c
 }
 
 .figura b {

@@ -5,6 +5,7 @@
   text-decoration: none;
   width: 100%;
 }
+
 .naranja {
   width: 85%;
   height: 40px;
@@ -27,4 +28,18 @@
   font-weight: 600;
   font-size: 18px;
   color: #fff;
+}
+
+.naranja:hover,
+.naranja:focus {
+  outline: none;
+  cursor: pointer;
+  background: rgba($color: #e24500, $alpha: 1);
+}
+
+.verde:hover,
+.verde:focus {
+  outline: none;
+  cursor: pointer;
+  background: rgba($color: #00ad85, $alpha: 1);
 }
