@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import '../assets/styles/components/pse.scss';
@@ -7,7 +8,9 @@ const Pse = () => (
   <section className='pse'>
     <div className='pse__titulo'>
       <h2>Pago PSE</h2>
-      <a href='#' id='close' className='close'><span>&times;</span></a>
+      <Link to='/'>
+        <p id='close' className='close'><span>&times;</span></p>
+      </Link>
     </div>
     <div className='pse__contenedor'>
       <div className='pse__contenedor--form'>
@@ -30,7 +33,13 @@ const Pse = () => (
             <img src='https://img.icons8.com/metro/26/000000/lock-2.png' alt='seguro' />
             <p>Pago 100% seguro</p>
           </div>
+<<<<<<< HEAD
           <ButtonComponent location='/cotizacion' color='naranja' name='Confirmar' />
+=======
+          <Link to='/'>
+            <button type='button'>Confirmar</button>
+          </Link>
+>>>>>>> debee2add614131db4c42a472a6bb8d86fbef838
         </form>
       </div>
     </div>

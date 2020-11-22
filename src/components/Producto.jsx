@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 /* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/img-redundant-alt */
+=======
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable react/jsx-no-undef */
+>>>>>>> debee2add614131db4c42a472a6bb8d86fbef838
 import React from 'react';
 import '../assets/styles/components/producto.scss';
+import { Link } from 'react-router-dom';
 import moto from '../assets/img/Product/moto.jpg';
 import trash from '../assets/img/Product/trash.png';
 
@@ -12,7 +18,9 @@ const Producto = () => (
         <input type='checkbox' name='checkbox' id='1' />
         Producto
       </h2>
-      <button><img src={trash} alt='trash' /></button>
+      <Link to='/'>
+        <button type='button'><img src={trash} alt='trash' /></button>
+      </Link>
     </div>
 
     <div className='product-main'>
@@ -26,7 +34,9 @@ const Producto = () => (
           <p className='subtotal-title'>Subtotal</p>
           <p className='subtotal-price'>$455.400</p>
         </div>
-        <button>Agregar bono de descuento</button>
+        <Link to='/'>
+          <button type='button'>Agregar bono de descuento</button>
+        </Link>
       </div>
 
     </div>
