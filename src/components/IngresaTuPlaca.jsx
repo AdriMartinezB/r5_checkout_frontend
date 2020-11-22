@@ -5,6 +5,7 @@ import '../assets/styles/components/ingresaTuPlaca.scss';
 import ButtonComponent from './ButtonComponent';
 import '../assets/styles/components/buttomComponent.scss';
 
+
 const IngresaTuPlaca = () => {
   const [placa, setPlaca] = React.useState('');
   const [enable, setEnable] = React.useState(true);
@@ -16,10 +17,10 @@ const IngresaTuPlaca = () => {
     if (isCorrect) {
       const placaUp = e.target.value.toUpperCase();
         setEnable(false);
-        sessionStorage.setItem('placa',placaUp)
+        sessionStorage.setItem('placa', placaUp);
     } else { 
-      setEnable(true); 
-        sessionStorage.removeItem('placa')
+      setEnable(true);
+        sessionStorage.removeItem('placa');
       }
   };
 
