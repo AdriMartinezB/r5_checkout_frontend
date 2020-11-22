@@ -3,7 +3,7 @@ import ButtonComponent from './ButtonComponent';
 
 import '../assets/styles/components/valorTotal.scss';
 
-const ValorTotal = () => {
+const ValorTotal = ({ valorSoat }) => {
   return (
     <section className='valor'>
       <div className='valor-title'>
@@ -11,7 +11,10 @@ const ValorTotal = () => {
       </div>
 
       <div className='valor-precio'>
-        <h1>$455.400</h1>
+        <h1>
+          $
+          {valorSoat}
+        </h1>
       </div>
 
       <ButtonComponent location='/cesta' color='naranja' name='Agregar a la Cesta' />

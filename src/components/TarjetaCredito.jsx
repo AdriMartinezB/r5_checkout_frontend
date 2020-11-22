@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react';
 import '../assets/styles/components/tarjetacredito.scss';
+import ButtonComponent from './ButtonComponent';
 
 const TrajetaCredito = () => (
   <section className='tarjetacredito'>
@@ -22,9 +23,13 @@ const TrajetaCredito = () => (
             <img src='https://img.icons8.com/metro/26/000000/lock-2.png' alt='seguro' />
             <p>Pago 100% seguro</p>
           </div>
+<<<<<<< HEAD
+          <ButtonComponent location='/cotizacion' color='naranja' name='Confirmar' />
+=======
           <Link to='/'>
             <button type='button'>Confirmar</button>
           </Link>
+>>>>>>> debee2add614131db4c42a472a6bb8d86fbef838
         </form>
       </div>
     </div>
