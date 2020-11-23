@@ -1,3 +1,11 @@
+.pago-container {
+  background: linear-gradient(to top, rgba(0, 206, 157, 0.39), #391a7dd9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .pago {
   background: linear-gradient(
     to top,
@@ -8,6 +16,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 400px;
 }
 
 .pago-title {
@@ -20,7 +29,7 @@
 
 .elegir {
   padding: 0 90px;
-  width: 400px;
+  width: 85%;
   height: 65px;
   background: #00ce9d;
   border: none;
@@ -38,7 +47,7 @@
 .containerList {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 85%;
   height: 100%;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
@@ -47,10 +56,12 @@
   margin-bottom: 10px;
   padding-bottom: 10px;
   padding-top: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagar {
-  width: 400px;
+  width: 85%;
   height: 68px;
   background: #ff4500;
   border: none;

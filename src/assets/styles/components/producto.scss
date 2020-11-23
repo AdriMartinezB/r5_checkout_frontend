@@ -21,14 +21,22 @@
   padding-left: 10px;
 }
 
-.product-header button {
-  border: none;
-  padding-right: 20px;
-  background: none;
-  align-content: center;
+.TrashButton {
+  align-self: center;
 }
 
-.product-header img {
+.TrashButton-button {
+  border: none;
+  margin-right: 20px;
+  background: none;
+  outline: none;
+  :hover {
+    cursor: pointer;
+    background: #707070;
+  }
+}
+
+.TrashButton-button img {
   height: 18px;
 }
 

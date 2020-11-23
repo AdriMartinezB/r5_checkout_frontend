@@ -1,11 +1,17 @@
 .descubrir__contenedor--form {
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 25px;
+  border-radius: 12px;
   width: 85%;
-  padding: 15px 10px;
-  margin: auto;
-  text-align: center;
-  margin-bottom: 10px;
+  height: auto;
+  margin: 0;
+  margin: 12px;
+}
+
+.descubrir__contenedor--form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .descubrir__contenedor--form p {
