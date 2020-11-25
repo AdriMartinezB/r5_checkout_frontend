@@ -1,11 +1,11 @@
 import React from 'react';
 
-import '../assets/styles/components/tarjetaCarrusel';
+import '../assets/styles/components/tarjetaCarrusel.scss';
 import Flecha_ampliar_derecha from '../assets/img/Carrusel/Flecha_ampliar_derecha';
 import Flecha_ampliar_izquierda from '../assets/img/Carrusel/Flecha_ampliar_izquierda'
 import SOAT from '../assets/img/Carrusel/SOAT';
 
-const TarjetaCarrusel = () => {
+const Tarjeta_Carrusel = () => {
   return(
     <div className = 'carousel__container'>
       <div className = 'carousel-item'>
@@ -23,4 +23,4 @@ const TarjetaCarrusel = () => {
   );
 };
   
-export default TarjetaCarrusel;
+export default Tarjeta_Carrusel;
