@@ -1,0 +1,113 @@
+.popbono {
+  width: 400px;
+  background: linear-gradient(to bottom,  #361F73, #00CE9D);
+  border-radius: 25px;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+}
+
+.popbono__titulo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -10px 10px;
+}
+
+.popbono__titulo h2{
+  color: #00CE9D;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing:2px;
+  width: 100%;
+  text-align: center;
+}
+
+.close {
+  text-decoration: none;
+  font-size: 33px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.2s;
+  background: #00CE9D;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+}
+
+.close:hover {
+  background: #60AFF0;
+}
+
+
+.popbono__contenedor{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 1px 10px 5px 10px;
+}
+
+.popbono__contenedor h3{
+  color: #00CE9D;
+  font-size: 20px;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+  text-align: left;
+  margin: 10px 0 0 0;
+}
+
+.popbono__contenedor--form{
+  text-align: center;
+  padding-bottom: 10px;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+
+.popbono__contenedor--form p{
+  text-align: left;
+  font-size: 16px;
+}
+
+.popbono__contenedor--form form{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.popbono__contenedor--form input{
+  border: none;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+  font-size: 16px;
+}
+
+::placeholder {
+  color: rgb(182, 171, 171);
+}
+
+.popbono__contenedor--form button{
+  border: none;
+  border-radius: 0 0 10px 10px;
+  padding: 5px;
+  background: #00CE9D;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.popbono__contenedor--popbonos{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+.bono__contenedor--bonos p{
+  text-align: left;
+  font-size: 16px;
+}

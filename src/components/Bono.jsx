@@ -6,7 +6,11 @@ import moto from '../assets/img/Product/moto.jpg';
 const Bono = ({ bono }) => {
   return (
     <div className='card'>
-      <p className='card__texto'>{bono}</p>
+      <p className='card__texto'>
+        {bono}
+        {' '}
+        Titulo del bono
+      </p>
       <img className='card__img' src={moto} alt='Imagen Producto' />
     </div>
   );

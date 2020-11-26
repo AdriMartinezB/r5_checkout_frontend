@@ -6,39 +6,39 @@
   width: 100%;
 }
 
-.naranja {
-  width: 85%;
+.naranjab {
+  width: 100%;
   height: 40px;
   background: #ff4500;
   border: none;
-  border-radius: 12px;
-  margin: 10px;
+  border-radius: 0 0 12px 12px;
+  margin:  0 0 10px 0;
   font-weight: 600;
   font-size: 18px;
   color: #fff;
 }
 
-.verde {
-  width: 85%;
+.verdeb {
+  width: 100%;
   height: 40px;
   background: #00ce9d;
   border: none;
-  border-radius: 12px;
-  margin: 10px;
+  border-radius: 0 0 12px 12px;
+  margin:  0 0 10px 0;
   font-weight: 600;
   font-size: 18px;
   color: #fff;
 }
 
-.naranja:hover,
-.naranja:focus {
+.naranjab:hover,
+.naranjab:focus {
   outline: none;
   cursor: pointer;
   background: rgba($color: #e24500, $alpha: 1);
 }
 
-.verde:hover,
-.verde:focus {
+.verdeb:hover,
+.verdeb:focus {
   outline: none;
   cursor: pointer;
   background: rgba($color: #00ad85, $alpha: 1);

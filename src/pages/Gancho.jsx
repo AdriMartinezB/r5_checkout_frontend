@@ -1,9 +1,9 @@
 import React from 'react';
 import '../assets/styles/components/gancho.scss';
-import ButtonClose from './ButtonClose';
-import ButtonComponent from './ButtonComponent';
-import Bono from './Bono';
-import ButtonBonusComponent from './ButtonBonusComponent';
+import ButtonClose from '../components/ButtonClose';
+import ButtonComponent from '../components/ButtonComponent';
+import Bono from '../components/Bono';
+import ButtonBonusComponent from '../components/ButtonBonusComponent';
 
 const Gancho = ({ numArticulos }) => {
   return (
@@ -21,7 +21,7 @@ const Gancho = ({ numArticulos }) => {
         <ButtonClose />
       </div>
       <div className='gancho__botones'>
-        <ButtonComponent location='/Tucesta' color='verde' name='Ver Cesta' />
+        <ButtonComponent location='/cesta' color='verde' name='Ver Cesta' />
         <ButtonComponent location='/' color='verde' name='Seguir comprando' />
       </div>
       <div className='gancho__contenedor'>
@@ -29,15 +29,15 @@ const Gancho = ({ numArticulos }) => {
         <div className='gancho__contenedor--grupo'>
           <div className='losbonos'>
             <Bono />
-            <ButtonBonusComponent name='Ver beneficios' color='naranja' />
+            <ButtonBonusComponent name='Ver beneficios' color='naranjab' />
           </div>
           <div className='losbonos'>
             <Bono />
-            <ButtonBonusComponent name='Ver beneficios' color='naranja' />
+            <ButtonBonusComponent name='Ver beneficios' color='naranjab' />
           </div>
           <div className='losbonos'>
             <Bono />
-            <ButtonBonusComponent name='Ver beneficios' color='naranja' />
+            <ButtonBonusComponent name='Ver beneficios' color='naranjab' />
           </div>
         </div>
       </div>

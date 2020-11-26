@@ -12,6 +12,8 @@ import IngresaPlaca from '../pages/IngresaPlaca';
 import Confirmacion from '../pages/Confirmacion';
 import Descuento from '../pages/Descuento';
 import Cotizacion from '../pages/Cotizacion';
+import Gancho from '../pages/Gancho';
+import PopBono from '../containers/PopBono';
 
 const App = () => (
   <BrowserRouter>
@@ -22,6 +24,8 @@ const App = () => (
         <Route exact path='/popUpBeneficio' component={PopUpBeneficio} />
         <Route exact path='/ingresaPlaca/' component={IngresaPlaca} />
         <Route exact path='/descuento/' component={Descuento} />
+        <Route exact path='/gancho/' component={Gancho} />
+        <Route exact path='/popBono' component={PopBono} />
         <Route exact path='/confirmacion/' component={Confirmacion} />
         <Route exact path='/pago/' component={Pago} />
         <Route exact path='/cesta/' component={TuCesta} />
