@@ -18,7 +18,7 @@ const Carrusel = () => {
                     <img className = 'carousel-item__img' src={SOAT} alt="Imagen-SOAT"/>
                     <div className = 'carousel-item__details'>
                         <div>
-                            <ButtonComponent location='/ingresaPlaca' color='blanco' name='Conocer más' />
+                            <ButtonComponent location='/ingresaPlaca' color='blanco' name='Cotiza Gratis' />
                         </div>
                     </div>
                     
@@ -28,6 +28,7 @@ const Carrusel = () => {
                 <button className = 'carousel-buttom__img'><img src={Flecha_der} alt="Flecha_der" width="40"/></button>
             </div>
         </div>
+        
     )
 };
 
