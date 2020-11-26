@@ -8,7 +8,7 @@ import ButtonBonusComponent from '../components/ButtonBonusComponent';
 const PopBono = () => (
   <section className='popbono'>
     <div className='popbono__titulo'>
-      <ButtonClose />
+      <ButtonClose location='/cesta' />
     </div>
     <div className='popbono__contenedor'>
       <h3>Agregar popbono de Descuento</h3>

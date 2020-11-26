@@ -18,7 +18,7 @@ const Gancho = ({ numArticulos }) => {
             en tu cesta
           </p>
         </div>
-        <ButtonClose />
+        <ButtonClose location='/descuento' />
       </div>
       <div className='gancho__botones'>
         <ButtonComponent location='/cesta' color='verde' name='Ver Cesta' />
