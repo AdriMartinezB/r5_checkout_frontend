@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import '../assets/styles/pages/pago.scss';
 import Resumen from '../components/Resumen';
@@ -13,7 +12,7 @@ const Pago = () => {
       <div className='pago'>
         <h1 className='pago-title'>Pago</h1>
         <TusDatos />
-        <ButtonComponent location='/formaDePago/' name='Elige tu forma de pago' color='verde' />
+        <ButtonComponent location='/TipoTarjetas/' name='Elige tu forma de pago' color='naranja' />
         <div className='containerList'>
           <ListOfProducts />
         </div>

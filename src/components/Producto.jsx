@@ -3,6 +3,7 @@
 import React from 'react';
 import '../assets/styles/components/producto.scss';
 import { Link } from 'react-router-dom';
+import ButtonComponent from './ButtonComponent';
 
 import trash from '../assets/img/Product/trash.png';
 
@@ -42,9 +43,7 @@ const Producto = ({ producto, imageProduct, placa, precio, subtotal, precioTotal
             {subtotal}
           </p>
         </div>
-        <Link to='/'>
-          <button type='button'>Agregar bono de descuento</button>
-        </Link>
+        <ButtonComponent name='Agregar bono de descuento' color='verde' location='/popBono' />
       </div>
 
     </div>

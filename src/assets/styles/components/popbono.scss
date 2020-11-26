@@ -1,4 +1,4 @@
-.tarjetacredito {
+.popbono {
   width: 400px;
   background: linear-gradient(to bottom,  #361F73, #00CE9D);
   border-radius: 25px;
@@ -7,24 +7,20 @@
   position: relative;
 }
 
-.tarjetacredito__titulo{
+.popbono__titulo{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: -1px 10px;
+  margin: -10px 10px;
 }
 
-.tarjetacredito__titulo h2{
+.popbono__titulo h2{
   color: #00CE9D;
   font-size: 30px;
   font-weight: 800;
   letter-spacing:2px;
   width: 100%;
   text-align: center;
-}
-
-.texto-credito{
-  text-align: left;
 }
 
 .close {
@@ -45,35 +41,48 @@
   background: #60AFF0;
 }
 
-.tarjetacredito__contenedor{
+
+.popbono__contenedor{
   width: 90%;
   margin: auto;
   text-align: center;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
+  padding: 1px 10px 5px 10px;
 }
 
-.tarjetacredito__contenedor--form{
-  border-radius: 10px;
-  margin: 15px;
-  padding: 5px 0;
-}
-
-.tarjetacredito__contenedor--form h3{
-  font-size: 16px;
-  font-weight: 300;
-  text-align: left;
+.popbono__contenedor h3{
+  color: #00CE9D;
+  font-size: 20px;
   border-bottom: 1px solid grey;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
+  text-align: left;
+  margin: 10px 0 0 0;
 }
 
-.tarjetacredito__contenedor--form input{
-  width: 95%;
-  margin: 5px auto;
+.popbono__contenedor--form{
+  text-align: center;
+  padding-bottom: 10px;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+
+.popbono__contenedor--form p{
+  text-align: left;
+  font-size: 16px;
+}
+
+.popbono__contenedor--form form{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.popbono__contenedor--form input{
   border: none;
-  border-radius: 10px;
-  height: 30px;
-  padding-left: 15px;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
   font-size: 16px;
 }
 
@@ -81,34 +90,24 @@
   color: rgb(182, 171, 171);
 }
 
-
-.tarjetacredito__contenedor--form button{
-  padding: 10px ;
-  width: 70%;
-  max-width: 250;
-  min-width: 150px;
+.popbono__contenedor--form button{
+  border: none;
+  border-radius: 0 0 10px 10px;
+  padding: 5px;
   background: #00CE9D;
   font-size: 20px;
   color: #FFFFFF;
-  border-radius: 15px;
-  border: none;
-  margin: 10px 0;
 }
 
-.pagoseguro{
+.popbono__contenedor--popbonos{
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: -1px 10px;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 10px;
 }
 
-.pagoseguro img{
-  width: 18px;
-  margin-right: 8px;
-}
-
-@media only screen and (max-width: 500px) {
-  .tarjetacredito{
-    width: 90%;
-  }
+.bono__contenedor--bonos p{
+  text-align: left;
+  font-size: 16px;
 }
