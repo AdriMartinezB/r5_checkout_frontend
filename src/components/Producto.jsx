@@ -7,56 +7,58 @@ import ButtonComponent from './ButtonComponent';
 
 import trash from '../assets/img/Product/trash.png';
 
-const Producto = ({ producto, imageProduct, placa, precio, subtotal, precioTotal }) => (
-  <section className='product-section'>
-    <div className='product-header'>
-      <h2>
-        <input type='checkbox' name='checkbox' id='1' />
-        {producto}
-      </h2>
-      <Link className='TrashButton' to='/'>
-        <button className='TrashButton-button' type='button'><img src={trash} alt='trash' /></button>
-      </Link>
-    </div>
-
-    <div className='product-main'>
-      <img src={imageProduct} alt='image product' />
-
-      <div className='product-main_info'>
-        <p>
+const Producto = ({ producto, imageProduct, placa, precio, subtotal, precioTotal }) => {
+  return (
+    <section className='product-section'>
+      <div className='product-header'>
+        <h2>
+          <input type='checkbox' name='checkbox' id='1' />
           {producto}
-          {' '}
-          placa
-          {' '}
-          {placa}
-          {' '}
-        </p>
-        <p>
-          COP $
-          {precio}
-        </p>
-        <p>Seguro valido por un año</p>
-        <div className='product-main_info_subtotal'>
-          <p className='subtotal-title'>Subtotal</p>
-          <p className='subtotal-price'>
-            $
-            {subtotal}
-          </p>
-        </div>
-        <ButtonComponent name='Agregar bono de descuento' color='verde' location='/popBono' />
+        </h2>
+        <Link className='TrashButton' to='/'>
+          <button className='TrashButton-button' type='button'><img src={trash} alt='trash' /></button>
+        </Link>
       </div>
 
-    </div>
+      <div className='product-main'>
+        <img src={imageProduct} alt='image product' />
 
-    <div className='product-footer'>
-      <p>
-        Total $
-        {precioTotal}
-      </p>
-    </div>
+        <div className='product-main_info'>
+          <p>
+            {producto}
+            {' '}
+            placa
+            {' '}
+            {placa}
+            {' '}
+          </p>
+          <p>
+            COP $
+            {precio}
+          </p>
+          <p>Seguro valido por un año</p>
+          <div className='product-main_info_subtotal'>
+            <p className='subtotal-title'>Subtotal</p>
+            <p className='subtotal-price'>
+              $
+              {subtotal}
+            </p>
+          </div>
+          <ButtonComponent name='Agregar bono de descuento' color='verde' location='/popBono' />
+        </div>
 
-  </section>
+      </div>
 
-);
+      <div className='product-footer'>
+        <p>
+          Total $
+          {precioTotal}
+        </p>
+      </div>
+
+    </section>
+
+  );
+};
 
 export default Producto;
