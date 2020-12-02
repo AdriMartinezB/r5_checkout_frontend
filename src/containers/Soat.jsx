@@ -14,7 +14,7 @@ const Soat = () => {
         <p>
           Con descuento hasta de $75.000 y descubre más Beneficios
           {' '}
-          <Link to='/popUpBeneficio/'>AQUÍ!</Link>
+          {/* <Link to='/popUpBeneficio/'>AQUÍ!</Link> */}
         </p>
       </div>
 
