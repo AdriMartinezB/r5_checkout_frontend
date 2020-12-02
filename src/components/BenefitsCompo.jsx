@@ -10,7 +10,6 @@ const BenefitsCompo = ({ localizacion, nombre, descripcion }) => (
       <p>{descripcion}</p>
     </div>
   </section>
-
 );
 
 export default BenefitsCompo;

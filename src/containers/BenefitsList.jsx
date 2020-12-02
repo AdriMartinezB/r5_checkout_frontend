@@ -1,39 +1,41 @@
 import React from 'react';
 import BenefitsCompo from '../components/BenefitsCompo';
+import BenefitsCompo2 from '../components/BenefitsCompo2';
 import '../assets/styles/containers/benefitsList.scss';
 
-import calendar from '../assets/img/Beneficios/calendar.png';
-import cornerShop from '../assets/img/Beneficios/cornerShop.png';
-import dafity from '../assets/img/Beneficios/dafity.png';
-import phone from '../assets/img/Beneficios/phone.png';
+import calendarwhite from '../assets/img/Beneficios/calendarwhite.png';
+import cornerShopwhite from '../assets/img/Beneficios/cornerShopwhite.png';
+import dafitiwhite from '../assets/img/Beneficios/dafitiwhite.png';
+import phonewhite from '../assets/img/Beneficios/phonewhite.png';
 
 const BenefitsList = () => {
   return (
+
     <ul className='BenefitsList'>
       <li>
         <BenefitsCompo
-          localizacion={dafity}
+          localizacion={dafitiwhite}
           nombre='dafity'
           descripcion='20% de descuento en moda Dafiti.com.co Válido hasta el 30 de noviembre o agotar existencias. Condiciones aquí.'
         />
       </li>
       <li>
         <BenefitsCompo
-          localizacion={cornerShop}
+          localizacion={cornerShopwhite}
           nombre='cornerShop'
           descripcion='Bono de $40.000 para hacer mercado con Cornershop.Solo aplica para clientes que compraron su anterior SOAT con Grupo R5.Válido hasta el 30 de noviembre o agotar existencias. Condiciones aquí.'
         />
       </li>
       <li>
-        <BenefitsCompo
-          localizacion={calendar}
+        <BenefitsCompo2
+          localizacion={calendarwhite}
           nombre='calendario'
           descripcion='Iniciará vigencia el día después de su vencimiento'
         />
       </li>
       <li>
-        <BenefitsCompo
-          localizacion={phone}
+        <BenefitsCompo2
+          localizacion={phonewhite}
           nombre='Telefono'
           descripcion='Entrega inmediata por correo y SMS'
         />
