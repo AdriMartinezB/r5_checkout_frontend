@@ -25,7 +25,7 @@ const IngresaTuPlaca = () => {
 
   return (
     <section className='placa'>
-      <h1>Métodos de Pago</h1>
+      <h1>Ingresa Tu Placa</h1>
       <input
         type='text'
         name='Placa'

@@ -1,7 +1,7 @@
 .placa {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 80%;
   height: 100%;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
@@ -9,11 +9,10 @@
   align-self: center;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  padding-top: 10px;
 }
 .placa h1 {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 600;
   color: #00ce9d;
   text-align: center;
 }

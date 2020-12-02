@@ -1,18 +1,16 @@
-.listOfBeneficios {
+.BenefitsList {
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 50%;
   margin: 0;
   padding: 0;
   padding-bottom: 10px;
 }
 
-.listOfBeneficios li {
-  margin-top: 10px;
+.BenefitsList li {
+ 
   width: 100%;
 }
-
-

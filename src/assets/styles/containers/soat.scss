@@ -5,13 +5,14 @@
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  width: 400px;
+  width: 50%;
   border-radius: 12px;
-  margin: 10px;
+  margin: 10px auto;
 }
 
 .Soat--descuento {
   margin: 20px 30px;
+  text-align: center;
 }
 
 .Soat--descuento h1 {
@@ -35,4 +36,10 @@
   color: #00ce9d;
   text-align: center;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 850px){
+  .Soat{
+    width: 100%;
+  }
 }
