@@ -29,7 +29,7 @@ const IngresaTuPlaca = () => {
       <input
         type='text'
         name='Placa'
-        placeholder='ABC123'
+        placeholder='FTG304'
         pattern='[A-Za-z]{3}[0-9]{2}[A-Fa-f0-9]{1}'
         value={placa}
         onChange={changeSubmit}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../assets/styles/pages/ingresaPlaca.scss';
 import Soat from '../containers/Soat';
-import Beneficios from '../containers/PopUpBeneficio';
+import Beneficios from '../containers/Beneficios_Desktop';
 
 const IngresaPlaca = () => {
   return (
