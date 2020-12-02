@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 100%;
 }
 
 .Contenedor_ingresa_placa{
@@ -16,5 +16,12 @@
   align-items: center;
   max-width: 1000px ;
   width: 80%;
+  margin: 40px 0;
 }
 
+@media only screen and (max-width: 800px){
+  .Contenedor_ingresa_placa{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
