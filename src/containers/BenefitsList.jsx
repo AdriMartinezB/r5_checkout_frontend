@@ -12,6 +12,19 @@ const BenefitsList = () => {
   return (
 
     <ul className='BenefitsList'>
+      <div className='BenefitsList__texto'>
+        <h3>
+          Compra y recibe
+          {' '}
+          <span>tu SOAT</span>
+          {' '}
+          <br />
+          fácil y rápido
+        </h3>
+        <p>
+          ¡Premiamos a los buenos conductores con hasta $75,000 de descuento!
+        </p>
+      </div>
       <li>
         <BenefitsCompo
           localizacion={dafitiwhite}
