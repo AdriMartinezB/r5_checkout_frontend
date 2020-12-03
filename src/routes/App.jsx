@@ -4,7 +4,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import '../assets/styles/App.scss';
 import PageUps from '../containers/PageUps';
 import Layout from '../components/Layout';
-import PopUpBeneficio from '../containers/PopUpBeneficio';
 import TuCesta from '../pages/Tucesta';
 import Pago from '../pages/Pago';
 import Home from '../pages/Home';
@@ -24,7 +23,6 @@ const App = () => (
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/cotizacion' component={Cotizacion} />
-        <Route exact path='/popUpBeneficio' component={PopUpBeneficio} />
         <Route exact path='/ingresaPlaca/' component={IngresaPlaca} />
         <Route exact path='/descuento/' component={Descuento} />
         <Route exact path='/gancho/' component={Gancho} />

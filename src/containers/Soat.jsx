@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
 import IngresaTuPlaca from '../components/IngresaTuPlaca';
 
 import '../assets/styles/containers/soat.scss';
 import TerminosYCondiciones from '../components/TerminosYCondiciones';
+import PopUpBeneficio from './PopUpBeneficio';
 
 const Soat = () => {
   return (
@@ -16,13 +16,19 @@ const Soat = () => {
           {' '}
           {' '}
           <br />
-          <Link to='/popUpBeneficio/'>AQUÍ!</Link>
+          <a href='#modal' id='show-modal' className='boton_aqui'>Aquí</a>
         </p>
       </div>
 
       <IngresaTuPlaca />
 
       <TerminosYCondiciones />
+
+      <aside id='modal' className='modal'>
+        <div className='content-modal'>
+          <PopUpBeneficio />
+        </div>
+      </aside>
 
     </section>
   );

@@ -9,8 +9,7 @@
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  display: inline-block;
-  align-self: flex-end;
+  margin: 10px;
 }
 
 .close--span {
@@ -22,10 +21,4 @@
   background: #60aff0;
 }
 
-.close--title {
-  font-weight: 700;
-  font-size: 36px;
-  color: #00ce9d;
-  text-align: center;
-  margin: auto;
-}
+

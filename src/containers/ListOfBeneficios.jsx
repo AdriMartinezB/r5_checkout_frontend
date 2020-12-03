@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../assets/styles/containers/listOfBeneficios.scss';
 import BeneficiosComponent from '../components/BeneficiosComponent';
+import BeneficiosComponent2 from '../components/BeneficiosComponent2';
 
 import calendar from '../assets/img/Beneficios/calendar.png';
 import cornerShop from '../assets/img/Beneficios/cornerShop.png';
@@ -26,14 +27,14 @@ const ListOfBeneficios = () => {
         />
       </li>
       <li>
-        <BeneficiosComponent
+        <BeneficiosComponent2
           localizacion={calendar}
           nombre='calendario'
           descripcion='Iniciará vigencia el día después de su vencimiento'
         />
       </li>
       <li>
-        <BeneficiosComponent
+        <BeneficiosComponent2
           localizacion={phone}
           nombre='Telefono'
           descripcion='Entrega inmediata por correo y SMS'

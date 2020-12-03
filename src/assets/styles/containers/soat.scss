@@ -30,12 +30,47 @@
   text-align: center;
 }
 
-.Soat--descuento a {
-  font-size: 18px;
+.Soat--descuento .boton_aqui {
+  font-size: 22px;
   font-weight: 900;
   color: #00ce9d;
   text-align: center;
   text-decoration: none;
+  line-height: 40px;
+  transition: all 0.15s linear;
+}
+
+.Soat--descuento .boton_aqui:hover{
+  color: #60aff0;
+  cursor: pointer;
+}
+
+.modal{
+  position: fixed;
+  top: -100vh;
+  z-index: 99999999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.modal .content-modal{
+  position: fixed;
+  top: -100vh;
+  transition: top 0.35s ease;
+  z-index: 99999999;
+}
+
+.modal:target{
+  opacity: 1;
+  top: 0;
+}
+
+.modal:target .content-modal{
+  top: 10px;
+  transition: top 0.35s ease;
 }
 
 @media only screen and (max-width: 850px){
