@@ -1,26 +1,34 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import IngresaTuPlaca from '../components/IngresaTuPlaca';
 
 import '../assets/styles/containers/soat.scss';
 import TerminosYCondiciones from '../components/TerminosYCondiciones';
+import PopUpBeneficio from './PopUpBeneficio';
 
 const Soat = () => {
   return (
     <section className='Soat'>
       <div className='Soat--descuento'>
-        <h1>Tu SOAT al instante</h1>
-        <p>
+        <h1>SOAT al instante</h1>
+        <p className='soat__texto'>
           Con descuento hasta de $75.000 y descubre más Beneficios
           {' '}
-          {/* <Link to='/popUpBeneficio/'>AQUÍ!</Link> */}
+          {' '}
+          <br />
+          <a href='#modal' id='show-modal' className='boton_aqui'>Aquí</a>
         </p>
       </div>
 
       <IngresaTuPlaca />
 
       <TerminosYCondiciones />
+
+      <aside id='modal' className='modal'>
+        <div className='content-modal'>
+          <PopUpBeneficio />
+        </div>
+      </aside>
 
     </section>
   );
