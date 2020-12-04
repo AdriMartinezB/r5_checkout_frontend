@@ -8,11 +8,13 @@ import DatosVehiculares from '../containers/DatosVehiculares';
 
 const Cotizacion = () => {
   return (
-    <section className='cotizacion-container'>
-      <div className='cotizacion-group'>
+    <section className='cotizacion'>
+      <div className='cotizacion__contenedor'>
         <Figura />
-        <Descubrir />
-        <DatosVehiculares />
+        <div className='cotizacion__contenedor--grupo2'>
+          <Descubrir />
+          <DatosVehiculares />
+        </div>
       </div>
     </section>
   );

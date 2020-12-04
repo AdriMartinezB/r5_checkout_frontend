@@ -1,6 +1,6 @@
 .precio-figura {
-  width: 100%;
-  margin: 0;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .figura {
@@ -21,5 +21,11 @@
 @media only screen and (max-width: 550px) {
   .precio-figura {
     width: 90%;
+  }
+}
+
+@media only screen and (min-width: 850px){
+  .precio-figura {
+    width: 100%;
   }
 }
