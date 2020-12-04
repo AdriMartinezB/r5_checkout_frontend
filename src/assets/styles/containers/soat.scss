@@ -37,7 +37,6 @@
   text-align: center;
   text-decoration: none;
   line-height: 40px;
-  transition: all 0.15s linear;
 }
 
 .Soat--descuento .boton_aqui:hover{
@@ -69,9 +68,10 @@
 }
 
 .modal:target .content-modal{
-  top: 10px;
+  top: 5px;
   transition: top 0.35s ease;
 }
+
 
 @media only screen and (max-width: 850px){
   .Soat{

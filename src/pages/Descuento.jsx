@@ -8,10 +8,16 @@ import ListOfBeneficios from '../containers/ListOfBeneficios';
 const Descuento = () => {
   return (
     <section className='descuento'>
-      <div className='descuento-group'>
+      <div className='descuento__contenedor'>
         <CajaDescuento />
-        <ValorTotal />
-        <ListOfBeneficios />
+        <div className='descuento__contenedor--grupo2'>
+          <div className='item1'>
+            <ValorTotal />
+          </div>
+          <div className='item2'>
+            <ListOfBeneficios />
+          </div>
+        </div>
       </div>
     </section>
 
