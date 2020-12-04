@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, compose } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import reducer from './reducers';
 import App from './routes/App';
 
@@ -10,7 +11,8 @@ const initialState = {
 };
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducer, initialState, composeEnhancers());
+const store = createStore(reducer, initialState, composeEnhancers(applyMiddleware(thunk))); // redux thunk
+// const histoty = createBrowserHistory();
 
 ReactDOM.render(
   <Provider store={store}>
@@ -18,5 +20,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('app'),
 );
-
-

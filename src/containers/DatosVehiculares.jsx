@@ -13,6 +13,7 @@ const DatosVehiculares = () => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        'X-Token': 56666,
       },
       //body: JSON.stringify(data),
     })
