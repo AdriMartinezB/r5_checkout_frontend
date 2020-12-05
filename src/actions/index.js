@@ -15,10 +15,10 @@ export const SetError = (payload) => ({
   payload,
 });
 
-export const dataPlaca = (payload) => ({
-  type: actions.dataPlaca,
-  payload,
-});
+// export const dataPlaca = (payload) => ({
+//   type: actions.dataPlaca,
+//   payload,
+// });
 
 export const dataUser = (payload) => ({
   type: actions.dataUser,

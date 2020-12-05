@@ -28,6 +28,7 @@ const initialState = {
       'CarModel': 'Model',
       'Description': 'Description',
       'SoatDiscount': 0,
+      'PriceSoat': 0,
     },
   ],
 };

@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { dataPlaca, getDataRequest } from '../actions';
+import { getDataRequest } from '../actions';
 
 import '../assets/styles/components/ingresaTuPlaca.scss';
 import '../assets/styles/components/buttomComponent.scss';
@@ -25,7 +25,7 @@ const IngresaTuPlaca = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const placaUp = placa.toUpperCase();
-    props.dataPlaca(placaUp);
+    // props.dataPlaca(placaUp);
     props.getDataRequest(placaUp, props);
   };
 
@@ -49,7 +49,6 @@ const IngresaTuPlaca = (props) => {
 };
 
 const mapDispatchToProps = {
-  dataPlaca,
   getDataRequest,
 };
 
