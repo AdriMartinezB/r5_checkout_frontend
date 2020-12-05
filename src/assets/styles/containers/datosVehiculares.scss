@@ -1,11 +1,19 @@
 .Vehi--Container {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 90%;
   height: 100%;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 12px;
   border: none;
-  margin: 0;
+  margin: 12px auto;
   padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 850px){
+  .Vehi--Container {
+    background: transparent;
+    border-left: 2px solid #391a7dd9;
+    border-radius: 0;
+  }
 }

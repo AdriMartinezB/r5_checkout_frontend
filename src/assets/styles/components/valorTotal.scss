@@ -1,20 +1,18 @@
 .valor {
   display: flex;
   flex-direction: column;
-  width: 85%;
-  height: 100%;
+  width: 90%;
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
+  border-radius: 12px;
   border: none;
   align-self: center;
-  margin-bottom: 10px;
-  margin-top: 15px;
+  margin: 10px auto 15px;
   padding-bottom: 10px;
   padding-top: 20px;
 }
 
 .valor-title {
-  width: 85%;
+  width: 90%;
   height: 100%;
   background: #391a7d;
   border-radius: 12px 12px 0 0;
@@ -30,7 +28,7 @@
 }
 
 .valor-precio {
-  width: 85%;
+  width: 90%;
   height: 100%;
   background: #fff;
   border-radius: 0 0 12px 12px;
@@ -44,11 +42,19 @@
   font-weight: 900;
   color: #000;
   text-align: center;
-  margin: auto;
-  margin: 15px;
+  margin: 15px auto;
 }
 
 .valor--Link {
   align-self: center;
   justify-self: center;
+}
+
+
+@media only screen and (min-width: 850px){
+  .valor{
+    width: 80%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ffffff;
+  }
 }
