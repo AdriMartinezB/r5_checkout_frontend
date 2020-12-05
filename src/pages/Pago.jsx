@@ -12,7 +12,7 @@ const Pago = () => {
       <div className='pago'>
         <h1 className='pago-title'>Pago</h1>
         <TusDatos />
-        <ButtonComponent location='/TipoTarjetas/' name='Elige tu forma de pago' color='naranja' />
+        <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='naranja' />
         <div className='containerList'>
           <ListOfProducts />
         </div>

@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import '../assets/styles/components/gancho.scss';
-import ButtonClose from '../components/ButtonClose';
+import '../assets/styles/pages/gancho.scss';
 import ButtonComponent from '../components/ButtonComponent';
 import Bono from '../components/Bono';
 import ButtonBonusComponent from '../components/ButtonBonusComponent';
@@ -18,7 +19,9 @@ const Gancho = ({ numArticulos }) => {
             en tu cesta
           </p>
         </div>
-        <ButtonClose location='/descuento' />
+        <div>
+          <a href='#' className='close-gancho'><span>x</span></a>
+        </div>
       </div>
       <div className='gancho__botones'>
         <ButtonComponent location='/cesta' color='verde' name='Ver Cesta' />
@@ -29,15 +32,11 @@ const Gancho = ({ numArticulos }) => {
         <div className='gancho__contenedor--grupo'>
           <div className='losbonos'>
             <Bono />
-            <ButtonBonusComponent name='Ver beneficios' color='naranjab' />
+            <ButtonBonusComponent location='/' name='Ver beneficios' color='naranjab' />
           </div>
           <div className='losbonos'>
             <Bono />
-            <ButtonBonusComponent name='Ver beneficios' color='naranjab' />
-          </div>
-          <div className='losbonos'>
-            <Bono />
-            <ButtonBonusComponent name='Ver beneficios' color='naranjab' />
+            <ButtonBonusComponent location='/' name='Ver beneficios' color='naranjab' />
           </div>
         </div>
       </div>

@@ -51,10 +51,71 @@
 }
 
 
+.boton_agregaralacesta{
+  transition: top 0.35s ease;
+  width: 90%;
+  height: 40px;
+  background: #ff4500;
+  border: none;
+  border-radius: 12px;
+  margin: 10px auto;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.boton_agregaralacesta p{
+  font-weight: 600;
+  font-size: 22px;
+  color: #fff;
+}
+
+.modalgancho{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(11, 1, 33, 0.9);
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.74s ease;
+}
+
+.content-modalgancho{
+  position: relative;
+  top: -100vh;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transition: 0.75s ease;
+}
+
+.modalgancho:target{
+  visibility: visible;
+  opacity: 1;
+}
+.modalgancho:target .content-modalgancho{
+  top: 0;
+}
+
+
 @media only screen and (min-width: 850px){
   .valor{
     width: 80%;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid #ffffff;
+    background: none;
   }
+}
+
+@media only screen and (min-width: 650px){
+  
 }
