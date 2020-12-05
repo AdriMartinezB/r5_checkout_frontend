@@ -30,6 +30,20 @@
   color: #fff;
 }
 
+.blanco {
+  width: 85%;
+  height: 50px;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  margin: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ff4500;
+  cursor: pointer;
+  outline: none;
+}
+
 .naranja:enabled,.naranja:hover,
 .naranja:focus {
   outline: none;

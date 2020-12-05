@@ -1,9 +1,13 @@
 import React from 'react';
-import ButtonComponent from './ButtonComponent';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { dataUser } from '../actions';
+// import ButtonComponent from './ButtonComponent';
 import '../assets/styles/components/descubrir.scss';
+import '../assets/styles/components/buttomComponent.scss';
 import TerminosYCondiciones from './TerminosYCondiciones';
 
-const Descubrir = () => {
+const Descubrir = (props) => {
   const [email, setEmail] = React.useState('');
   const [phone, setPhone] = React.useState('');
   const [enable, setEnable] = React.useState(true);
@@ -15,11 +19,8 @@ const Descubrir = () => {
     const isCorrect = regexEmail.test(e.target.value);
     if (isCorrect && regexPhone.test(phone)) {
       setEnable(false);
-      const phoneAndEmail = { email: e.target.value, phone };
-      sessionStorage.setItem('phoneAndEmail', JSON.stringify(phoneAndEmail));
     } else {
       setEnable(true);
-      sessionStorage.removeItem('phoneAndEmail');
     }
   };
   const phoneChangeSubmit = (e) => {
@@ -27,26 +28,35 @@ const Descubrir = () => {
     const isCorrect = regexPhone.test(e.target.value);
     if (isCorrect && regexEmail.test(email)) {
       setEnable(false);
-      const phoneAndEmail = { email, phone: e.target.value };
-      sessionStorage.setItem('phoneAndEmail', JSON.stringify(phoneAndEmail));
     } else {
       setEnable(true);
-      sessionStorage.removeItem('phoneAndEmail');
     }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // const placaUp = placa.toUpperCase();
+    // console.log(placaUp);
+    props.dataUser({ email, phone }); //'http://localhost:8081/cotizacion');
+    props.history.push('/descuento');
   };
 
   return (
     <section className='descubrir__contenedor--form'>
       <p>Por favor ingresa los siguientes datos para calcular tu descuento. La veracidad de tus datos impacta en el valor de tu descuento.</p>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input name='celular' className='input' type='number' placeholder='Celular' onChange={phoneChangeSubmit} />
         <input name='correo' className='input' type='email' placeholder='Correo' onChange={emailChangeSubmit} />
-        <ButtonComponent location='/descuento' color='naranja' name='Descubrir Descuento' enable={enable} />
+        <button className='naranja' disabled={enable}>Descubrir Descuento</button>
+        {/* <ButtonComponent location='/descuento' color='naranja' name='Descubrir Descuento' enable={enable} /> */}
       </form>
 
       <TerminosYCondiciones />
     </section>
   );
 };
+const mapDispatchToProps = {
+  dataUser,
+};
 
-export default Descubrir;
+export default withRouter(connect(null, mapDispatchToProps)(Descubrir));

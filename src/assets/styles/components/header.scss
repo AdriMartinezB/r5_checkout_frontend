@@ -1,27 +1,26 @@
 .header {
   align-items: center;
-  background-color: #361f73;
-  color: #ffffff;
+  background-color: #391A7D;
   display: flex;
-  height: 100px;
+  height: 80%;
   justify-content: space-around;
   top: 0px;
   width: 100%;
 }
 
 .header__img {
-  width: 70px;
+  width: 80px;
 }
 
 .header__menu {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .header__menu--botones ul {
-  list-style: none;
   display: flex;
   flex-direction: row;
+  list-style: none;
 }
 
 .header__menu--botones li {
@@ -30,10 +29,10 @@
 
 .header__menu--botones li a {
   color: #ffffff;
-  text-decoration: none;
   display: block;
-  padding: 10px 20px;
   max-width: 200px;
+  padding: 10px 20px;
+  text-decoration: none;
   /*font-variant: small-caps;*/
 }
 
@@ -43,14 +42,15 @@
 }
 
 .header__menu--buscador input {
-  height: 40px;
   background-color: rgba(250, 248, 248, 0.3);
   border: 1px solid white;
   border-radius: 25px;
   color: white;
-  font-size: 16px;
-  padding: 0px 20px;
   font-family: "Public Sans", sans-serif;
+  font-size: 16px;
+  height: 40px;
+  outline: none;
+  padding: 0px 20px;
 }
 
 .header__menu--noticifaciones {
@@ -60,8 +60,8 @@
 
 .header__menu--noticifaciones img {
   height: 30px;
-  object-fit: contain;
   margin: 10px;
+  object-fit: contain;
 }
 
 ::placeholder {
@@ -73,49 +73,49 @@
 }
 
 input#abrir-cerrar {
-  visibility: hidden;
   position: absolute;
+  visibility: hidden;
 }
 
 .toggle-button {
+  box-sizing: border-box;
+  cursor: pointer;
   display: block;
-  width: 30px;
   height: 30px;
   position: relative;
-  cursor: pointer;
-  box-sizing: border-box;
+  width: 30px;
 }
 
 .toggle-button:before,
 .toggle-button:after {
-  position: absolute;
-  display: block;
-  content: " ";
-  width: calc(100% / 2);
   box-sizing: border-box;
+  content: " ";
+  display: block;
   left: calc(100% / 4);
+  position: absolute;
   transition: all 0.2s ease-out;
-}
+  width: calc(100% / 2);
+  }
 
 .toggle-button:before {
-  top: calc(100% / 4);
-  height: calc(100% / 4);
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
   background-color: transparent;
+  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  height: calc(100% / 4);
+  top: calc(100% / 4);
 }
 
 .toggle-button:after {
-  height: 1px;
   background-color: #ffffff;
   bottom: calc(100% / 4);
+  height: 1px;
 }
 
 input#abrir-cerrar:checked + .toggle-button:before,
 input#abrir-cerrar:checked + .toggle-button:after {
-  top: calc(100% / 2);
-  height: 1px;
   border-bottom: 0;
+  height: 1px;
+  top: calc(100% / 2);
 }
 
 input#abrir-cerrar:checked + .toggle-button:before {

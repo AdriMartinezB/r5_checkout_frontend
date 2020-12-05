@@ -10,6 +10,7 @@ const Beneficios = ({ localizacion, nombre, descripcion }) => (
       <p>{descripcion}</p>
     </div>
   </section>
+
 );
 
 export default Beneficios;

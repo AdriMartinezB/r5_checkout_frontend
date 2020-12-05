@@ -1,0 +1,86 @@
+.gancho {
+  width: 70%;
+  background: linear-gradient(to bottom,  #361F73, #00CE9D);
+  border-radius: 25px;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+}
+
+.gancho__header{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.gancho__header--articulos{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.gancho__header--articulos p{
+  color: #FFFFFF;
+  width: 65%;
+}
+
+.check{
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  color: #00CE9D;
+  width: 60px;
+  height: 60px;
+  font-size: 50px;
+  border-radius: 50%;
+  border: 4px solid #00CE9D;
+}
+
+.gancho__botones{
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.gancho__contenedor{
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+}
+
+.texto-gancho{
+  text-align: center;
+  padding: 20px 10px;
+  width: 70%;
+  margin: auto;
+}
+
+.gancho__contenedor--grupo{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.gancho__contenedor--grupo .losbonos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 40%;
+  margin: 5px 0;
+}
+
+
+@media only screen and (max-width: 750px){
+
+  .gancho{
+    width: 90%;
+  }
+
+  .gancho__contenedor--grupo .losbonos {
+    width: 80%;
+  }
+}

@@ -2,10 +2,11 @@ import React from 'react';
 
 import '../assets/styles/containers/listOfBeneficios.scss';
 import BeneficiosComponent from '../components/BeneficiosComponent';
+import BeneficiosComponent2 from '../components/BeneficiosComponent2';
 
 import calendar from '../assets/img/Beneficios/calendar.png';
 import cornerShop from '../assets/img/Beneficios/cornerShop.png';
-import dafity from '../assets/img/Beneficios/dafity.png';
+import dafiti from '../assets/img/Beneficios/dafiti.png';
 import phone from '../assets/img/Beneficios/phone.png';
 
 const ListOfBeneficios = () => {
@@ -13,7 +14,7 @@ const ListOfBeneficios = () => {
     <ul className='listOfBeneficios'>
       <li>
         <BeneficiosComponent
-          localizacion={dafity}
+          localizacion={dafiti}
           nombre='dafity'
           descripcion='20% de descuento en moda Dafiti.com.co Válido hasta el 30 de noviembre o agotar existencias. Condiciones aquí.'
         />
@@ -26,14 +27,14 @@ const ListOfBeneficios = () => {
         />
       </li>
       <li>
-        <BeneficiosComponent
+        <BeneficiosComponent2
           localizacion={calendar}
           nombre='calendario'
           descripcion='Iniciará vigencia el día después de su vencimiento'
         />
       </li>
       <li>
-        <BeneficiosComponent
+        <BeneficiosComponent2
           localizacion={phone}
           nombre='Telefono'
           descripcion='Entrega inmediata por correo y SMS'

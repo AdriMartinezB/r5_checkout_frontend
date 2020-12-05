@@ -17,7 +17,7 @@ const ValorTotal = ({ valorSoat }) => {
         </h1>
       </div>
 
-      <ButtonComponent location='/cesta' color='naranja' name='Agregar a la Cesta' />
+      <ButtonComponent location='/gancho' color='naranja' name='Agregar a la Cesta' />
 
     </section>
   );

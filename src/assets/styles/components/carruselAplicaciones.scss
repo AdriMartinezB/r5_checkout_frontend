@@ -1,0 +1,94 @@
+.carrusel {
+    background: linear-gradient(to top, rgba(57,26,125,1) 0%,  rgba(0,206,158,1)100%);
+    width: 100%;
+    /* overflow: scroll; */
+    padding:0px;
+    position: relative; //Todos los elementos se vana  aposicionar en relacion al padre. 
+    text-align: center;
+}
+
+.carrusel__container {
+    white-space: nowrap; //No nos envuelva
+    margin: 50px 0; //Espacio entre elementos 70px
+    padding-bottom: 10px; //padding de abajo
+}
+
+.carrusel-item {
+    background-color: rgb(0, 0, 0); //Temporal
+    width: 20%;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block; //Para que los elementos queden de manera horizontal
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+}
+
+.carrusel-item:hover ~ .carrusel-item {
+    transform: translate3D(30%, 0, 0) //Los elementos se nos desplazan hacia la derecha.
+}
+
+.carrusel__container:hover .carrusel-item{
+    opacity: 0.3; //Cuando seleccione uno de los elementos el resto tendra una opacidad
+}
+
+.carrusel__container:hover .carrusel-item:hover {
+    transform: scale(1.3);
+    opacity: 1;
+}
+
+.carrusel-item__img {
+    opacity: 0.7;
+    width: 100%;
+    height: 250px;
+    object-fit: cover; // Recuperar tamaño original de la imagen
+}
+
+.carrusel-item__details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, (0, 0, 0, 0) 100%);
+    font-size: 36px;
+    opacity: 1;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    /* color: white;
+    text-shadow:2px 2px 2px black; */
+}
+
+.carrusel-item__details__tittle {
+    font-size: 20px;
+    font-weight: bold;
+    align-self: center;
+    color: rgb(241, 232, 232);
+    text-shadow: 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carrusel-item__details__button {
+    
+}
+
+.carrrusel-item__details:hover {
+    opacity: 1;
+}
+
+.carrusel-item__details p{
+    margin:2px 0px;
+}
+
+.carrusel-item__details--title{
+    font-size: 12px;
+}
+
+.curva{
+    width: 100%;
+}
