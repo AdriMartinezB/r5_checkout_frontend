@@ -25,7 +25,6 @@ const IngresaTuPlaca = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const placaUp = placa.toUpperCase();
-    // props.dataPlaca(placaUp);
     props.getDataRequest(placaUp, props);
   };
 

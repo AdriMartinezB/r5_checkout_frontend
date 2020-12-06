@@ -8,7 +8,14 @@ import App from './routes/App';
 
 const initialState = {
   'placa': [],
-  'dataUser': [],
+  'dataUser': [{
+    'Email': 'example@example.com',
+    'PhoneNumber': '3210000000',
+    'Discount': 0,
+    'PriceTotal': 0,
+    'PriceDiscount': 0,
+    'RegistrationNumber': 'ABC1234',
+  }],
   'data': [
     {
       'id': 1,
@@ -19,9 +26,9 @@ const initialState = {
       'ValidityStartDate': '2018-11-29',
       'ValidityEndDate': '2019-11-29',
       'InsuranceCompany': 'Company',
-      'PolicyNumber': 111111,
-      'FasecoldaCode': 11111,
-      'RegistrationNumber': 'ABC123',
+      'PolicyNumber': 0,
+      'FasecoldaCode': 0,
+      'RegistrationNumber': 'ABC1234',
       'CarMake': 'Make',
       'VehicleType': 'Type',
       'RegistrationYear': 2000,

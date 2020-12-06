@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { dataUser } from '../actions';
-// import ButtonComponent from './ButtonComponent';
+import { getDataUser } from '../actions';
 import '../assets/styles/components/descubrir.scss';
 import '../assets/styles/components/buttomComponent.scss';
 import TerminosYCondiciones from './TerminosYCondiciones';
@@ -13,6 +12,7 @@ const Descubrir = (props) => {
   const [enable, setEnable] = React.useState(true);
   const regexEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
   const regexPhone = /^[0-9]{10}$/;
+  const placa = props.data.RegistrationNumber;
 
   const emailChangeSubmit = (e) => {
     setEmail(e.target.value);
@@ -35,10 +35,8 @@ const Descubrir = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const placaUp = placa.toUpperCase();
-    // console.log(placaUp);
-    props.dataUser({ email, phone }); //'http://localhost:8081/cotizacion');
-    props.history.push('/descuento');
+    props.getDataUser(email, phone, placa, props);
+    //props.history.push('/descuento');
   };
 
   return (
@@ -48,15 +46,22 @@ const Descubrir = (props) => {
         <input name='celular' className='input' type='number' placeholder='Celular' onChange={phoneChangeSubmit} />
         <input name='correo' className='input' type='email' placeholder='Correo' onChange={emailChangeSubmit} />
         <button className='naranja' disabled={enable}>Descubrir Descuento</button>
-        {/* <ButtonComponent location='/descuento' color='naranja' name='Descubrir Descuento' enable={enable} /> */}
       </form>
 
       <TerminosYCondiciones />
     </section>
   );
 };
-const mapDispatchToProps = {
-  dataUser,
+
+const mapStateToProps = (state) => {
+  console.log('descubrir', state);
+  return {
+    data: state.data[0],
+  };
 };
 
-export default withRouter(connect(null, mapDispatchToProps)(Descubrir));
+const mapDispatchToProps = {
+  getDataUser,
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Descubrir));
