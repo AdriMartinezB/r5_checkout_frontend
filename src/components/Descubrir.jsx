@@ -10,6 +10,7 @@ const Descubrir = (props) => {
   const [email, setEmail] = React.useState('');
   const [phone, setPhone] = React.useState('');
   const [enable, setEnable] = React.useState(true);
+  const [loading, setLoading] = React.useState(false);
   const regexEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
   const regexPhone = /^[0-9]{10}$/;
   const placa = props.data.RegistrationNumber;
@@ -35,21 +36,28 @@ const Descubrir = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     props.getDataUser(email, phone, placa, props);
-    //props.history.push('/descuento');
   };
 
   return (
-    <section className='descubrir__contenedor--form'>
-      <p>Por favor ingresa los siguientes datos para calcular tu descuento. La veracidad de tus datos impacta en el valor de tu descuento.</p>
-      <form onSubmit={handleSubmit}>
-        <input name='celular' className='input' type='number' placeholder='Celular' onChange={phoneChangeSubmit} />
-        <input name='correo' className='input' type='email' placeholder='Correo' onChange={emailChangeSubmit} />
-        <button className='naranja' disabled={enable}>Descubrir Descuento</button>
-      </form>
+    loading ? (
+      <section className='descubrir__contenedor--form'>
+        <h1>Loading...</h1>
+      </section>
+    ) :
+      (
+        <section className='descubrir__contenedor--form'>
+          <p>Por favor ingresa los siguientes datos para calcular tu descuento. La veracidad de tus datos impacta en el valor de tu descuento.</p>
+          <form onSubmit={handleSubmit}>
+            <input name='celular' className='input' type='number' placeholder='Celular' onChange={phoneChangeSubmit} />
+            <input name='correo' className='input' type='email' placeholder='Correo' onChange={emailChangeSubmit} />
+            <button className='naranja' disabled={enable}>Descubrir Descuento</button>
+          </form>
 
-      <TerminosYCondiciones />
-    </section>
+          <TerminosYCondiciones />
+        </section>
+      )
   );
 };
 
