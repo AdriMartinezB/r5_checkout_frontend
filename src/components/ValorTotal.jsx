@@ -1,9 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import ButtonComponent from './ButtonComponent';
 
 import '../assets/styles/components/valorTotal.scss';
 
-const ValorTotal = ({ valorSoat }) => {
+const ValorTotal = ({ data }) => {
   return (
     <section className='valor'>
       <div className='valor-title'>
@@ -13,7 +14,7 @@ const ValorTotal = ({ valorSoat }) => {
       <div className='valor-precio'>
         <h1>
           $
-          {valorSoat}
+          {data.PriceDiscount}
         </h1>
       </div>
 
@@ -23,4 +24,11 @@ const ValorTotal = ({ valorSoat }) => {
   );
 };
 
-export default ValorTotal;
+const mapStateToProps = (state) => {
+  console.log('valorTotal', state);
+  return {
+    data: state.dataUser[0],
+  };
+};
+
+export default connect(mapStateToProps, null)(ValorTotal);
