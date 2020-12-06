@@ -2,6 +2,7 @@ export const actions = {
   dataRequest: 'DATA_REQUEST',
   setError: 'SET_ERROR',
   dataUser: 'DATA_USER',
+  dataCesta: 'DATA_CESTA',
 };
 
 export const dataRequest = (payload) => ({
@@ -16,6 +17,11 @@ export const SetError = (payload) => ({
 
 export const dataUser = (payload) => ({
   type: actions.dataUser,
+  payload,
+});
+
+export const dataCesta = (payload) => ({
+  type: actions.dataCesta,
   payload,
 });
 
@@ -48,6 +54,23 @@ export const getDataUser = (email, phone, placa, props) => {
       .then((res) => res.json())
       .then((data) => dispatch(dataUser(data)))
       .then(() => props.history.push('/descuento'))
+      .catch((err) => dispatch(setError(err)));
+  };
+};
+
+export const setDataCarkMarket = (data, props) => {
+  return (dispatch) => {
+    console.log(data);
+    fetch('https://heroprodev.herokuapp.com/api/marketCarts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => dispatch(dataCesta(data)))
+      .then(() => props.history.push('/gancho'))
       .catch((err) => dispatch(setError(err)));
   };
 };
