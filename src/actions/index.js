@@ -74,3 +74,23 @@ export const setDataCarkMarket = (data, props) => {
       .catch((err) => dispatch(setError(err)));
   };
 };
+
+export const getDataCesta = (props) => {
+  return (dispatch) => {
+    const phonenumber = props.data.PhoneNumber;
+    const email = props.data.Email;
+    console.log(phonenumber, email);
+    fetch('https://heroprodev.herokuapp.com/api/marketCarts', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        phonenumber,
+        email,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => dispatch(dataCesta(data)))
+      .then(() => props.history.push('/cesta'))
+      .catch((err) => dispatch(setError(err)));
+  };
+};

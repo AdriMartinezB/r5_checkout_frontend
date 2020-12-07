@@ -4,11 +4,10 @@ import Producto from '../components/Producto';
 
 import '../assets/styles/containers/listOfProducts.scss';
 
-const ListOfProducts = () => {
+const ListOfProducts = (props) => {
   return (
     <ul className='listOfItems'>
-      <li><Producto /></li>
-      <li><Producto /></li>
+      <li><Producto data={props} /></li>
     </ul>
   );
 };

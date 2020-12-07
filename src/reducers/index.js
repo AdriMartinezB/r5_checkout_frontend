@@ -6,7 +6,7 @@ const reducer = (state, action) => {
       console.log('actions Cesta reducers', state, action.payload);
       return {
         ...state,
-        placa: [action.payload],
+        dataCesta: [action.payload],
       };
     case actions.dataUser:
       console.log('actions datauser reducers', state, action.payload);
