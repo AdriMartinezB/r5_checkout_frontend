@@ -1,15 +1,17 @@
 # GrupoR5
-
+```
 Desarrollaremos toda la parte front del checkout de Grupo R5
 
 Prototipo del proyecto link figma
 
 https://www.figma.com/file/G40h3lcCyzmNSRXrdl3o7K/P%C3%A1gina_Web?node-id=0%3A1
-
+```
 # Instalación para desarollador
-
+``` sh
 npm install
 
+```
+```
 React router-------
 npm install react-router-dom --save
 
@@ -26,7 +28,13 @@ npm install --save-dev file-loader
 
 REDUX ----------------
 npm install redux react-redux --save
-
+```
+# Llenar archivo de las variables de entorno
+```
+URI_API  
+TOKEN
+```
 # correr en navegador
-
+``` sh
 npm run start
+```

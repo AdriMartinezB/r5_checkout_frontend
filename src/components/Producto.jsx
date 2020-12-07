@@ -7,13 +7,16 @@ import ButtonComponent from './ButtonComponent';
 
 import trash from '../assets/img/Product/trash.png';
 
-const Producto = ({ producto, imageProduct, placa, precio, subtotal, precioTotal }) => {
+const Producto = (props) => {
+  console.log(props);
+  const { product, discount, price} = props.data;
+  const priceTotal = parseInt(price - discount);
   return (
     <section className='product-section'>
       <div className='product-header'>
         <h2>
           <input type='checkbox' name='checkbox' id='1' />
-          {producto}
+          {product}
         </h2>
         <Link className='TrashButton' to='/'>
           <button className='TrashButton-button' type='button'><img src={trash} alt='trash' /></button>
@@ -21,27 +24,25 @@ const Producto = ({ producto, imageProduct, placa, precio, subtotal, precioTotal
       </div>
 
       <div className='product-main'>
-        <img src={imageProduct} alt='image product' />
+        <img src='https://i.imgur.com/dIumlIh.jpg' alt='image product' />
 
         <div className='product-main_info'>
           <p>
-            {producto}
-            {' '}
-            placa
-            {' '}
-            {placa}
+            {product}
             {' '}
           </p>
           <p>
             COP $
-            {precio}
+            {' '}
+            {price}
           </p>
           <p>Seguro valido por un año</p>
           <div className='product-main_info_subtotal'>
-            <p className='subtotal-title'>Subtotal</p>
+            <p className='subtotal-title'>Descuento</p>
             <p className='subtotal-price'>
               $
-              {subtotal}
+              {' '}
+              {discount}
             </p>
           </div>
           <ButtonComponent name='Agregar bono de descuento' color='verde' location='/popBono' />
@@ -52,7 +53,8 @@ const Producto = ({ producto, imageProduct, placa, precio, subtotal, precioTotal
       <div className='product-footer'>
         <p>
           Total $
-          {precioTotal}
+          {' '}
+          {priceTotal}
         </p>
       </div>
 

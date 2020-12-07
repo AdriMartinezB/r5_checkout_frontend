@@ -1,3 +1,5 @@
+import config from '../config';
+
 export const actions = {
   dataRequest: 'DATA_REQUEST',
   setError: 'SET_ERROR',
@@ -31,6 +33,7 @@ export const getDataRequest = (payload, props) => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        'X-Token': config.token,
       },
       //body: JSON.stringify(data),
     })
@@ -48,6 +51,7 @@ export const getDataUser = (email, phone, placa, props) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'X-Token': config.token,
       },
       body: JSON.stringify(data),
     })
@@ -65,12 +69,34 @@ export const setDataCarkMarket = (data, props) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'X-Token': config.token,
       },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((data) => dispatch(dataCesta(data)))
       .then(() => props.history.push('/gancho'))
+      .catch((err) => dispatch(setError(err)));
+  };
+};
+
+export const getDataCesta = (props) => {
+  return (dispatch) => {
+    const phonenumber = props.data.PhoneNumber;
+    const email = props.data.Email;
+    console.log(phonenumber, email);
+    fetch('https://heroprodev.herokuapp.com/api/marketCarts', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Token': config.token,
+        phonenumber,
+        email,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => dispatch(dataCesta(data)))
+      .then(() => props.history.push('/cesta'))
       .catch((err) => dispatch(setError(err)));
   };
 };

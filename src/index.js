@@ -39,6 +39,9 @@ const initialState = {
       'PriceSoat': 0,
     },
   ],
+  'dataCesta': [
+    { 'message': null },
+  ],
 };
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
