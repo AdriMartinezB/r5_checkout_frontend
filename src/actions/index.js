@@ -1,3 +1,5 @@
+import config from '../config';
+
 export const actions = {
   dataRequest: 'DATA_REQUEST',
   setError: 'SET_ERROR',
@@ -31,6 +33,7 @@ export const getDataRequest = (payload, props) => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        'X-Token': config.token,
       },
       //body: JSON.stringify(data),
     })
@@ -48,6 +51,7 @@ export const getDataUser = (email, phone, placa, props) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'X-Token': config.token,
       },
       body: JSON.stringify(data),
     })
@@ -65,6 +69,7 @@ export const setDataCarkMarket = (data, props) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'X-Token': config.token,
       },
       body: JSON.stringify(data),
     })
@@ -84,6 +89,7 @@ export const getDataCesta = (props) => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        'X-Token': config.token,
         phonenumber,
         email,
       },
