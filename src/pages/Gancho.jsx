@@ -1,48 +1,84 @@
 import React from 'react';
 import '../assets/styles/components/gancho.scss';
-import ButtonClose from '../components/ButtonClose';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { getDataCesta } from '../actions';
+
 import ButtonComponent from '../components/ButtonComponent';
 import Bono from '../components/Bono';
-import ButtonBonusComponent from '../components/ButtonBonusComponent';
 
-const Gancho = ({ numArticulos }) => {
+const Gancho = (props) => {
+  const [loading, setLoading] = React.useState(true);
+  const [services, setServices] = React.useState([]);
+  const getServices = () => {
+    fetch('https://heroprodev.herokuapp.com/api/services', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setServices(data);
+        setLoading(false);
+      })
+      .catch((err) => console.log(err));
+  };
+  if (services.length === 0) {
+    getServices();
+  };
+  const handleClick = () => {
+    setLoading(true);
+    props.getDataCesta(props);
+  };
+
   return (
-    <section className='gancho'>
-      <div className='gancho__header'>
-        <div className='gancho__header--articulos'>
-          <span className='check'>&#10004;</span>
-          <p>
-            Se añadio un nuevo artículo. Ahora tienes
-            {numArticulos}
-            {' '}
-            en tu cesta
-          </p>
+    loading ? <section className='gancho'><h1>Loading...</h1></section> : (
+      <section className='gancho'>
+        <div className='gancho__header'>
+          <div className='gancho__header--articulos'>
+            <span className='check'>&#10004;</span>
+            <p>
+              Se añadio un nuevo artículo. Ahora tienes un producto
+              {' '}
+              en tu cesta
+            </p>
+          </div>
+          {/* <ButtonClose location='/descuento' /> */}
         </div>
-        <ButtonClose location='/descuento' />
-      </div>
-      <div className='gancho__botones'>
-        <ButtonComponent location='/cesta' color='verde' name='Ver Cesta' />
-        <ButtonComponent location='/' color='verde' name='Seguir comprando' />
-      </div>
-      <div className='gancho__contenedor'>
-        <p className='texto-gancho'>Los clientes que compraron este producto también compraron:</p>
-        <div className='gancho__contenedor--grupo'>
-          <div className='losbonos'>
-            <Bono />
-            <ButtonBonusComponent name='Ver beneficios' color='naranjab' />
-          </div>
-          <div className='losbonos'>
-            <Bono />
-            <ButtonBonusComponent name='Ver beneficios' color='naranjab' />
-          </div>
-          <div className='losbonos'>
-            <Bono />
-            <ButtonBonusComponent name='Ver beneficios' color='naranjab' />
+        <div className='gancho__botones'>
+          <ButtonComponent location='/' color='verde' name='Regresar al Home' />
+          <button className='verde' onClick={handleClick}>Ver Cesta</button>
+          {/* <ButtonComponent location='/cesta' color='verde' name='Ver Cesta' /> */}
+        </div>
+        <div className='gancho__contenedor'>
+          <p className='texto-gancho'>Los clientes que compraron este producto también compraron:</p>
+          <div className='gancho__contenedor--grupo'>
+            {
+              services.map((data) => (
+                <div className='losbonos' key={data.id}>
+                  <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
+                  <button className='naranjab'>Ver Beneficios</button>
+                </div>
+              ))
+            }
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    )
   );
 };
 
-export default Gancho;
+const mapStateToProps = (state) => {
+  console.log('datosvehiculares', state);
+  return {
+    data: state.dataUser[0],
+  };
+};
+
+const mapDispatchToProps = {
+  getDataCesta,
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Gancho));
