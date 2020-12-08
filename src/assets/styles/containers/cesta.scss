@@ -1,14 +1,11 @@
 .cesta {
-  background: linear-gradient(
-    to top,
-    rgba(0, 206, 157, 0.39),
-    rgba(57, 26, 125, 0.85)
-  );
+  background-image: linear-gradient(to top, rgba(0, 206, 157, 0.39), #391a7dd9), url('../../img/fondos/ingresa_placa.jpg');
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 450px;
+  width: 100%;
   height: auto;
 }
 
@@ -18,4 +15,78 @@
   align-self: center;
   color: #fff;
   text-shadow: 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cesta-listProducts{
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 5px;;
+}
+
+.contenedor-cesta{
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  padding: 0px;
+}
+
+.contenedor-cesta-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 0px;
+}
+
+.contenedor-cesta-2 {
+  width: 100%;
+}
+
+.contenedor-cesta-2 button {
+  width: 98%;
+}
+
+.pasoAPaso{
+  width: 500px;
+}
+
+@media only screen and (max-width: 930px){
+  .cesta {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+    height: auto;
+  }
+
+  .cesta-listProducts{
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .contenedor-cesta{
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    flex-direction: column;
+  }
+
+  .contenedor-cesta-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    flex-direction: column;
+  }
+
 }
