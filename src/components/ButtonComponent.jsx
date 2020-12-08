@@ -10,7 +10,6 @@ const ButtonComponent = ({ location, name, color, enable, props }) => {
       <button className={color} disabled={enable}>{name}</button>
     </Link>
   );
-
 };
 
 export default ButtonComponent;

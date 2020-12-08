@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 90%;
+  height: auto;
   background: linear-gradient(to top, #00ce9d, #391a7dd9);
   border-radius: 12px;
   margin: 10px auto;
@@ -34,7 +34,6 @@
   border-radius:30px;
   width: 30px;
   height: 30px;
-
 }
 
 .close-modal span {
@@ -50,11 +49,11 @@
 }
 
 .btnclose-modal{
-  transition: top 0.35s ease;
+  transition: top 0.75s ease;
 }
 
 .btnclose-modal1 {
-  transition: top 0.35s ease;
+  transition: top 0.75s ease;
   width: 85%;
   height: 40px;
   background: #ff4500;

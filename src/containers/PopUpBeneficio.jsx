@@ -10,7 +10,6 @@ const PopUpBeneficio = () => (
       <div>
         <a href='#' className='close-modal'><span>x</span></a>
       </div>
-      <a href='#' className='btnclose-modal'>.</a>
     </div>
 
     <ListOfBeneficios />
