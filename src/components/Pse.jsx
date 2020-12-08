@@ -1,13 +1,11 @@
 import React from 'react';
 import '../assets/styles/components/pse.scss';
-import ButtonClose from './ButtonClose';
 import ButtonComponent from './ButtonComponent';
 
 const Pse = () => (
   <section className='pse'>
     <div className='pse__titulo'>
       <h2>Pago PSE</h2>
-      <ButtonClose location='/pago' />
     </div>
     <div className='pse__contenedor'>
       <div className='pse__contenedor--form'>

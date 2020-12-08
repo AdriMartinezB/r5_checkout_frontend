@@ -2,13 +2,11 @@
 import React from 'react';
 import '../assets/styles/components/tarjetacredito.scss';
 import ButtonComponent from './ButtonComponent';
-import ButtonClose from './ButtonClose';
 
 const TrajetaCredito = () => (
   <section className='tarjetacredito'>
     <div className='tarjetacredito__titulo'>
       <h2>Tarjeta de Credito</h2>
-      <ButtonClose location='/pago' />
     </div>
     <div className='tarjetacredito__contenedor'>
       <div className='tarjetacredito__contenedor--form'>

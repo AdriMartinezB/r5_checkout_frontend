@@ -1,21 +1,19 @@
 .tarjetacredito {
-  width: 400px;
+  width: 80%;
   background: linear-gradient(to bottom,  #361F73, #00CE9D);
-  border-radius: 25px;
-  margin: auto;
-  padding: 10px;
-  position: relative;
+  border-radius: 12px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .tarjetacredito__titulo{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: -1px 10px;
+  width: 100%;
 }
 
 .tarjetacredito__titulo h2{
   color: #00CE9D;
+  padding-top: 10px;
   font-size: 30px;
   font-weight: 800;
   letter-spacing:2px;
@@ -27,27 +25,9 @@
   text-align: left;
 }
 
-.close {
-  text-decoration: none;
-  font-size: 33px;
-  text-align: center;
-  color: #FFFFFF;
-  cursor: pointer;
-  transition: 0.2s;
-  background: #00CE9D;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  display: inline-block;
-}
-
-.close:hover {
-  background: #60AFF0;
-}
-
 .tarjetacredito__contenedor{
   width: 90%;
-  margin: auto;
+  margin: 0 auto 10px;
   text-align: center;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
@@ -73,7 +53,6 @@
   border: none;
   border-radius: 10px;
   height: 30px;
-  padding-left: 15px;
   font-size: 16px;
 }
 

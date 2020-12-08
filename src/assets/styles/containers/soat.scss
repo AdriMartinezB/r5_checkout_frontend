@@ -45,33 +45,39 @@
 }
 
 .modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  top: -100vh;
-  z-index: 99999999;
   width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.7);
+  top: 0;
+  left: 0;
+  background: rgba(11, 1, 33, 0.9);
+  z-index: 2;
+  visibility: hidden;
   opacity: 0;
-  transition: opacity 0.35s ease;
+  overflow: hidden;
+  transition: 0.74s ease;
 }
 
-.modal .content-modal{
-  position: fixed;
+.content-modal{
+  position: relative;
   top: -100vh;
-  transition: top 0.35s ease;
-  z-index: 99999999;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 90%;
+  transition: 0.75s ease;
 }
 
 .modal:target{
+  visibility: visible;
   opacity: 1;
+}
+.modal:target .content-modal{
   top: 0;
 }
-
-.modal:target .content-modal{
-  top: 5px;
-  transition: top 0.35s ease;
-}
-
 
 @media only screen and (max-width: 850px){
   .Soat{

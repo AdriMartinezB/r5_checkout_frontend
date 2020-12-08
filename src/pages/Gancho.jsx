@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import '../assets/styles/components/gancho.scss';
 import { connect } from 'react-redux';
