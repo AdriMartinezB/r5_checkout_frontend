@@ -1,23 +1,24 @@
 .gancho {
   width: 70%;
+  max-width: 900px;
   background: linear-gradient(to bottom,  #361F73, #00CE9D);
-  border-radius: 25px;
-  margin: auto;
-  padding: 10px;
-  position: relative;
+  border-radius: 12px;
+  margin: 0 auto;
+  padding: 10px 0 0 0;
 }
 
 .gancho__header{
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  margin: 3px auto;
+  width: 95%;
 }
 
 .gancho__header--articulos{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 75%;
 }
 
 .gancho__header--articulos p{
@@ -37,23 +38,46 @@
   border: 4px solid #00CE9D;
 }
 
+.close-gancho {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: #00ce9d;
+  border-radius:30px;
+  width: 30px;
+  height: 30px;
+}
+
+
+.close-gancho span{
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+}
+
+.close-gancho:hover {
+  background: #60aff0;
+}
+
 .gancho__botones{
   display: flex;
   justify-content: space-around;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 .gancho__contenedor{
   background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
-  width: 90%;
+  border-radius: 0 0 12px 12px;
+  width: 100%;
   margin: auto;
 }
 
 .texto-gancho{
   text-align: center;
-  padding: 20px 10px;
-  width: 70%;
+  padding: 10px;
+  width: 80%;
   margin: auto;
 }
 
@@ -74,13 +98,27 @@
 }
 
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 650px){
 
   .gancho{
     width: 90%;
   }
 
+  .gancho__contenedor{
+    width: 100%;
+  }
+
+  .texto-gancho{
+    width: 90%;
+  }
+
   .gancho__contenedor--grupo .losbonos {
-    width: 80%;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 850px){
+  .gancho {
+    width: 90%;
   }
 }

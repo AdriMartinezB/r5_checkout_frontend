@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { setDataCarkMarket } from '../actions';
 
 import '../assets/styles/components/valorTotal.scss';
+import Gancho from '../pages/Gancho';
 
 const ValorTotal = (props) => {
   const [loading, setLoading] = React.useState(false);

@@ -13,9 +13,7 @@ import Descuento from '../pages/Descuento';
 import Cotizacion from '../pages/Cotizacion';
 import Gancho from '../pages/Gancho';
 import PopBono from '../containers/PopBono';
-import TipoTarjetas from '../components/TipoTarjetas';
-import Pse from '../components/Pse';
-import TarjetaCredito from '../components/TarjetaCredito';
+import TarjetaMetodo from '../pages/TarjetaMetodo';
 
 const App = () => (
   <BrowserRouter>
@@ -29,9 +27,7 @@ const App = () => (
         <Route exact path='/popBono' component={PopBono} />
         <Route exact path='/confirmacion/' component={Confirmacion} />
         <Route exact path='/pago/' component={Pago} />
-        <Route exact path='/tipotarjetas/' component={TipoTarjetas} />
-        <Route exact path='/pse/' component={Pse} />
-        <Route exact path='/tarjetacredito/' component={TarjetaCredito} />
+        <Route exact path='/TarjetaMetodo/' component={TarjetaMetodo} />
         <Route exact path='/cesta/' component={TuCesta} />
         <Route exact path='/ups/' component={PageUps} />
       </Switch>
