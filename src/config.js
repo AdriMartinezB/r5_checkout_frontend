@@ -1,6 +1,6 @@
-// const config = {
-//   uri: process.env.URI_API,
-//   token: process.env.TOKEN,
-// };
+const config = {
+  uri: process.env.REACT_APP_URI_API,
+  token: process.env.REACT_APP_TOKEN,
+};
 
-// export default config;
+export default config;
