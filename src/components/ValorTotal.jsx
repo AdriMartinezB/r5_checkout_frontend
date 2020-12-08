@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../assets/styles/components/valorTotal.scss';
-import Gancho from '../pages/Gancho';
+import ButtonComponent from './ButtonComponent';
 
 const ValorTotal = ({ valorSoat }) => {
   return (
@@ -17,13 +17,8 @@ const ValorTotal = ({ valorSoat }) => {
         </h1>
       </div>
 
-      <a href='#modalgancho' id='show-modal' className='boton_agregaralacesta'><p>Agregar a la cesta</p></a>
+      <ButtonComponent location='/gancho' color='naranja' name='Agregar a la cesta' />
 
-      <aside id='modalgancho' className='modalgancho'>
-        <div className='content-modalgancho'>
-          <Gancho />
-        </div>
-      </aside>
     </section>
   );
 };
