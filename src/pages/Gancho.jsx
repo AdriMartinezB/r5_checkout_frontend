@@ -43,9 +43,7 @@ const Gancho = (props) => {
           <div className='gancho__header--articulos'>
             <span className='check'>&#10004;</span>
             <p>
-              Se añadio un nuevo artículo. Ahora tienes un producto
-              {' '}
-              en tu cesta
+              Se añadio un nuevo artículo. Ahora tienes un producto en tu cesta
             </p>
           </div>
           {/* <ButtonClose location='/descuento' /> */}
@@ -62,7 +60,7 @@ const Gancho = (props) => {
               services.map((data) => (
                 <div className='losbonos' key={data.id}>
                   <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
-                  <button className='naranjab'>Ver Beneficios</button>
+                  <button className='naranjab'>Añadir a cesta</button>
                 </div>
               ))
             }
