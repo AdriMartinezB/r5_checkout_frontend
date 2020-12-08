@@ -14,7 +14,7 @@ const Pago = () => {
         <TusDatos />
         <ButtonComponent location='/TipoTarjetas/' name='Elige tu forma de pago' color='naranja' />
         <div className='containerList'>
-          <ListOfProducts />
+          <ListOfProducts isCesta={false} />
         </div>
         <Resumen />
 
