@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import '../assets/styles/containers/cesta.scss';
+import PasoPaso1 from '../assets/img/pasoPaso1.png'
 import ButtonComponent from '../components/ButtonComponent';
 import MetodoDePago from '../components/MetodoDePago';
 
@@ -27,6 +28,7 @@ const Cesta = ({ data }) => {
   return (
     product.length === 0 ? <div className='cesta'><h1>Loading...</h1></div> : (
       <div className='cesta'>
+        <img className = 'PasoPaso1' src={PasoPaso1} alt="Paso cesta"/>
         <h1 className='cesta-title'>Tu Cesta</h1>
 
         <div className = 'contenedor-cesta'>
