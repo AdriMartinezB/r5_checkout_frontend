@@ -17,6 +17,13 @@
   text-align: center;
 }
 
+.placa-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .placa input {
   border: none;
   background: #fff;

@@ -9,7 +9,7 @@ const DatosVehiculares = ({ data }) => {
 
   return (
     <div className='Vehi--Container'>
-      <TusDatos nombre={data.OwnerNames} apellido={data.OwnerLastNames} />
+      <TusDatos isCotizacion nombre={data.OwnerNames} apellido={data.OwnerLastNames} />
       <TuVehiculo marca={data.CarMake} modelo={data.RegistrationYear} linea={data.CarModel} />
     </div>
   );

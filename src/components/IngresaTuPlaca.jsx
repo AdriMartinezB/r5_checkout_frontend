@@ -39,7 +39,7 @@ const IngresaTuPlaca = (props) => {
       (
         <section className='placa'>
           <h1>Métodos de Pago</h1>
-          <form onSubmit={handleSubmit}>
+          <form className='placa-form' onSubmit={handleSubmit}>
             <input
               type='text'
               name='Placa'
@@ -49,7 +49,7 @@ const IngresaTuPlaca = (props) => {
               onChange={changeSubmit}
               required
             />
-            <button className='naranja' disabled={enable}>Cotiza Gratis</button>
+            <button className='naranja' type='submit' disabled={enable}>Cotiza Gratis</button>
           </form>
         </section>
       )

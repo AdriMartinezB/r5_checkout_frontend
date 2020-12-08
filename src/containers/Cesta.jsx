@@ -25,20 +25,42 @@ const Cesta = ({ data }) => {
 
   }
   return (
-    product.length === 0 ? <div className='cesta'><h1>Loading...</h1></div> : (
+    product.length === 0 ? (<div className='cesta'><h1>Loading...</h1></div>) : (
       <div className='cesta'>
         <h1 className='cesta-title'>Tu Cesta</h1>
-        {
-          product.map((data) => {
-            if (data.product === '') {
-              return false;
-            }
-            return <ListOfProducts key={data.id} product={data.product} discount={data.discount} price={data.price} />;
-          })
-        }
-        <ButtonComponent location='/pago' color='naranja' name='COMPRAR' />
-        <PagoSeguro />
-        <MetodoDePago />
+
+        <div className='contenedor-cesta'>
+          <div className='contenedor-cesta-1'>
+            <div className='cesta-listProducts'>
+              {
+                product.map((data) => {
+                  if (data.product === '') {
+                    return false;
+                  }
+                  return (
+                    <ListOfProducts
+                      isCesta={true}
+                      key={data.id}
+                      product={data.product}
+                      discount={data.discount}
+                      price={data.price}
+                    />
+                  );
+                })
+              }
+            </div>
+            <div className='cesta-listProducts'>
+              <PagoSeguro />
+              <MetodoDePago />
+            </div>
+          </div>
+          <div className='contenedor-cesta-2'>
+            <div className='botonCesta'>
+              <ButtonComponent location='/pago' color='naranja' name='COMPRAR' />
+            </div>
+          </div>
+        </div>
+
       </div>
     )
   );
