@@ -6,11 +6,19 @@ import TusDatos from '../components/TusDatos';
 import TuVehiculo from '../components/TuVehiculo';
 
 const DatosVehiculares = ({ data }) => {
+  const [datos, setDatos] = React.useState('');
+  console.log(data);
+  if (data.id === undefined && datos === '') {
+    const newData = JSON.parse(data);
+    setDatos(newData.data);
+  } else if (datos === '') {
+    setDatos(data);
+  }
 
   return (
     <div className='Vehi--Container'>
-      <TusDatos isCotizacion nombre={data.OwnerNames} apellido={data.OwnerLastNames} />
-      <TuVehiculo marca={data.CarMake} modelo={data.RegistrationYear} linea={data.CarModel} />
+      <TusDatos isCotizacion nombre={datos.OwnerNames} apellido={datos.OwnerLastNames} />
+      <TuVehiculo marca={datos.CarMake} modelo={datos.RegistrationYear} linea={datos.CarModel} />
     </div>
   );
 };
@@ -18,7 +26,7 @@ const DatosVehiculares = ({ data }) => {
 const mapStateToProps = (state) => {
   console.log('datosvehiculares', state);
   return {
-    data: state.data[0],
+    data: document.cookie || state.data[0],
   };
 };
 
