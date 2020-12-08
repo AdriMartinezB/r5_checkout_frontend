@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../assets/styles/components/bono.scss';
-import moto from '../assets/img/Product/moto.jpg';
+//import moto from '../assets/img/Product/moto.jpg';
 
 const Bono = ({ image, description, name, price }) => {
   return (
