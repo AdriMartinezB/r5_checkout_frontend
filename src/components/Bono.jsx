@@ -17,7 +17,7 @@ const Bono = ({ image, description, name, price }) => {
             {price}
           </span>
         </p>
-        <img className='card__img' src={moto} alt='Imagen Producto' />
+        <img className='card__img' src={image} alt='Imagen Producto' />
       </div>
     </section>
   );
