@@ -39,8 +39,8 @@ export const getDataRequest = (payload, props) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        const dataUser = JSON.stringify(data);
-        document.cookie = `{"data":${dataUser}};max-age=120`;
+        const dataCookie = JSON.stringify(data);
+        document.cookie = `{"data"=${dataCookie}};max-age=600`;
         return dispatch(dataRequest(data));
       })
       .then(() => props.history.push('/cotizacion'))
@@ -61,8 +61,8 @@ export const getDataUser = (email, phone, placa, props) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        // const dataUser = JSON.stringify(data);
-        // document.cookie = `{"dataUser":${dataUser}};max-age=120`;
+        const dataCookie = JSON.stringify(data);
+        document.cookie = `{"dataUser"=${dataCookie}};max-age=600`;
         return dispatch(dataUser(data));
       })
       .then(() => props.history.push('/descuento'))
@@ -82,7 +82,11 @@ export const setDataCarkMarket = (data, props) => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((data) => dispatch(dataCesta(data)))
+      .then((data) => {
+        const dataCookie = JSON.stringify(data);
+        document.cookie = `{"dataCesta"=${dataCookie}};max-age=600`;
+        return dispatch(dataCesta(data));
+      })
       .then(() => props.history.push('/gancho'))
       .catch((err) => dispatch(setError(err)));
   };
@@ -103,7 +107,11 @@ export const getDataCesta = (props) => {
       },
     })
       .then((res) => res.json())
-      .then((data) => dispatch(dataCesta(data)))
+      .then((data) => {
+        const dataCookie = JSON.stringify(data);
+        document.cookie = `{"dataCesta"=${dataCookie}};max-age=600`;
+        return dispatch(dataCesta(data));
+      })
       .then(() => props.history.push('/cesta'))
       .catch((err) => dispatch(setError(err)));
   };

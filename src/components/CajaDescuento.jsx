@@ -4,13 +4,23 @@ import { connect } from 'react-redux';
 import '../assets/styles/components/cajaDescuento.scss';
 
 const CajaDescuento = ({ data }) => {
+  const [datos, setDatos] = React.useState('');
+  if (data.id === undefined && datos === '') {
+    const dataJSON1 = data.replace(/=/g, ':');
+    const dataJSON = dataJSON1.replace(/}; {/g, ',');
+    const newData = JSON.parse(dataJSON);
+    setDatos(newData.dataUser);
+  } else if (datos === '') {
+    setDatos(data);
+  }
+
   return (
     <section className='Descuento'>
       <h2>TU DESCUENTO ES DE:</h2>
       <p>
         $
         {' '}
-        {data.Discount}
+        {datos.Discount}
       </p>
     </section>
   );
@@ -19,7 +29,7 @@ const CajaDescuento = ({ data }) => {
 const mapStateToProps = (state) => {
   console.log('valorDescuento', state);
   return {
-    data: state.dataUser[0],
+    data: document.cookie || state.dataUser[0],
   };
 };
 

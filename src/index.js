@@ -9,6 +9,7 @@ import App from './routes/App';
 const initialState = {
   'placa': [],
   'dataUser': [{
+    'id': 1,
     'Email': 'example@example.com',
     'PhoneNumber': '3210000000',
     'Discount': 0,
@@ -40,7 +41,7 @@ const initialState = {
     },
   ],
   'dataCesta': [
-    { 'message': null },
+    { 'message': null, 'id': 0 },
   ],
 };
 

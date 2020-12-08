@@ -2,25 +2,37 @@ import React from 'react';
 import { connect } from 'react-redux';
 import '../assets/styles/components/figura.scss';
 
-const Figura = ({ data }) => (
-  <div className='precio-figura'>
-    <div className='figura'>
-      <p>PRECIO ANTES DEL DESCUENTO</p>
-      <p>
-        <b>
-          $
-          {' '}
-          {data}
-        </b>
-      </p>
-      <p>Precio establecido por ley*</p>
+const Figura = ({ data }) => {
+  const [datos, setDatos] = React.useState('');
+  if (data.id === undefined && datos === '') {
+    const dataJSON1 = data.replace(/=/g, ':');
+    const dataJSON = dataJSON1.replace(/}; {/g, ',');
+    const newData = JSON.parse(dataJSON);
+    setDatos(newData.data);
+  } else if (datos === '') {
+    setDatos(data);
+  }
+
+  return (
+    <div className='precio-figura'>
+      <div className='figura'>
+        <p>PRECIO ANTES DEL DESCUENTO</p>
+        <p>
+          <b>
+            $
+            {' '}
+            {datos.PriceSoat}
+          </b>
+        </p>
+        <p>Precio establecido por ley*</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const mapStateToProps = (state) => {
   return {
-    data: state.data[0].PriceSoat,
+    data: document.cookie || state.data[0],
   };
 };
 
