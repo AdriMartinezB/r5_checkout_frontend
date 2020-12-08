@@ -5,9 +5,6 @@ import SOAT from '../assets/img/Carrusel/SOAT_1.png';
 import MOTO from '../assets/img/Carrusel/Seguro_moto.png';
 import HUELLITAS from '../assets/img/Carrusel/Seguro_huellitas.png';
 import CREDITO from '../assets/img/Carrusel/Credito.png'
-import Flecha_izq from '../assets/img/Carrusel/Flecha_ampliar_izquierda.png';
-import Flecha_der from '../assets/img/Carrusel/Flecha_ampliar_derecha.png'
-
 
 const Carrusel = () => {
     return(
