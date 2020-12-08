@@ -7,9 +7,10 @@ import TuVehiculo from '../components/TuVehiculo';
 
 const DatosVehiculares = ({ data }) => {
   const [datos, setDatos] = React.useState('');
-  console.log(data);
   if (data.id === undefined && datos === '') {
-    const newData = JSON.parse(data);
+    const dataJSON1 = data.replace(/=/g, ':');
+    const dataJSON = dataJSON1.replace(/}; {/g, ',');
+    const newData = JSON.parse(dataJSON);
     setDatos(newData.data);
   } else if (datos === '') {
     setDatos(data);
