@@ -1,8 +1,11 @@
 .card {
   background: #FFFFFF;
   border-radius: 10px 10px 0 0;
-  height: 120px;
+  height: 180px;
   width: 100%;
+}
+
+.card__content{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -13,23 +16,34 @@
   text-align: left;
   font-size: 16px;
   margin: 10px 10px 10px 20px;
-  display: flex;
   width: 40%;
 }
 
 .card__img {
-  border-radius: 95% 5% 0% 0% / 100% 5% 0% 0% ;
-  height: 120px;
-  right: 0;
-  width: 60%;
+  border-radius: 0 10px 0 0;
+  height: 180px;
+  display: flex;
+  max-width: 200px;
+  clip-path: ellipse(100% 100% at 100% 100%);
 }
 
-@media only screen and (max-width: 650px){
-  .card__texto {
-    width: 55%;
+
+
+@media only screen and (max-width: 750px){
+
+  .gancho{
+    width: 100%;
   }
 
-  .card__img {
-    width: 45%;
+  .gancho__container{
+    width: 100%;
+  }
+
+  .gancho__container--contenido{
+    width: 90%;
+  }
+
+  .gancho__contenedor--grupo .losbonos {
+    width: 90%;
   }
 }
