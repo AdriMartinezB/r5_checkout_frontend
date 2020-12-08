@@ -116,3 +116,27 @@ export const getDataCesta = (props) => {
       .catch((err) => dispatch(setError(err)));
   };
 };
+
+export const updateDataCesta = (data, params) => {
+  return (dispatch) => {
+    const phonenumber = props.data.PhoneNumber;
+    const email = props.data.Email;
+    fetch('https://heroprodev.herokuapp.com/api/marketCarts', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Token': 1234,
+        phonenumber,
+        email,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const dataCookie = JSON.stringify(data);
+        document.cookie = `{"dataCesta"=${dataCookie}};max-age=600`;
+        return dispatch(dataCesta(data));
+      })
+      .then(() => props.history.push('/cesta'))
+      .catch((err) => dispatch(setError(err)));
+  };
+};
