@@ -27,7 +27,6 @@ const CajaDescuento = ({ data }) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log('valorDescuento', state);
   return {
     data: document.cookie || state.dataUser[0],
   };

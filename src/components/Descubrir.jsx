@@ -1,3 +1,5 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/button-has-type */
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -18,7 +20,7 @@ const Descubrir = (props) => {
     const dataJSON1 = props.data.replace(/=/g, ':');
     const dataJSON = dataJSON1.replace(/}; {/g, ',');
     const newData = JSON.parse(dataJSON);
-    console.log(newData);
+
     setPlaca(newData.data.RegistrationNumber);
   } else if (placa === '') {
     setPlaca(props.data.RegistrationNumber);
@@ -71,7 +73,6 @@ const Descubrir = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log('descubrir', state);
   return {
     data: document.cookie || state.data[0],
   };

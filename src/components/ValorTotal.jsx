@@ -56,7 +56,6 @@ const ValorTotal = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log('valorTotal', state);
   return {
     data: document.cookie || state.dataUser[0],
   };
