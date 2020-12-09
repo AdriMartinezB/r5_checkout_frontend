@@ -5,7 +5,7 @@ import ResumenList from './ResumenList';
 
 const Resumen = (props) => {
   const [error, setError] = React.useState(false);
-  const { products, user } = props;
+  const { products, cesta } = props;
   console.log('resumen products', products);
   if (products.length === 0) {
     setError(true);
@@ -35,7 +35,7 @@ const Resumen = (props) => {
         <h2>TOTAL</h2>
         <p>
           $
-          {user.PriceDiscount}
+          {cesta.Total}
         </p>
       </div>
 

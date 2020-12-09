@@ -93,7 +93,7 @@ const Pago = ({ data }) => {
               })
           }
         </div>
-        <Resumen user={user} products={newProducts} />
+        <Resumen products={newProducts} cesta={cesta} />
 
         <ButtonComponent location='/confirmacion/' name='PAGAR $' color='naranja' />
 
