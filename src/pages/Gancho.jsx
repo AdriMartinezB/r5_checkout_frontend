@@ -41,7 +41,7 @@ const Gancho = (props) => {
   };
 
   return (
-    loading ? <section className='gancho'><h1>Loading...</h1></section> : (
+    loading ? <section className='gancho'><h6 className='loading'>Loading...</h6></section> : (
       <section className='gancho'>
         <div className='gancho__container'>
           <div className='gancho__container--contenido'>

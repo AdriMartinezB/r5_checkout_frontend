@@ -34,7 +34,7 @@ const ValorTotal = (props) => {
   return (
     loading ? (
       <section className='valor'>
-        <h1>Loading...</h1>
+        <h6 className='loading'>Loading...</h6>
       </section>
     ) : (
       <section className='valor'>
