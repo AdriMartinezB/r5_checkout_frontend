@@ -63,7 +63,7 @@ const Gancho = (props) => {
   };
 
   return (
-    loading ? <section className='gancho'><h1>Loading...</h1></section> : (
+    loading ? <section className='gancho'><h6 className='loading'>Loading...</h6></section> : (
       <section className='gancho'>
         <div className='gancho__header'>
           <div className='gancho__header--articulos'>
@@ -84,7 +84,7 @@ const Gancho = (props) => {
               services.map((data) => (
                 <div className='losbonos' key={data.id}>
                   <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
-                  <button className='naranjab' type='button' onClick={() => handleAdd(data)}>Añadir a cesta</button>
+                  <button className='naranjab' onClick={() => handleAdd(data)}>Añadir a cesta</button>
                 </div>
               ))
             }

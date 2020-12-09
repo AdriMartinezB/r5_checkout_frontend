@@ -1,10 +1,11 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { setDataCarkMarket } from '../actions';
 
 import '../assets/styles/components/valorTotal.scss';
-import ButtonComponent from './ButtonComponent';
 
 const ValorTotal = (props) => {
   const [loading, setLoading] = React.useState(false);
@@ -33,7 +34,7 @@ const ValorTotal = (props) => {
   return (
     loading ? (
       <section className='valor'>
-        <h1>Loading...</h1>
+        <h6 className='loading'>Loading...</h6>
       </section>
     ) : (
       <section className='valor'>
