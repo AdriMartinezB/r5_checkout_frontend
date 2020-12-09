@@ -7,7 +7,6 @@ import reducer from './reducers';
 import App from './routes/App';
 
 const initialState = {
-  'placa': [],
   'dataUser': [{
     'id': 1,
     'Email': 'example@example.com',

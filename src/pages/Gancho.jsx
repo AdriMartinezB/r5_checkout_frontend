@@ -36,6 +36,10 @@ const Gancho = (props) => {
     props.getDataCesta(props);
   };
 
+  const handleAdd = () => {
+    console.log('add');
+  };
+
   return (
     loading ? <section className='gancho'><h1>Loading...</h1></section> : (
       <section className='gancho'>
@@ -46,12 +50,10 @@ const Gancho = (props) => {
               Se añadio un nuevo artículo. Ahora tienes un producto en tu cesta
             </p>
           </div>
-          {/* <ButtonClose location='/descuento' /> */}
         </div>
         <div className='gancho__botones'>
           <ButtonComponent location='/' color='verde' name='Regresar al Home' />
           <button className='verde' onClick={handleClick}>Ver Cesta</button>
-          {/* <ButtonComponent location='/cesta' color='verde' name='Ver Cesta' /> */}
         </div>
         <div className='gancho__contenedor'>
           <p className='texto-gancho'>Los clientes que compraron este producto también compraron:</p>
@@ -60,7 +62,7 @@ const Gancho = (props) => {
               services.map((data) => (
                 <div className='losbonos' key={data.id}>
                   <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
-                  <button className='naranjab'>Añadir a cesta</button>
+                  <button className='naranjab' onClick={handleAdd}>Añadir a cesta</button>
                 </div>
               ))
             }
