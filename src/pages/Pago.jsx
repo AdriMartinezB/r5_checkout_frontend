@@ -87,8 +87,7 @@ const Pago = ({ data }) => {
                     isCesta={false}
                     key={data.id}
                     product={data.product}
-                    discount={data.discount}
-                    price={data.price}
+                    price={data.price - data.discount}
                   />
                 );
               })

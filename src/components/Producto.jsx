@@ -59,9 +59,6 @@ const Producto = (props) => {
 
       <div className='product-header'>
         <h2>
-          {isCesta ? (
-            <input type='checkbox' name='checkbox' id='1' />
-          ) : (<div />)}
           {product}
         </h2>
         {isCesta && props.data.product !== 'SOAT' ? (
