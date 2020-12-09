@@ -1,6 +1,5 @@
 .carrusel {
-    background: linear-gradient(to top, rgba(57,26,125,1) 0%,  rgba(0,206,158,1)100%);
-    width: 100%;
+    /* background: linear-gradient(to top, rgba(57,26,125,1) 0%,  rgba(0,206,158,1)100%); */
     /* overflow: scroll; */
     padding:0px;
     position: relative; //Todos los elementos se vana  aposicionar en relacion al padre. 
@@ -11,6 +10,10 @@
     white-space: nowrap; //No nos envuelva
     margin: 50px 0; //Espacio entre elementos 70px
     padding-bottom: 10px; //padding de abajo
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carrusel-item {
@@ -34,6 +37,7 @@
 .carrusel__container:hover .carrusel-item{
     opacity: 0.3; //Cuando seleccione uno de los elementos el resto tendra una opacidad
 }
+
 
 .carrusel__container:hover .carrusel-item:hover {
     transform: scale(1.3);
