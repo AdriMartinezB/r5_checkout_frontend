@@ -7,6 +7,9 @@ import reducer from './reducers';
 import App from './routes/App';
 
 const initialState = {
+  'error': [{
+    'message': 'false',
+  }],
   'update': [{
     'message': 'error',
   }],

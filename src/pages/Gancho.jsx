@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable radix */
 /* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -14,6 +15,23 @@ import Bono from '../components/Bono';
 const Gancho = (props) => {
   const [loading, setLoading] = React.useState(true);
   const [services, setServices] = React.useState([]);
+  const [datos, setDatos] = React.useState('');
+  if (props.data.id === undefined && datos === '') {
+    const dataJSON1 = props.data.replace(/=/g, ':');
+    const dataJSON = dataJSON1.replace(/}; {/g, ',');
+    const newData = JSON.parse(dataJSON);
+    setDatos(newData.dataUser);
+  } else if (datos === '') {
+    setDatos(props.data);
+  }
+
+  const upData = {
+    data: {
+      Email: datos.Email,
+      PhoneNumber: datos.PhoneNumber,
+    },
+    history: props.history,
+  };
   const getServices = () => {
     fetch('https://heroprodev.herokuapp.com/api/services', {
       method: 'GET',
@@ -34,32 +52,32 @@ const Gancho = (props) => {
   };
   const handleClick = () => {
     setLoading(true);
-    props.getDataCesta(props);
+    props.getDataCesta(upData);
   };
 
-  const handleAdd = async (data) => {
-    const id = await parseInt(data.id.toString().substring(1, 2));
+  const handleAdd = (data) => {
+    const id = parseInt(data.id.toString().substring(1, 2));
     if (id === 2) {
       const upData2 = {
         ProductName2: data.SureName,
         Discount2: data.Discount || 0,
         Price2: data.Price,
       };
-      props.updateDataCesta(upData2, props);
+      props.updateDataCesta(upData2, upData);
     } else if (id === 3) {
       const upData3 = {
         ProductName3: data.SureName,
         Discount3: data.Discount || 0,
         Price3: data.Price,
       };
-      props.updateDataCesta(upData3, props);
+      props.updateDataCesta(upData3, upData);
     } else if (id === 4) {
       const upData4 = {
         ProductName2: data.SureName,
         Discount2: data.Discount || 0,
         Price2: data.Price,
       };
-      props.updateDataCesta(upData4, props);
+      props.updateDataCesta(upData4, upData);
     }
   };
 
@@ -84,7 +102,7 @@ const Gancho = (props) => {
                 services.map((data) => (
                   <div className='losbonos' key={data.id}>
                     <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
-                    <button className='naranjab' onClick={handleAdd}>Añadir a cesta</button>
+                    <button className='naranjab' onClick={() => handleAdd(data)}>Añadir a cesta</button>
                   </div>
                 ))
               }
@@ -99,7 +117,7 @@ const Gancho = (props) => {
 const mapStateToProps = (state) => {
   console.log('datosvehiculares', state);
   return {
-    data: state.dataUser[0],
+    data: document.cookie || state.dataUser[0],
   };
 };
 

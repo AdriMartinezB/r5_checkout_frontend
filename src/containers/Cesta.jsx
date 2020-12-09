@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { getDataRequest } from '../actions';
 
 import '../assets/styles/containers/cesta.scss';
 import PasoPaso1 from '../assets/img/pasoPaso1.png';
@@ -10,20 +11,18 @@ import MetodoDePago from '../components/MetodoDePago';
 import PagoSeguro from './PagoSeguro';
 import ListOfProducts from './ListOfProducts';
 
-const Cesta = ({ data }) => {
-
+const Cesta = (props) => {
   const [error, setError] = React.useState(false);
   const [product, setProduct] = React.useState([]);
   const [datos, setDatos] = React.useState('');
-  if (data.id === undefined && datos === '') {
-    const dataJSON1 = data.replace(/=/g, ':');
+  if (props.data.id === undefined && datos === '') {
+    const dataJSON1 = props.data.replace(/=/g, ':');
     const dataJSON = dataJSON1.replace(/}; {/g, ',');
     const newData = JSON.parse(dataJSON);
     setDatos(newData.dataCesta);
   } else if (datos === '') {
-    setDatos(data);
+    setDatos(props.data);
   }
-  console.log(datos);
   if (datos.message !== 'Ok' && error === false) {
     console.log('data undefined');
     setError(true);
@@ -61,6 +60,9 @@ const Cesta = ({ data }) => {
                         product={data.product}
                         discount={data.discount}
                         price={data.price}
+                        Email={datos.Email}
+                        PhoneNumber={datos.PhoneNumber}
+                        info={props.history}
                       />
                     );
                   })
@@ -89,5 +91,8 @@ const mapStateToProps = (state) => {
     data: document.cookie || state.dataCesta[0],
   };
 };
+const mapDispatchToProps = {
+  getDataRequest,
+};
 
-export default withRouter(connect(mapStateToProps, null)(Cesta));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Cesta));

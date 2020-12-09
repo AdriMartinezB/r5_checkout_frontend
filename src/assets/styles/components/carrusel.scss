@@ -1,27 +1,25 @@
 .carousel {
-    background: linear-gradient(to top, rgba(0,206,158,1) 0%, rgba(57,26,125,1) 100%);
+    background: linear-gradient(to bottom, rgba(57,26,125,1) 0%,  rgba(0,206,158,1)100%);
     width: 100%;
-    padding: 0px;
     position: relative;
     align-items: center;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
-.carousel__container {
+.carousel a{
+    display: flex;
+}
+
+.carousel__container {    //acaaaaaaaaa esta
     white-space: nowrap;
-    margin: 20px 0px;
-    /* overflow: hidden; */
+    margin: 0 20px;
+    max-width: 1550px;
+    overflow: hidden;
 }
 
-.carousel-buttom__img{
-    background: transparent;
-    border: transparent;
-    cursor: pointer;
-    outline: none;
-}
-
-.carousel-item {
+.carousel-item {   //Como tal la tarjeta
     background-color: rgb(226, 218, 217);
     width: 100%;
     height: 350px;
@@ -35,29 +33,16 @@
     position: relative;
 }
 
-.carousel-item:hover ~ .carousel-item{
-    transform: translate3d(100px, 0, 0);
-}
-
-.carousel__container:hover .carousel-item {
-    opacity: 0.3;
-}
-
-.carousel__container:hover .carousel-item:hover {
-    opacity: 1;
-}
-
-.carousel-item__img {
+.carousel-item__img { //que tan grandes se van a ver las imagenes
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.carousel-item__details {
+.carousel-item__details { //Parte interna de la tarjeta
     background: linear-gradient(to top rgba (0, 0, 0, 0.9) 0%, rgba (0, 0, 0, 0) 100%);
     font-size: 10px;
     opacity: 1;
-    /* transition: 450ms opacity; */
     padding: 10px;
     position: absolute;
     top: 0;
@@ -70,12 +55,94 @@
     color: rgb(255, 255, 255);
     text-shadow:2px 2px 2px black;
     width: 50%;
+    justify-content: space-between;
+    width: 700px;
 }
 
-.carousel-item__details p{
-    margin:2px 0px;
+.botonCotizar button {
+    margin-bottom: 15px;
 }
 
 .carousel-item__details--title{
-    font-size: 12px;
+    font-size: 60px;
+    margin-left: 45px;
+}
+
+.carousel__container ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    padding-inline-start: 0px;
+    animation: cambio 20s infinite;
+}
+
+.carousel__container li{
+    width: 100%;
+    list-style: none;
+}
+
+.carousel__container img{
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes cambio{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+
+}
+
+@media only screen and (max-width: 690px){
+    .carousel-buttom__img{
+        display: none;
+    }
+
+    .botonCotizar {
+        margin: 5px;
+        width: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 360px){
+    .carousel__container{
+        margin: 15px;
+    }
+
+    .carousel-item__details--title{
+        font-size: 40px;
+        margin-left: 10px;
+    }
+
+    #img__soat{
+        content: url(../../img/Carrusel/SOAT_2.png);
+    }
+
+    #img__moto{
+        content: url(../../img/Carrusel/Seguro_moto_1.png);
+    }
+
+    #img__huella{
+        content: url(../../img/Carrusel/Seguro_huellitas_1.png);
+    }
+
+    #img__credito{
+        content: url(../../img/Carrusel/Credito_1.png);
+    }
+
+    .botonCotizar button {
+        margin-bottom: 0px;
+        height: 30px;
+        width: 50%;
+    }
+        
 }
