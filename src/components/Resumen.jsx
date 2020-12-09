@@ -1,31 +1,42 @@
 import React from 'react';
 
 import '../assets/styles/components/resumen.scss';
+import ResumenList from './ResumenList';
 
-const Resumen = () => {
+const Resumen = (props) => {
+  const [error, setError] = React.useState(false);
+  const { products, user } = props;
+  console.log('resumen products', products);
+  if (products.length === 0) {
+    setError(true);
+  }
   return (
     <section className='Resumen'>
 
       <h1 className='Resumen-title'>RESUMEN DE PEDIDO</h1>
 
-      <div className='Resumen-info-container'>
-        <div className='Resumen-info'>
-          <h2>SOAT placa BLM074</h2>
-          <p>455.400</p>
-        </div>
-        <div className='Resumen-info'>
-          <h2>Seguro Motocicleta</h2>
-          <p>63.000</p>
-        </div>
-        <div className='Resumen-info'>
-          <h2>Costo transaccional</h2>
-          <p>0</p>
-        </div>
-      </div>
+      {
+        error ? <div /> :
+          products.map((data) => {
+            if (data.product === '') {
+              return false;
+            }
+            return (
+              <ResumenList
+                key={data.id}
+                product={data.product}
+                price={data.price - data.discount}
+              />
+            );
+          })
+      }
 
       <div className='Resumen-total'>
         <h2>TOTAL</h2>
-        <p>$518.400</p>
+        <p>
+          $
+          {user.PriceDiscount}
+        </p>
       </div>
 
     </section>

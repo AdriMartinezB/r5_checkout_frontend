@@ -7,59 +7,94 @@ import Resumen from '../components/Resumen';
 import TusDatos from '../components/TusDatos';
 import ListOfProducts from '../containers/ListOfProducts';
 import ButtonComponent from '../components/ButtonComponent';
+import useCookie from '../hooks/useCookie';
 
 const Pago = ({ data }) => {
+  const [error, setError] = React.useState(false);
+  const [product, setProduct] = React.useState([]);
+  const [cesta, setCesta] = React.useState('');
+  const [soat, setSoat] = React.useState('');
+  const [user, setUser] = React.useState('');
+
   console.log('esta jhair data', data);
 
-  const [datos, setDatos] = React.useState('');
-  if (data.id === undefined && datos === '') {
-    const dataJSON1 = data.replace(/=/g, ':');
-    const dataJSON = dataJSON1.replace(/}; {/g, ',');
-    const newData = JSON.parse(dataJSON);
-    setDatos(newData);
-    console.log('new data jhair', newData[0]);
-  } else if (datos === '') {
-    setDatos(data);
-  }
+  const Soat = (data, soat, setSoat) => {
+    if (data.id === undefined && soat === '') {
+      return setSoat(useCookie(data).data);
+    } if (soat === '') {
+      return setSoat(data);
+    }
+  };
+  const Cesta = (data, cesta, setCesta) => {
+    if (data.id === undefined && cesta === '') {
+      return setCesta(useCookie(data).dataCesta);
+    } if (cesta === '') {
+      return setCesta(data);
+    }
+  };
+  const User = (data, user, setUser) => {
+    if (data.id === undefined && user === '') {
+      return setUser(useCookie(data).dataUser);
+    } if (user === '') {
+      return setUser(data);
+    }
+  };
 
-  const soat = datos.data;
-  const cesta = datos.dataCesta;
-  const user = datos.dataUser;
+  Soat(data, soat, setSoat);
+  Cesta(data, cesta, setCesta);
+  User(data, user, setUser);
 
-  console.log('esta jhair soat', soat);
-  console.log('esta jhair datos', cesta);
-  console.log('esta jhair datos', user);
+  console.log('soat jhair', soat.OwnerLastNames);
+  console.log('cesta jhair', cesta);
+  console.log('user jhair', user);
 
-  /*  const [product, setProduct] = React.useState([]);
-  if (datos.message !== 'Ok') {
+  const newProducts = [
+    { id: 1, product: cesta.ProductName1, discount: cesta.Discount1, price: cesta.Price1 },
+    { id: 2, product: cesta.ProductName2 || '', discount: cesta.Discount2 || 0, price: cesta.Price2 || 0 },
+    { id: 3, product: cesta.ProductName3 || '', discount: cesta.Discount3 || 0, price: cesta.Price3 || 0 }];
+
+  if (cesta.message !== 'Ok' && error === false) {
     console.log('data undefined');
+    setError(true);
   } else {
-    const newProducts = [
-      { id: 1, product: data.ProductName1, discount: data.Discount1, price: data.Price1 },
-      { id: 2, product: data.ProductName2 || '', discount: data.Discount2 || 0, price: data.Price2 || 0 },
-      { id: 3, product: data.ProductName3 || '', discount: data.Discount3 || 0, price: data.Price3 || 0 }];
+    newProducts;
     if (product.length === 0) {
       console.log(newProducts);
       setProduct(newProducts);
+      setError(false);
     }
-  } */
+  }
   return (
     <section className='pago-container'>
       <div className='pago'>
         <h1 className='pago-title'>Pago</h1>
-        <TusDatos />
+        <TusDatos
+          nombre={soat.OwnerNames}
+          apellido={soat.OwnerLastNames}
+          correo={user.Email}
+          telefono={user.PhoneNumber}
+        />
         <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='naranja' />
         <div className='containerList'>
-
-          <ListOfProducts
-            isCesta={false}
-            key={data.id}
-            product={data.product}
-            discount={data.discount}
-            price={data.price}
-          />
+          {
+            error ? <h1>Cesta vacia</h1> :
+              product.map((data) => {
+                if (data.product === '') {
+                  return false;
+                }
+                return (
+                  <ListOfProducts
+                    isCesta={false}
+                    key={data.id}
+                    product={data.product}
+                    discount={data.discount}
+                    price={data.price}
+                  />
+                );
+              })
+          }
         </div>
-        <Resumen />
+        <Resumen user={user} products={newProducts} />
 
         <ButtonComponent location='/confirmacion/' name='PAGAR $' color='naranja' />
 
