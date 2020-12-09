@@ -1,3 +1,4 @@
+/* eslint-disable radix */
 /* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/anchor-is-valid */
@@ -36,8 +37,8 @@ const Gancho = (props) => {
     props.getDataCesta(props);
   };
 
-  const handleAdd = async(data) => {
-    let id = await parseInt(data.id.toString().substring(1, 2));
+  const handleAdd = async (data) => {
+    const id = await parseInt(data.id.toString().substring(1, 2));
     if (id === 2) {
       const upData2 = {
         ProductName2: data.SureName,
@@ -65,29 +66,29 @@ const Gancho = (props) => {
   return (
     loading ? <section className='gancho'><h6 className='loading'>Loading...</h6></section> : (
       <section className='gancho'>
-        <div className='gancho__header'>
-          <div className='gancho__header--articulos'>
+        <div className='gancho__container--contenido'>
+          <div className='gancho__header'>
             <span className='check'>&#10004;</span>
             <p>
               Se añadio un nuevo artículo. Ahora tienes un producto en tu cesta
             </p>
           </div>
-        </div>
-        <div className='gancho__botones'>
-          <ButtonComponent location='/' color='verde' name='Regresar al Home' />
-          <button className='verde' onClick={handleClick}>Ver Cesta</button>
-        </div>
-        <div className='gancho__contenedor'>
-          <p className='texto-gancho'>Los clientes que compraron este producto también compraron:</p>
-          <div className='gancho__contenedor--grupo'>
-            {
-              services.map((data) => (
-                <div className='losbonos' key={data.id}>
-                  <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
-                  <button className='naranjab' onClick={() => handleAdd(data)}>Añadir a cesta</button>
-                </div>
-              ))
-            }
+          <div className='gancho__botones'>
+            <ButtonComponent location='/' color='verde' name='Regresar al Home' />
+            <button className='verde' onClick={handleClick}>Ver Cesta</button>
+          </div>
+          <div className='gancho__contenedor'>
+            <p className='texto-gancho'>Los clientes que compraron este producto también compraron:</p>
+            <div className='gancho__contenedor--grupo'>
+              {
+                services.map((data) => (
+                  <div className='losbonos' key={data.id}>
+                    <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
+                    <button className='naranjab' onClick={handleAdd}>Añadir a cesta</button>
+                  </div>
+                ))
+              }
+            </div>
           </div>
         </div>
       </section>
