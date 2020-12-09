@@ -1,7 +1,6 @@
 .carousel {
     background: linear-gradient(to bottom, rgba(57,26,125,1) 0%,  rgba(0,206,158,1)100%);
     width: 100%;
-    padding:0 10px 10px 10px ;
     position: relative;
     align-items: center;
     display: flex;
@@ -16,7 +15,7 @@
 .carousel__container {    //acaaaaaaaaa esta
     white-space: nowrap;
     margin: 0 20px;
-    max-width: 1350px;
+    max-width: 1550px;
     overflow: hidden;
 }
 
@@ -101,109 +100,49 @@
     100% {margin-left: -300%;}
 
 }
-/* .menu ul{
-    justify-content: space-between;
-}
-
-.menu{
-    text-align: center;
-    margin: 3px;
-}
-
-.menu li{
-    display:inline-block;
-    text-align: center;
-}
-
-.menu li a{
-    display: inline-block;
-    text-decoration: none;
-    background-color: white;
-    padding: 0px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    margin-left: 13px;
-}
-
-ul.slider li:first-child{
-    opacity: 1;
-}
-
-ul.slider li:target{
-    opacity: 1;
-} */
-
-.navigation-manual{
-    position: absolute;
-    width: 100%;
-    margin-top: -20px;
-    display: flex;
-    justify-content: center;
-}
-
-.manual-btn {
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.manual-btn:not(:last-child){
-    margin-right: 20px;
-}
-
-.manual-btn:hover{
-    background: white;
-}
-
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-
-#radio2:checked ~ .first{
-    margin-left: -20%;
-}
-
-#radio3:checked ~ .first{
-    margin-left: -40%;
-}
-
-#radio4:checked ~ .first{
-    margin-left: -60%;
-}
-/* @media only screen and (max-width: 930px){
-    .carousel-buttom__img{
-        display: none;
-    }
-
-    .carousel-item__img {
-        object-fit: cover;
-        content: url(../../img/Carrusel/SOAT_2.png);
-        width: 100%;
-        height: 100%;
-
-    }
-
-    ul.slider li img {
-        width: 100%;
-        height: 100%px;
-    }    
-}
 
 @media only screen and (max-width: 690px){
     .carousel-buttom__img{
         display: none;
     }
 
-    .carousel-item__img {
-        object-fit: cover;
-        content: url(../../img/Carrusel/SOAT.png);
-    }
-
     .botonCotizar {
         margin: 5px;
         width: 50%;
     }
-} */
+}
+
+
+@media only screen and (max-width: 360px){
+    .carousel__container{
+        margin: 15px;
+    }
+
+    .carousel-item__details--title{
+        font-size: 40px;
+        margin-left: 10px;
+    }
+
+    #img__soat{
+        content: url(../../img/Carrusel/SOAT_2.png);
+    }
+
+    #img__moto{
+        content: url(../../img/Carrusel/Seguro_moto_1.png);
+    }
+
+    #img__huella{
+        content: url(../../img/Carrusel/Seguro_huellitas_1.png);
+    }
+
+    #img__credito{
+        content: url(../../img/Carrusel/Credito_1.png);
+    }
+
+    .botonCotizar button {
+        margin-bottom: 0px;
+        height: 30px;
+        width: 50%;
+    }
+        
+}
