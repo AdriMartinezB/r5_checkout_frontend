@@ -13,7 +13,8 @@ const Carrusel = () => {
                 
             <div className = 'carousel__container'>
                 <ul className = 'slider'>
-                    <li id = 'slider1'>
+
+                    <li className = 'slider1'>
                         <div className = 'carousel-item'>
                             <img className = 'carousel-item__img' src={SOAT} alt="soat"/>
                             <div className = 'carousel-item__details'>
@@ -25,7 +26,7 @@ const Carrusel = () => {
                         </div>
                     </li>
 
-                    <li id = 'slider2'>
+                    <li className = 'slider2'>
                         <div className = 'carousel-item'>
                             <img className = 'carousel-item__img' src={MOTO} alt="seguro de moto"/>
                             <div className = 'carousel-item__details'>
@@ -37,7 +38,7 @@ const Carrusel = () => {
                         </div>
                     </li>
 
-                    <li id = 'slider3'>
+                    <li className = 'slider3'>
                         <div className = 'carousel-item'>
                             <img className = 'carousel-item__img' src={HUELLITAS} alt="Seguro de huellitasT"/>
                             <div className = 'carousel-item__details'>
@@ -49,7 +50,7 @@ const Carrusel = () => {
                         </div>
                     </li>
 
-                    <li id = 'slider4'>
+                    <li className = 'slider4'>
                         <div className = 'carousel-item'>
                             <img className = 'carousel-item__img' src={CREDITO} alt="credito"/>
                             <div className = 'carousel-item__details'>
@@ -60,11 +61,18 @@ const Carrusel = () => {
                             </div>
                         </div>
                     </li>
+                    <div className = 'navigation-auto'>
+                        <div className = 'auto-btn1'></div>
+                        <div className = 'auto-btn2'></div>
+                        <div className = 'auto-btn3'></div>
+                        <div className = 'auto-btn4'></div>
+                    </div>
                 </ul>
 
-            </div>
+            </div>            
             
         </div>
+
 
         
     )

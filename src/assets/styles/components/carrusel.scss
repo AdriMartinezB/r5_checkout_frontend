@@ -15,7 +15,7 @@
 
 .carousel__container {    //acaaaaaaaaa esta
     white-space: nowrap;
-    margin: 20px 20px 0px 20px;
+    margin: 0 20px;
     max-width: 1350px;
     overflow: hidden;
 }
@@ -134,7 +134,45 @@ ul.slider li:target{
     opacity: 1;
 } */
 
+.navigation-manual{
+    position: absolute;
+    width: 100%;
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+}
 
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+.manual-btn:hover{
+    background: white;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
 /* @media only screen and (max-width: 930px){
     .carousel-buttom__img{
         display: none;
