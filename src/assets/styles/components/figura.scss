@@ -14,8 +14,14 @@
   clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
 }
 
-.figura b {
-  font-size: 20px;
+.valordelproducto{
+  line-height: 30px;
+  font-size: 35px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  margin: 1px auto 10px;
+  text-shadow: 1px 2px 2px #391a7d;
 }
 
 @media only screen and (max-width: 550px) {

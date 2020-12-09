@@ -17,12 +17,10 @@ const Figura = ({ data }) => {
     <div className='precio-figura'>
       <div className='figura'>
         <p>PRECIO ANTES DEL DESCUENTO</p>
-        <p>
-          <b>
-            $
-            {' '}
-            {datos.PriceSoat}
-          </b>
+        <p className='valordelproducto'>
+          $
+          {' '}
+          {datos.PriceSoat}
         </p>
         <p>Precio establecido por ley*</p>
       </div>
