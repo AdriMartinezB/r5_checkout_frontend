@@ -43,8 +43,8 @@ const Gancho = (props) => {
   return (
     loading ? <section className='gancho'><h1>Loading...</h1></section> : (
       <section className='gancho'>
-        <div className='gancho__header'>
-          <div className='gancho__header--articulos'>
+        <div className='gancho__container'>
+          <div className='gancho__header'>
             <span className='check'>&#10004;</span>
             <p>
               Se añadio un nuevo artículo. Ahora tienes un producto en tu cesta
