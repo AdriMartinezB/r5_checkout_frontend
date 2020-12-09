@@ -5,19 +5,21 @@ import '../assets/styles/components/bono.scss';
 
 const Bono = ({ image, description, name, price }) => {
   return (
-    <div className='card'>
-      <p className='card__texto'>
-        {name}
-        {' '}
-        {description}
-      </p>
-      <img className='card__img' src={image} alt='Imagen Producto' />
-      <span>
-        $
-        {' '}
-        {price}
-      </span>
-    </div>
+    <section className='card'>
+      <div className='card__content'>
+        <p className='card__texto'>
+          {name}
+          {' '}
+          {description}
+          {' '}
+          <span>
+            $
+            {price}
+          </span>
+        </p>
+        <img className='card__img' src={image} alt='Imagen Producto' />
+      </div>
+    </section>
   );
 };
 

@@ -8,6 +8,7 @@ import TuVehiculo from '../components/TuVehiculo';
 const DatosVehiculares = ({ data }) => {
   const [datos, setDatos] = React.useState('');
   if (data.id === undefined && datos === '') {
+    console.log('data cookied', data);
     const dataJSON1 = data.replace(/=/g, ':');
     const dataJSON = dataJSON1.replace(/}; {/g, ',');
     const newData = JSON.parse(dataJSON);

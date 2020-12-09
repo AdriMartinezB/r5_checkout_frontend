@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
@@ -46,9 +47,7 @@ const Gancho = (props) => {
           <div className='gancho__header--articulos'>
             <span className='check'>&#10004;</span>
             <p>
-              Se añadio un nuevo artículo. Ahora tienes un producto
-              {' '}
-              en tu cesta
+              Se añadio un nuevo artículo. Ahora tienes un producto en tu cesta
             </p>
           </div>
         </div>
@@ -63,7 +62,7 @@ const Gancho = (props) => {
               services.map((data) => (
                 <div className='losbonos' key={data.id}>
                   <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
-                  <button className='naranjab' onClick={handleAdd} >Agregar a la cesta </button>
+                  <button className='naranjab' onClick={handleAdd}>Añadir a cesta</button>
                 </div>
               ))
             }
