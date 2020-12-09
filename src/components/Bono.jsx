@@ -1,18 +1,21 @@
 import React from 'react';
 
 import '../assets/styles/components/bono.scss';
-//import moto from '../assets/img/Product/moto.jpg';
 
 const Bono = ({ image, description, name, price }) => {
   return (
     <section className='card'>
       <div className='card__content'>
         <p className='card__texto'>
-          {name}
+          <span className='spannombre'>
+            {name}
+          </span>
+          <br />
           {' '}
           {description}
           {' '}
-          <span>
+          <br />
+          <span className='spanprecio'>
             $
             {price}
           </span>
