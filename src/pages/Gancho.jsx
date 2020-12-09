@@ -5,7 +5,7 @@ import React from 'react';
 import '../assets/styles/pages/gancho.scss';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { getDataCesta } from '../actions';
+import { getDataCesta, updateDataCesta } from '../actions';
 
 import ButtonComponent from '../components/ButtonComponent';
 import Bono from '../components/Bono';
@@ -36,8 +36,30 @@ const Gancho = (props) => {
     props.getDataCesta(props);
   };
 
-  const handleAdd = () => {
-    console.log('add');
+  const handleAdd = async(data) => {
+    let id = await parseInt(data.id.toString().substring(1, 2));
+    if (id === 2) {
+      const upData2 = {
+        ProductName2: data.SureName,
+        Discount2: data.Discount || 0,
+        Price2: data.Price,
+      };
+      props.updateDataCesta(upData2, props);
+    } else if (id === 3) {
+      const upData3 = {
+        ProductName3: data.SureName,
+        Discount3: data.Discount || 0,
+        Price3: data.Price,
+      };
+      props.updateDataCesta(upData3, props);
+    } else if (id === 4) {
+      const upData4 = {
+        ProductName2: data.SureName,
+        Discount2: data.Discount || 0,
+        Price2: data.Price,
+      };
+      props.updateDataCesta(upData4, props);
+    }
   };
 
   return (
@@ -62,7 +84,7 @@ const Gancho = (props) => {
               services.map((data) => (
                 <div className='losbonos' key={data.id}>
                   <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
-                  <button className='naranjab' onClick={handleAdd}>Añadir a cesta</button>
+                  <button className='naranjab' type='button' onClick={() => handleAdd(data)}>Añadir a cesta</button>
                 </div>
               ))
             }
@@ -82,6 +104,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   getDataCesta,
+  updateDataCesta,
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Gancho));

@@ -1,10 +1,10 @@
-// import { arguments } from "file-loader";
 
 export const actions = {
   dataRequest: 'DATA_REQUEST',
   setError: 'SET_ERROR',
   dataUser: 'DATA_USER',
   dataCesta: 'DATA_CESTA',
+  updateCesta: 'UPDATE_CESTA',
 };
 
 export const dataRequest = (payload) => ({
@@ -24,6 +24,11 @@ export const dataUser = (payload) => ({
 
 export const dataCesta = (payload) => ({
   type: actions.dataCesta,
+  payload,
+});
+
+export const updateCesta = (payload) => ({
+  type: actions.updateCesta,
   payload,
 });
 
@@ -117,26 +122,22 @@ export const getDataCesta = (props) => {
   };
 };
 
-export const updateDataCesta = (data, params) => {
+export const updateDataCesta = (updata, props) => {
   return (dispatch) => {
     const phonenumber = props.data.PhoneNumber;
     const email = props.data.Email;
+    console.log('update cesta', phonenumber, email, updata);
     fetch('https://heroprodev.herokuapp.com/api/marketCarts', {
-      method: 'GET',
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
         'X-Token': 1234,
         phonenumber,
         email,
       },
+      body: JSON.stringify(updata),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        const dataCookie = JSON.stringify(data);
-        document.cookie = `{"dataCesta"=${dataCookie}};max-age=600`;
-        return dispatch(dataCesta(data));
-      })
-      .then(() => props.history.push('/cesta'))
-      .catch((err) => dispatch(setError(err)));
+      .then(() => dispatch(updateCesta({ 'message': 'ok' })))
+      .catch((err) => dispatch(updateCesta({ 'message': 'error', err })));
   };
 };
