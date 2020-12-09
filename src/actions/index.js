@@ -45,7 +45,7 @@ export const getDataRequest = (payload, props) => {
       .then((res) => res.json())
       .then((data) => {
         const dataCookie = JSON.stringify(data);
-        document.cookie = `{"data"=${dataCookie}};max-age=600`;
+        document.cookie = `{"data"=${dataCookie}};max-age=990`;
         return dispatch(dataRequest(data));
       })
       .then(() => props.history.push('/cotizacion'))
@@ -67,7 +67,7 @@ export const getDataUser = (email, phone, placa, props) => {
       .then((res) => res.json())
       .then((data) => {
         const dataCookie = JSON.stringify(data);
-        document.cookie = `{"dataUser"=${dataCookie}};max-age=600`;
+        document.cookie = `{"dataUser"=${dataCookie}};max-age=950`;
         return dispatch(dataUser(data));
       })
       .then(() => props.history.push('/descuento'))
@@ -77,7 +77,6 @@ export const getDataUser = (email, phone, placa, props) => {
 
 export const setDataCarkMarket = (data, props) => {
   return (dispatch) => {
-    console.log(data);
     fetch('https://heroprodev.herokuapp.com/api/marketCarts', {
       method: 'POST',
       headers: {
@@ -89,7 +88,7 @@ export const setDataCarkMarket = (data, props) => {
       .then((res) => res.json())
       .then((data) => {
         const dataCookie = JSON.stringify(data);
-        document.cookie = `{"dataCesta"=${dataCookie}};max-age=600`;
+        document.cookie = `{"dataCesta"=${dataCookie}};max-age=910`;
         return dispatch(dataCesta(data));
       })
       .then(() => props.history.push('/gancho'))
@@ -101,7 +100,7 @@ export const getDataCesta = (props) => {
   return (dispatch) => {
     const phonenumber = props.data.PhoneNumber;
     const email = props.data.Email;
-    console.log(phonenumber, email);
+    console.log('props desde get cesta', props);
     fetch('https://heroprodev.herokuapp.com/api/marketCarts', {
       method: 'GET',
       headers: {
@@ -114,7 +113,7 @@ export const getDataCesta = (props) => {
       .then((res) => res.json())
       .then((data) => {
         const dataCookie = JSON.stringify(data);
-        document.cookie = `{"dataCesta"=${dataCookie}};max-age=600`;
+        document.cookie = `{"dataCesta"=${dataCookie}};max-age=850`;
         return dispatch(dataCesta(data));
       })
       .then(() => props.history.push('/cesta'))
@@ -126,7 +125,7 @@ export const updateDataCesta = (updata, props) => {
   return (dispatch) => {
     const phonenumber = props.data.PhoneNumber;
     const email = props.data.Email;
-    console.log('update cesta', phonenumber, email, updata);
+    console.log('update cesta', updata, props)
     fetch('https://heroprodev.herokuapp.com/api/marketCarts', {
       method: 'PUT',
       headers: {
@@ -138,6 +137,6 @@ export const updateDataCesta = (updata, props) => {
       body: JSON.stringify(updata),
     })
       .then(() => dispatch(updateCesta({ 'message': 'ok' })))
-      .catch((err) => dispatch(updateCesta({ 'message': 'error', err })));
+      .catch((err) => dispatch(setError(err)));
   };
 };
