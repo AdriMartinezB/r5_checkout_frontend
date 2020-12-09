@@ -33,12 +33,12 @@ const IngresaTuPlaca = (props) => {
   return (
     loading ? (
       <section className='placa'>
-        <h1>Loading...</h1>
+        <h6 className='loading'>Loading...</h6>
       </section>
     ) :
       (
         <section className='placa'>
-          <h1>Métodos de Pago</h1>
+          <h1>Ingresa tu placa</h1>
           <form className='placa-form' onSubmit={handleSubmit}>
             <input
               type='text'

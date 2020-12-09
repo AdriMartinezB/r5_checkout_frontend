@@ -13,7 +13,16 @@ const Descubrir = (props) => {
   const [loading, setLoading] = React.useState(false);
   const regexEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
   const regexPhone = /^[0-9]{10}$/;
-  const placa = props.data.RegistrationNumber;
+  const [placa, setPlaca] = React.useState('');
+  if (props.data.id === undefined && placa === '') {
+    const dataJSON1 = props.data.replace(/=/g, ':');
+    const dataJSON = dataJSON1.replace(/}; {/g, ',');
+    const newData = JSON.parse(dataJSON);
+    console.log(newData);
+    setPlaca(newData.data.RegistrationNumber);
+  } else if (placa === '') {
+    setPlaca(props.data.RegistrationNumber);
+  }
 
   const emailChangeSubmit = (e) => {
     setEmail(e.target.value);
@@ -43,7 +52,7 @@ const Descubrir = (props) => {
   return (
     loading ? (
       <section className='descubrir__contenedor--form'>
-        <h1>Loading...</h1>
+        <h6 className='loading'>Loading...</h6>
       </section>
     ) :
       (
@@ -64,7 +73,7 @@ const Descubrir = (props) => {
 const mapStateToProps = (state) => {
   console.log('descubrir', state);
   return {
-    data: state.data[0],
+    data: document.cookie || state.data[0],
   };
 };
 
