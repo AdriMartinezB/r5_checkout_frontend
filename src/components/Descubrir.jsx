@@ -52,7 +52,7 @@ const Descubrir = (props) => {
   return (
     loading ? (
       <section className='descubrir__contenedor--form'>
-        <h1>Loading...</h1>
+        <h6 className='loading'>Loading...</h6>
       </section>
     ) :
       (

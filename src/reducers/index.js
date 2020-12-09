@@ -20,6 +20,12 @@ const reducer = (state, action) => {
         ...state,
         data: [action.payload],
       };
+    case actions.updateCesta:
+      console.log('cesta updated', state, action.payload);
+      return {
+        ...state,
+        update: [action.payload],
+      };
     default:
       return state;
   }

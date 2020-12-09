@@ -16,34 +16,30 @@
   text-align: left;
   font-size: 16px;
   margin: 10px 10px 10px 20px;
-  width: 40%;
+  width: 50%;
+}
+
+.card__texto .spannombre{
+  font-weight: 700;
+  line-height: 20px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.card__texto .spanprecio{
+  color: #391A7D;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
 }
 
 .card__img {
   border-radius: 0 10px 0 0;
   height: 180px;
   display: flex;
+  width: 50%;
   max-width: 200px;
   clip-path: ellipse(100% 100% at 100% 100%);
 }
 
 
-
-@media only screen and (max-width: 750px){
-
-  .gancho{
-    width: 100%;
-  }
-
-  .gancho__container{
-    width: 100%;
-  }
-
-  .gancho__container--contenido{
-    width: 90%;
-  }
-
-  .gancho__contenedor--grupo .losbonos {
-    width: 90%;
-  }
-}
