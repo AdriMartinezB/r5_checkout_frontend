@@ -36,8 +36,8 @@ const Gancho = (props) => {
     props.getDataCesta(props);
   };
 
-  const handleAdd = async(data) => {
-    let id = await parseInt(data.id.toString().substring(1, 2));
+  const handleAdd = (data) => {
+    let id = parseInt(data.id.toString().substring(1, 2));
     if (id === 2) {
       const upData2 = {
         ProductName2: data.SureName,
