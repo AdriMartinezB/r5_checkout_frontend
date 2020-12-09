@@ -56,7 +56,7 @@ const Gancho = (props) => {
   };
 
   const handleAdd = (data) => {
-    let id = parseInt(data.id.toString().substring(1, 2));
+    const id = parseInt(data.id.toString().substring(1, 2));
     if (id === 2) {
       const upData2 = {
         ProductName2: data.SureName,
@@ -102,7 +102,7 @@ const Gancho = (props) => {
                 services.map((data) => (
                   <div className='losbonos' key={data.id}>
                     <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
-                    <button className='naranjab' onClick={handleAdd}>Añadir a cesta</button>
+                    <button className='naranjab' onClick={() => handleAdd(data)}>Añadir a cesta</button>
                   </div>
                 ))
               }
