@@ -44,27 +44,29 @@ const Gancho = (props) => {
     loading ? <section className='gancho'><h1>Loading...</h1></section> : (
       <section className='gancho'>
         <div className='gancho__container'>
-          <div className='gancho__header'>
-            <span className='check'>&#10004;</span>
-            <p>
-              Se añadio un nuevo artículo. Ahora tienes un producto en tu cesta
-            </p>
-          </div>
-          <div className='gancho__botones'>
-            <ButtonComponent location='/' color='verde' name='Regresar al Home' />
-            <button className='verde' onClick={handleClick}>Ver Cesta</button>
-          </div>
-          <div className='gancho__contenedor'>
-            <p className='texto-gancho'>Los clientes que compraron este producto también compraron:</p>
-            <div className='gancho__contenedor--grupo'>
-              {
-                services.map((data) => (
-                  <div className='losbonos' key={data.id}>
-                    <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
-                    <button className='naranjab' onClick={handleAdd}>Añadir a cesta</button>
-                  </div>
-                ))
-              }
+          <div className='gancho__container--contenido'>
+            <div className='gancho__header'>
+              <span className='check'>&#10004;</span>
+              <p>
+                Se añadio un nuevo artículo. Ahora tienes un producto en tu cesta
+              </p>
+            </div>
+            <div className='gancho__botones'>
+              <ButtonComponent location='/' color='verde' name='Regresar al Home' />
+              <button className='verde' onClick={handleClick}>Ver Cesta</button>
+            </div>
+            <div className='gancho__contenedor'>
+              <p className='texto-gancho'>Los clientes que compraron este producto también compraron:</p>
+              <div className='gancho__contenedor--grupo'>
+                {
+                  services.map((data) => (
+                    <div className='losbonos' key={data.id}>
+                      <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
+                      <button className='naranjab' onClick={handleAdd}>Añadir a cesta</button>
+                    </div>
+                  ))
+                }
+              </div>
             </div>
           </div>
         </div>
