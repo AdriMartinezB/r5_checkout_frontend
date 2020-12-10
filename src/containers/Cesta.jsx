@@ -5,6 +5,7 @@ import { getDataRequest } from '../actions';
 
 import '../assets/styles/containers/cesta.scss';
 import PasoPaso1 from '../assets/img/pasoPaso1.png';
+import cesta from '../assets/img/cesta_vacia.png'
 import ButtonComponent from '../components/ButtonComponent';
 import MetodoDePago from '../components/MetodoDePago';
 
@@ -49,7 +50,7 @@ const Cesta = (props) => {
             <div className='cesta-listProducts'>
             <h1 className='cesta-title'>Tus productos</h1>
               {
-                error ? <h1>Cesta vacia</h1> :
+                error ? <img className = 'cesta_img-carga' src={cesta} alt="cesta"/> :
                   product.map((data) => {
                     if (data.product === '') {
                       return false;
