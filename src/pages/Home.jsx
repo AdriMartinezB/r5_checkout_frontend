@@ -6,6 +6,7 @@ import Carrusel from '../components/Carrusel';
 import CarruselAplicaciones from '../components/CarruselAplicaciones';
 
 const Home = () => {
+  sessionStorage.setItem('message', 'undefined');
   const [del, setDel] = React.useState(true);
   const deleteAllCookies = () => {
     const cookies = document.cookie.split(';');

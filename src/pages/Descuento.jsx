@@ -6,6 +6,7 @@ import ValorTotal from '../components/ValorTotal';
 import ListOfBeneficios from '../containers/ListOfBeneficios';
 
 const Descuento = () => {
+  sessionStorage.setItem('message', 'undefined');
   return (
     <>
       <section className='descuento'>

@@ -48,7 +48,6 @@ export const getDataRequest = (payload, props) => {
         'Content-Type': 'application/json',
         'X-Token': 1234,
       },
-      //body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -108,7 +107,6 @@ export const getDataCesta = (props) => {
   return (dispatch) => {
     const phonenumber = props.data.PhoneNumber;
     const email = props.data.Email;
-    console.log('props desde get cesta', props);
     fetch('https://heroprodev.herokuapp.com/api/marketCarts', {
       method: 'GET',
       headers: {
@@ -162,7 +160,7 @@ export const getConfirmacionTrajeta = (datos, props) => {
         const card = parseInt(nCard);
         const cvv = parseInt(datos.Cvv);
         if (data[0].CardNumber === card && data[0].Cvv === cvv) {
-          sessionStorage.setItem('message', 'ok');
+          sessionStorage.setItem('message', 'acessOk');
           dispatch(autenticacion({ 'message': 'ok' }));
         } else {
           dispatch(autenticacion({ 'message': 'denied' }));

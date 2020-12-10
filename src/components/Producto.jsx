@@ -5,9 +5,7 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react';
 import '../assets/styles/components/producto.scss';
-// import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import ButtonComponent from './ButtonComponent';
 import { getDataCesta, updateDataCesta } from '../actions';
 import trash from '../assets/img/Product/trash.png';
 
@@ -90,7 +88,7 @@ const Producto = (props) => {
                   {new Intl.NumberFormat('de-DE').format(discount)}
                 </p>
               </div>
-              
+
             </div>
           ) : (<div />)}
         </div>
