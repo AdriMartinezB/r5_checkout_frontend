@@ -7,6 +7,8 @@ import { getDataRequest } from '../actions';
 import '../assets/styles/components/ingresaTuPlaca.scss';
 import '../assets/styles/components/buttomComponent.scss';
 
+import cargando from '../assets/img/consultandoPrecio.png'
+
 const IngresaTuPlaca = (props) => {
   const [placa, setPlaca] = React.useState('');
   const [enable, setEnable] = React.useState(true);
@@ -33,7 +35,7 @@ const IngresaTuPlaca = (props) => {
   return (
     loading ? (
       <section className='placa'>
-        <h6 className='loading'>Loading...</h6>
+        <h6 className='loading'>Consultando el precio <br/> <img className = 'cargando' src={cargando} alt=""/></h6>
       </section>
     ) :
       (
