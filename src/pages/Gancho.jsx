@@ -109,12 +109,6 @@ const Gancho = (props) => {
 
   console.log('aqui services', services);
 
-  services.map((data) => {
-    if (data.SureName === (cesta.ProductName1 || cesta.ProductName2 || cesta.ProductName3 || cesta.ProductName4)) {
-      changeValues(`${data.id}.button`);
-    }
-  });
-
   return (
     loading ? <section className='gancho'><h6 className='loading'>Loading...</h6></section> : (
       <section className='gancho'>
