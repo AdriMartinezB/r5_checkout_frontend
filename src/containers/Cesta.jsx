@@ -91,12 +91,11 @@ const Cesta = (props) => {
             <div className='cesta-metodos'>
               <PagoSeguro />
               <MetodoDePago />
+              <div className='botonCesta'>
+                <ButtonComponent disabled={enable} location='/pago' color='naranja' name={ButtonDescription} />
+              </div>
             </div>
-          </div>
-          <div className='contenedor-cesta-2'>
-            <div className='botonCesta'>
-              <ButtonComponent disabled={enable} location='/pago' color='naranja' name={ButtonDescription} />
-            </div>
+            
           </div>
         </div>
 

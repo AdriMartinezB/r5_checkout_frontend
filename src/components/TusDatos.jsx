@@ -6,7 +6,6 @@ const TusDatos = ({ isCotizacion, nombre, apellido, correo, telefono }) => {
 
   return (
     <section className='Datos'>
-      <h1 className='Datos-title'>Tus Datos</h1>
       {isCotizacion ? (
         <div className='Datos-info-container'>
           <div className='Datos-info'>

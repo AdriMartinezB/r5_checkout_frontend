@@ -9,6 +9,8 @@ import ListOfProducts from '../containers/ListOfProducts';
 import ButtonComponent from '../components/ButtonComponent';
 import useCookie from '../hooks/useCookie';
 
+import paso2 from '../assets/img/pasoPaso2.png'
+
 const Pago = ({ data }) => {
   const [error, setError] = React.useState(false);
   const [product, setProduct] = React.useState([]);
@@ -69,36 +71,48 @@ const Pago = ({ data }) => {
   return (
     <section className='pago-container'>
       <div className='pago'>
+        <img className = 'paso2' src={paso2} alt="Paso 2 pago"/>
         <h1 className='pago-title'>Pago</h1>
-        <TusDatos
-          nombre={soat.OwnerNames}
-          apellido={soat.OwnerLastNames}
-          correo={user.Email}
-          telefono={user.PhoneNumber}
-        />
-        <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='naranja' />
-        <div className='containerList'>
-          {
-            error ? <h1>Cesta vacia</h1> :
-              product.map((data) => {
-                if (data.product === '') {
-                  return false;
+        <div className = 'container-total'>
+            <div className = 'container1'>
+              <div className='containerList'>
+              {
+                error ? <h1>Cesta vacia</h1> :
+                  product.map((data) => {
+                    if (data.product === '') {
+                      return false;
+                    }
+                    return (
+                      <ListOfProducts
+                        isCesta={false}
+                        key={data.id}
+                        product={data.product}
+                        price={data.price - data.discount}
+                      />
+                    );
+                  })
                 }
-                return (
-                  <ListOfProducts
-                    isCesta={false}
-                    key={data.id}
-                    product={data.product}
-                    price={data.price - data.discount}
-                  />
-                );
-              })
-          }
+              </div>
+          </div>
+          <div className = 'container2'>
+            <h1 className = 'Datos-title_'> Tus Datos </h1>
+            <TusDatos className = 'datos'
+            nombre={soat.OwnerNames}
+            apellido={soat.OwnerLastNames}
+            correo={user.Email}
+            telefono={user.PhoneNumber}
+            />
+            <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='naranja' />
+            
+            <Resumen products={newProducts} cesta={cesta} />
+
+            
+          </div>
+          
         </div>
-        <Resumen products={newProducts} cesta={cesta} />
-
-        <ButtonComponent location='/confirmacion/' name='PAGAR' color='naranja' />
-
+        <div className = 'botonPagar'>
+          <ButtonComponent location='/confirmacion/' name='PAGAR' color='naranja' />
+        </div>
       </div>
     </section>
   );
