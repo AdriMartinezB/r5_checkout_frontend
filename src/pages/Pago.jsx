@@ -77,16 +77,10 @@ const Pago = ({ data }) => {
       <div className='pago'>
         <img className='paso2' src={paso2} alt='Paso 2 pago' />
         <h1 className='pago-title'>Pago</h1>
-<<<<<<< HEAD
         <div className = 'container-total'>
             <div className = 'container1'>
               <div className='containerList'>
               <h1 className='cesta-title'>Tus productos</h1>
-=======
-        <div className='container-total'>
-          <div className='container1'>
-            <div className='containerList'>
->>>>>>> 153d349c0eafb825032872fd7d177a459fd6556a
               {
                 error ? <h1>Cesta vacia</h1> :
                   product.map((data) => {
@@ -114,7 +108,6 @@ const Pago = ({ data }) => {
               correo={user.Email}
               telefono={user.PhoneNumber}
             />
-<<<<<<< HEAD
             <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='verde' />
             
             <Resumen products={newProducts} cesta={cesta} />
@@ -122,22 +115,10 @@ const Pago = ({ data }) => {
             <div className = 'botonPagar'>
               <ButtonComponent location='/confirmacion/' name='PAGAR' color='naranja' />
             </div>
-=======
-            <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='naranja' disabled={enable} />
-
-            <Resumen products={newProducts} cesta={cesta} />
-
->>>>>>> 153d349c0eafb825032872fd7d177a459fd6556a
           </div>
 
         </div>
-<<<<<<< HEAD
         
-=======
-        <div className='botonPagar'>
-          <ButtonComponent location='/confirmacion/' name='PAGAR' color='naranja' disabled={!enable} />
-        </div>
->>>>>>> 153d349c0eafb825032872fd7d177a459fd6556a
       </div>
     </section>
   );
