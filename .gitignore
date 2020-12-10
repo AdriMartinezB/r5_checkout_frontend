@@ -75,3 +75,7 @@ yarn-error.log
 # Build
 dist/
 package-lock.json
+
+.firebaserc
+firebase.json
+.firebase

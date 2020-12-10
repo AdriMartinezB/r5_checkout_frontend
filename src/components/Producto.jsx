@@ -48,7 +48,6 @@ const Producto = (props) => {
         Price3: 0,
       };
       props.updateDataCesta(upData3, emAndPh);
-      props.getDataCesta(emAndPh);
     }
   };
 
