@@ -20,7 +20,7 @@ const CajaDescuento = ({ data }) => {
       <p>
         $
         {' '}
-        {datos.Discount}
+        {new Intl.NumberFormat('de-DE').format(datos.Discount)}
       </p>
     </section>
   );

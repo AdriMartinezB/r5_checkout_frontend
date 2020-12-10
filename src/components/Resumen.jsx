@@ -25,7 +25,7 @@ const Resumen = (props) => {
               <ResumenList
                 key={data.id}
                 product={data.product}
-                price={data.price - data.discount}
+                price={new Intl.NumberFormat('de-DE').format(data.price - data.discount)}
               />
             );
           })
@@ -35,7 +35,7 @@ const Resumen = (props) => {
         <h2>TOTAL</h2>
         <p>
           $
-          {cesta.Total}
+          {new Intl.NumberFormat('de-DE').format(cesta.Total)}
         </p>
       </div>
 
