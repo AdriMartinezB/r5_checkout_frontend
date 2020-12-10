@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -47,7 +48,7 @@ const Cesta = (props) => {
         <div className='contenedor-cesta'>
           <div className='contenedor-cesta-1'>
             <div className='cesta-listProducts'>
-            <h1 className='cesta-title'>Tus productos</h1>
+              <h1 className='cesta-title'>Tus productos</h1>
               {
                 error ? <h1>Cesta vacia</h1> :
                   product.map((data) => {
