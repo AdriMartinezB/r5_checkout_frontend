@@ -7,6 +7,7 @@ import '../assets/styles/pages/cotizacion.scss';
 import DatosVehiculares from '../containers/DatosVehiculares';
 
 const Cotizacion = () => {
+  sessionStorage.setItem('message', 'undefined');
   return (
     <section className='cotizacion'>
       <div className='cotizacion__contenedor'>

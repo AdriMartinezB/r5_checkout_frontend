@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -50,7 +51,6 @@ const Cesta = (props) => {
   } else {
     newProducts;
     if (product.length === 0) {
-      console.log(newProducts);
       setProduct(newProducts);
       setError(false);
       setEnable(false);
@@ -105,7 +105,6 @@ const Cesta = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log('datoscesta', state);
   return {
     data: document.cookie || state.dataCesta[0],
   };

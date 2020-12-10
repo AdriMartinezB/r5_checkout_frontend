@@ -1,3 +1,5 @@
+/* eslint-disable radix */
+/* eslint-disable no-new-wrappers */
 
 export const actions = {
   dataRequest: 'DATA_REQUEST',
@@ -5,6 +7,7 @@ export const actions = {
   dataUser: 'DATA_USER',
   dataCesta: 'DATA_CESTA',
   updateCesta: 'UPDATE_CESTA',
+  autenticacion: 'AUTENTICATION',
 };
 
 export const dataRequest = (payload) => ({
@@ -32,6 +35,11 @@ export const updateCesta = (payload) => ({
   payload,
 });
 
+export const autenticacion = (payload) => ({
+  type: actions.autenticacion,
+  payload,
+});
+
 export const getDataRequest = (payload, props) => {
   return (dispatch) => {
     fetch(`https://heroprodev.herokuapp.com/api/soatDetails/${payload}`, {
@@ -40,7 +48,6 @@ export const getDataRequest = (payload, props) => {
         'Content-Type': 'application/json',
         'X-Token': 1234,
       },
-      //body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -100,7 +107,6 @@ export const getDataCesta = (props) => {
   return (dispatch) => {
     const phonenumber = props.data.PhoneNumber;
     const email = props.data.Email;
-    console.log('props desde get cesta', props);
     fetch('https://heroprodev.herokuapp.com/api/marketCarts', {
       method: 'GET',
       headers: {
@@ -125,7 +131,6 @@ export const updateDataCesta = (updata, props) => {
   return (dispatch) => {
     const phonenumber = props.data.PhoneNumber;
     const email = props.data.Email;
-    console.log('update cesta', updata, props)
     fetch('https://heroprodev.herokuapp.com/api/marketCarts', {
       method: 'PUT',
       headers: {
@@ -137,6 +142,31 @@ export const updateDataCesta = (updata, props) => {
       body: JSON.stringify(updata),
     })
       .then(() => dispatch(updateCesta({ 'message': 'ok' })))
+      .catch((err) => dispatch(setError(err)));
+  };
+};
+export const getConfirmacionTrajeta = (datos, props) => {
+  return (dispatch) => {
+    fetch(`https://heroprodev.herokuapp.com/api/creditCards/${datos.DocumentNumber}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Token': 1234,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const nCard = new String(datos.CardNumber.slice(12, 16));
+        const card = parseInt(nCard);
+        const cvv = parseInt(datos.Cvv);
+        if (data[0].CardNumber === card && data[0].Cvv === cvv) {
+          sessionStorage.setItem('message', 'acessOk');
+          dispatch(autenticacion({ 'message': 'ok' }));
+        } else {
+          dispatch(autenticacion({ 'message': 'denied' }));
+        }
+      })
+      .then(() => props.history.push('/pago'))
       .catch((err) => dispatch(setError(err)));
   };
 };
