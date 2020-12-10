@@ -7,6 +7,7 @@ import reducer from './reducers';
 import App from './routes/App';
 
 const initialState = {
+  'autentication': [{ 'message': 'denied' }],
   'error': [{
     'message': 'false',
   }],

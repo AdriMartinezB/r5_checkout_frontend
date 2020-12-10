@@ -9,12 +9,24 @@ import ListOfProducts from '../containers/ListOfProducts';
 import ButtonComponent from '../components/ButtonComponent';
 import useCookie from '../hooks/useCookie';
 
-const Pago = ({ data }) => {
+
+const Pago = ({ data, auth }) => {
   const [error, setError] = React.useState(false);
   const [product, setProduct] = React.useState([]);
   const [cesta, setCesta] = React.useState('');
   const [soat, setSoat] = React.useState('');
   const [user, setUser] = React.useState('');
+  // const [enable, setEnable] = React.useState(false);
+  // const [count, setCount] = React.useState(0);
+
+  // if (auth.message !== 'ok' && count === 0) {
+  //   setEnable(false);
+  //   setCount(1);
+  // } else if (auth.message === 'ok' && count === 0) {
+  //   setEnable(true);
+  //   setCount(1);
+  //   console.log('auht', auth);
+  // }
 
   console.log('esta jhair data', data);
 
@@ -74,7 +86,7 @@ const Pago = ({ data }) => {
           correo={user.Email}
           telefono={user.PhoneNumber}
         />
-        <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='naranja' />
+        <ButtonComponent location='/TarjetaMetodo' name='Elige tu forma de pago' color='naranja' />
         <div className='containerList'>
           {
             error ? <h1>Cesta vacia</h1> :
@@ -95,7 +107,7 @@ const Pago = ({ data }) => {
         </div>
         <Resumen user={user} products={newProducts} />
 
-        <ButtonComponent location='/confirmacion/' name='PAGAR $' color='naranja' />
+        <ButtonComponent location='/confirmacion' name='PAGAR $' color='naranja' />
 
       </div>
     </section>
@@ -106,7 +118,8 @@ const Pago = ({ data }) => {
 const mapStateToProps = (state) => {
   console.log('datoscesta', state);
   return {
-    data: document.cookie || state,
+    data: document.cookie || state.data[0],
+    auth: state.autentication[0]
   };
 };
 
