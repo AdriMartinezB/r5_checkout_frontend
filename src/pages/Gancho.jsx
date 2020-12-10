@@ -13,6 +13,7 @@ import ButtonComponent from '../components/ButtonComponent';
 import Bono from '../components/Bono';
 
 const Gancho = (props) => {
+  sessionStorage.setItem('message', 'undefined');
   const [loading, setLoading] = React.useState(true);
   const [services, setServices] = React.useState([]);
   const [datos, setDatos] = React.useState('');

@@ -6,7 +6,6 @@ import ResumenList from './ResumenList';
 const Resumen = (props) => {
   const [error, setError] = React.useState(false);
   const { products, cesta } = props;
-  console.log('resumen products', products);
   if (products.length === 0) {
     setError(true);
   }

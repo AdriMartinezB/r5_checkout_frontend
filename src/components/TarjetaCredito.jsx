@@ -40,7 +40,6 @@ const TrajetaCredito = (props) => {
               <p>Pago 100% seguro</p>
             </div>
             <button className='naranja'>Confirmar</button>
-            {/* <ButtonComponent location='/pago' color='naranja' name='Confirmar' /> */}
           </form>
         </div>
       </div>
