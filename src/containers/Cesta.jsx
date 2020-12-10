@@ -6,7 +6,7 @@ import { getDataRequest } from '../actions';
 
 import '../assets/styles/containers/cesta.scss';
 import PasoPaso1 from '../assets/img/pasoPaso1.png';
-import cesta from '../assets/img/cesta_vacia.png'
+import cesta from '../assets/img/cesta_vacia.png';
 import ButtonComponent from '../components/ButtonComponent';
 import MetodoDePago from '../components/MetodoDePago';
 
@@ -27,6 +27,8 @@ const Cesta = (props) => {
   } else if (datos === '') {
     setDatos(props.data);
   }
+
+  console.log('aqui', datos);
 
   const newProducts = [
     { id: 1, product: datos.ProductName1, discount: datos.Discount1, price: datos.Price1 },
@@ -67,26 +69,29 @@ const Cesta = (props) => {
           <div className='contenedor-cesta-1'>
             <div className='cesta-listProducts'>
               <h1 className='cesta-title'>Tus productos</h1>
-              {
-                error ? <img className = 'cesta_img-carga' src={cesta} alt="cesta"/> :
-                  product.map((data) => {
-                    if (data.product === '') {
-                      return false;
-                    }
-                    return (
-                      <ListOfProducts
-                        isCesta={true}
-                        key={data.id}
-                        product={data.product}
-                        discount={data.discount}
-                        price={data.price}
-                        Email={datos.Email}
-                        PhoneNumber={datos.PhoneNumber}
-                        info={props.history}
-                      />
-                    );
-                  })
-              }
+              <ul>
+                {
+                  error ? <img className='cesta_img-carga' src={cesta} alt='cesta' /> :
+                    product.map((data) => {
+                      if (data.product === '') {
+                        return false;
+                      }
+                      return (
+                        <ListOfProducts
+                          isCesta={true}
+                          key={data.id}
+                          product={data.product}
+                          discount={data.discount}
+                          price={data.price}
+                          Email={datos.Email}
+                          PhoneNumber={datos.PhoneNumber}
+                          info={props.history}
+                        />
+                      );
+                    })
+                }
+
+              </ul>
             </div>
             <div className='cesta-metodos'>
               <PagoSeguro />
@@ -95,7 +100,7 @@ const Cesta = (props) => {
                 <ButtonComponent disabled={enable} location='/pago' color='naranja' name={ButtonDescription} />
               </div>
             </div>
-            
+
           </div>
         </div>
 

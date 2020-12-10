@@ -6,9 +6,7 @@ import '../assets/styles/containers/listOfProducts.scss';
 
 const ListOfProducts = (props) => {
   return (
-    <ul className='listOfItems'>
-      <li><Producto data={props} /></li>
-    </ul>
+    <li className='listOfItems'><Producto data={props} /></li>
   );
 };
 

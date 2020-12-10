@@ -13,7 +13,6 @@ import ButtonComponent from '../components/ButtonComponent';
 import Bono from '../components/Bono';
 
 const Gancho = (props) => {
-  sessionStorage.setItem('message', 'undefined');
   const [loading, setLoading] = React.useState(true);
   const [services, setServices] = React.useState([]);
   const [datos, setDatos] = React.useState('');
@@ -85,9 +84,9 @@ const Gancho = (props) => {
     } else if (id === 4) {
       changeValues(`${data.id}.button`);
       const upData4 = {
-        ProductName2: data.SureName,
-        Discount2: data.Discount || 0,
-        Price2: data.Price,
+        ProductName4: data.SureName,
+        Discount4: data.Discount || 0,
+        Price4: data.Price,
       };
       props.updateDataCesta(upData4, upData);
     }

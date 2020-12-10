@@ -21,6 +21,8 @@ const Pago = ({ data }) => {
   const [count, setCount] = React.useState(0);
   const auth = sessionStorage.getItem('message');
 
+  console.log('soat aqui', soat);
+
   if (auth !== 'acessOk' && count === 0) {
     setEnable(false);
     setCount(1);
@@ -77,10 +79,10 @@ const Pago = ({ data }) => {
       <div className='pago'>
         <img className='paso2' src={paso2} alt='Paso 2 pago' />
         <h1 className='pago-title'>Pago</h1>
-        <div className = 'container-total'>
-            <div className = 'container1'>
-              <div className='containerList'>
-              <h1 className='cesta-title'>Tus productos</h1>
+        <div className='container-total'>
+          <div className='container1'>
+            <h1 className='cesta-title'>Tus productos</h1>
+            <ul className='containerList'>
               {
                 error ? <h1>Cesta vacia</h1> :
                   product.map((data) => {
@@ -97,7 +99,7 @@ const Pago = ({ data }) => {
                     );
                   })
               }
-            </div>
+            </ul>
           </div>
           <div className='container2'>
             <h1 className='Datos-title_'> Tus Datos </h1>
@@ -109,16 +111,16 @@ const Pago = ({ data }) => {
               telefono={user.PhoneNumber}
             />
             <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='verde' />
-            
+
             <Resumen products={newProducts} cesta={cesta} />
 
-            <div className = 'botonPagar'>
+            <div className='botonPagar'>
               <ButtonComponent location='/confirmacion/' name='PAGAR' color='naranja' />
             </div>
           </div>
 
         </div>
-        
+
       </div>
     </section>
   );
