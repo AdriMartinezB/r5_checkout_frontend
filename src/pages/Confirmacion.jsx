@@ -8,7 +8,6 @@ import '../assets/styles/pages/confirmacion.scss';
 const Confirmacion = () => {
   const [del, setDel] = React.useState(true);
   if (document.cookie) {
-    window.location.reload(true);
     sessionStorage.clear();
     const deleteAllCookies = () => {
       const cookies = document.cookie.split(';');
@@ -17,6 +16,7 @@ const Confirmacion = () => {
         document.cookie = `${spcook[0]}=;expires=Thu, 21 Sep 1979 00:00:01 UTC;`;
       }
       setDel(false);
+      window.location.reload(true);
     };
     if (del) {
       deleteAllCookies();
