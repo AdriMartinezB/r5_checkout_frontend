@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: calc(100vh - 100px - 100px);
 }
 
 .pago {
@@ -38,8 +39,6 @@
   border-radius: 10px;
   border: none;
   align-self: center;
-  align-items: center;
-  justify-content: center;
   padding: 15px 15px 0px 15px;
 }
 
@@ -86,14 +85,25 @@
 
 .botonPagar {
   width: 100%;
-  position: static;
-  bottom: 0;
+}
+
+.botonPagar button{
+  height: 50px;
 }
 
 .cesta_img-carga {
   width: 470px;
   height: 500x; 
 
+}
+
+.containerList h1{
+  margin: 0 0 10px 0;
+  font-size: 36px;
+  font-weight: bold;
+  align-self: flex-start;
+  color: #391A7D;
+  text-shadow: none;
 }
 
 @media only screen and (max-width: 930px){
