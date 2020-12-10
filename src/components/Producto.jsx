@@ -90,7 +90,7 @@ const Producto = (props) => {
                   {new Intl.NumberFormat('de-DE').format(discount)}
                 </p>
               </div>
-              <ButtonComponent name='Agregar bono de descuento' color='verde' location='/popBono' />
+              
             </div>
           ) : (<div />)}
         </div>

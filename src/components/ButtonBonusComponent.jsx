@@ -7,7 +7,7 @@ import '../assets/styles/components/buttonBonusComponent.scss';
 const ButtonComponent = ({ location, name, color }) => {
   return (
     <Link className='link' to={location}>
-      <button className={color}>{name}</button>
+      (<button className={color}>{name}</button>)
     </Link>
   );
 
