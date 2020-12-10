@@ -10,6 +10,7 @@
 }
 
 .cesta-title {
+  margin: 0 0 5px 0;
   font-size: 36px;
   font-weight: bold;
   align-self: center;
@@ -36,10 +37,11 @@
 }
 
 .cesta-metodos {
-  padding: 10px;
+  padding: 0px;
   border-radius: 15px;
   margin-left: 30px;
-  position: static;
+  position: sticky;
+  top: -0;
 }
 
 .contenedor-cesta{
@@ -63,10 +65,6 @@
   height: auto; //
 }
 
-.pasoAPaso{
-  width: 500px;
-}
-
 .PasoPaso1 {
   margin: 0;
   width: 480px;
@@ -80,13 +78,18 @@
 }
 
 .botonCesta button{
-  font-size: 30px;
+  font-size: 25px;
   height: 50px;
   width: 100%;
   max-width: 1100px;
   margin: 0 0 0 0;
   border-radius: 15;
   padding: 0;
+}
+
+.cesta_img-carga{
+  width: 100%;
+  height: 100%;
 }
 
 @media only screen and (max-width: 930px){
@@ -133,20 +136,19 @@
 @media only screen and (max-width: 360px){
 
   .PasoPaso1{
-    width: 360px;
+    width: 330px;
   }
 
   .cesta{
-    max-width: 360px;
+    max-width: 330px;
   }
 
   .contenedor-cesta-1{
-    max-width: 360px;
-    margin: 0px;
+    max-width: 330px;
   }
 
   .cesta-metodos{
-    width: 360px;
+    width: 330px;
     margin: 0;
     padding: 20px 0;
   }

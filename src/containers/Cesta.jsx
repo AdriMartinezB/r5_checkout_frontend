@@ -6,6 +6,7 @@ import { getDataRequest } from '../actions';
 
 import '../assets/styles/containers/cesta.scss';
 import PasoPaso1 from '../assets/img/pasoPaso1.png';
+import cesta from '../assets/img/cesta_vacia.png'
 import ButtonComponent from '../components/ButtonComponent';
 import MetodoDePago from '../components/MetodoDePago';
 
@@ -16,6 +17,8 @@ const Cesta = (props) => {
   const [error, setError] = React.useState(false);
   const [product, setProduct] = React.useState([]);
   const [datos, setDatos] = React.useState('');
+  const [enable, setEnable] = React.useState(true);
+
   if (props.data.id === undefined && datos === '') {
     const dataJSON1 = props.data.replace(/=/g, ':');
     const dataJSON = dataJSON1.replace(/}; {/g, ',');
@@ -24,21 +27,37 @@ const Cesta = (props) => {
   } else if (datos === '') {
     setDatos(props.data);
   }
+
+  const newProducts = [
+    { id: 1, product: datos.ProductName1, discount: datos.Discount1, price: datos.Price1 },
+    { id: 2, product: datos.ProductName2 || '', discount: datos.Discount2 || 0, price: datos.Price2 || 0 },
+    { id: 3, product: datos.ProductName3 || '', discount: datos.Discount3 || 0, price: datos.Price3 || 0 },
+    { id: 4, product: datos.ProductName4 || '', discount: datos.Discount4 || 0, price: datos.Price4 || 0 },
+  ];
+
+  const handlePay = (Total) => {
+    if (Total === 0) {
+      return 'COMPRAR';
+    }
+    return (`COMPRAR   $${Total}`);
+
+  };
+  const ButtonDescription = handlePay(new Intl.NumberFormat('de-DE').format(datos.Total));
+
   if (datos.message !== 'Ok' && error === false) {
     console.log('data undefined');
     setError(true);
+    setEnable(true);
   } else {
-    const newProducts = [
-      { id: 1, product: datos.ProductName1, discount: datos.Discount1, price: datos.Price1 },
-      { id: 2, product: datos.ProductName2 || '', discount: datos.Discount2 || 0, price: datos.Price2 || 0 },
-      { id: 3, product: datos.ProductName3 || '', discount: datos.Discount3 || 0, price: datos.Price3 || 0 }];
+    newProducts;
     if (product.length === 0) {
       console.log(newProducts);
       setProduct(newProducts);
       setError(false);
+      setEnable(false);
     }
-
   }
+
   return (
     product.length === 0 ? (<div className='cesta'><h1>Loading...</h1></div>) : (
       <div className='cesta'>
@@ -50,7 +69,7 @@ const Cesta = (props) => {
             <div className='cesta-listProducts'>
               <h1 className='cesta-title'>Tus productos</h1>
               {
-                error ? <h1>Cesta vacia</h1> :
+                error ? <img className = 'cesta_img-carga' src={cesta} alt="cesta"/> :
                   product.map((data) => {
                     if (data.product === '') {
                       return false;
@@ -74,9 +93,10 @@ const Cesta = (props) => {
               <PagoSeguro />
               <MetodoDePago />
               <div className='botonCesta'>
-                <ButtonComponent location='/pago' color='naranja' name='COMPRAR' />
+                <ButtonComponent disabled={enable} location='/pago' color='naranja' name={ButtonDescription} />
               </div>
             </div>
+            
           </div>
         </div>
 

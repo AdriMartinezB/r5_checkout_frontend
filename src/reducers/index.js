@@ -27,6 +27,11 @@ const reducer = (state, action) => {
         ...state,
         error: [action.payload],
       };
+    case actions.autentication:
+      return {
+        ...state,
+        autentication: [action.payload],
+      };
     default:
       return state;
   }

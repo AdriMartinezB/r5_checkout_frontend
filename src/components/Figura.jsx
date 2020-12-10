@@ -20,7 +20,7 @@ const Figura = ({ data }) => {
         <p className='valordelproducto'>
           $
           {' '}
-          {datos.PriceSoat}
+          {new Intl.NumberFormat('de-DE').format(datos.PriceSoat)}
         </p>
         <p>Precio establecido por ley*</p>
       </div>

@@ -17,7 +17,7 @@ const Bono = ({ image, description, name, price }) => {
           <br />
           <span className='spanprecio'>
             $
-            {price}
+            {new Intl.NumberFormat('de-DE').format(price)}
           </span>
         </p>
         <img className='card__img' src={image} alt='Imagen Producto' />

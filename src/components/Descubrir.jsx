@@ -54,7 +54,7 @@ const Descubrir = (props) => {
   return (
     loading ? (
       <section className='descubrir__contenedor--form'>
-        <h6 className='loading'>Loading...</h6>
+        <h6 className='loading'>Calculando descuento</h6>
       </section>
     ) :
       (

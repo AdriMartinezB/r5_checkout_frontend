@@ -16,6 +16,14 @@ const Gancho = (props) => {
   const [loading, setLoading] = React.useState(true);
   const [services, setServices] = React.useState([]);
   const [datos, setDatos] = React.useState('');
+  const [enable] = React.useState(false);
+
+  const changeValues = (id) => {
+    const elem = document.getElementById(id);
+    elem.disabled = { enable: true };
+    elem.textContent = 'Añadido';
+  };
+
   if (props.data.id === undefined && datos === '') {
     const dataJSON1 = props.data.replace(/=/g, ':');
     const dataJSON = dataJSON1.replace(/}; {/g, ',');
@@ -58,6 +66,7 @@ const Gancho = (props) => {
   const handleAdd = (data) => {
     const id = parseInt(data.id.toString().substring(1, 2));
     if (id === 2) {
+      changeValues(`${data.id}.button`);
       const upData2 = {
         ProductName2: data.SureName,
         Discount2: data.Discount || 0,
@@ -65,6 +74,7 @@ const Gancho = (props) => {
       };
       props.updateDataCesta(upData2, upData);
     } else if (id === 3) {
+      changeValues(`${data.id}.button`);
       const upData3 = {
         ProductName3: data.SureName,
         Discount3: data.Discount || 0,
@@ -72,6 +82,7 @@ const Gancho = (props) => {
       };
       props.updateDataCesta(upData3, upData);
     } else if (id === 4) {
+      changeValues(`${data.id}.button`);
       const upData4 = {
         ProductName2: data.SureName,
         Discount2: data.Discount || 0,
@@ -101,8 +112,15 @@ const Gancho = (props) => {
               {
                 services.map((data) => (
                   <div className='losbonos' key={data.id}>
-                    <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />                
-                    <button className='naranjab' onClick={() => handleAdd(data)}>Añadir a cesta</button>
+                    <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
+                    <button
+                      id={`${data.id}.button`}
+                      className='naranja'
+                      disabled={enable}
+                      onClick={() => handleAdd(data)}
+                    >
+                      Añadir a la cesta
+                    </button>
                   </div>
                 ))
               }
