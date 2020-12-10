@@ -9,6 +9,22 @@
 
 .footer__img {
   padding: 0;
-  margin-top: 10px;
+  margin: 20px 0px;
   width: 100px;
+}
+
+.footer__productos_container{
+  margin: 0;
+  padding: 0;
+  display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+@media only screen and (max-width: 930px){
+  .footer__productos_container {display:none}
+}
+
+@media only screen and (max-width: 430px){
+  .footer__productos_container {display:none}
 }
