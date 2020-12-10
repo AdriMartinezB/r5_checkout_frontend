@@ -57,7 +57,7 @@
 .product-main_info {
   display: inline;
   padding: 7px;
-  min-width: 180px;
+  min-width: 250px;
 }
 
 .product-main_info_subtotal {
@@ -100,4 +100,14 @@
   font-size: 18px;
   font-weight: 600;
   align-self: center;
+}
+
+@media only screen and (max-width: 360px){
+
+  .product-main {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+  }
+
 }

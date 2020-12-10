@@ -46,7 +46,7 @@ const ValorTotal = (props) => {
           <h1>
             $
             {' '}
-            {datos.PriceDiscount}
+            {new Intl.NumberFormat('de-DE').format(datos.PriceDiscount)}
           </h1>
         </div>
         <button className='naranja' onClick={handleClick}>Agregar a la Cesta</button>

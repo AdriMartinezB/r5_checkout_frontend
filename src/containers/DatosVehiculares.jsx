@@ -18,6 +18,7 @@ const DatosVehiculares = ({ data }) => {
 
   return (
     <div className='Vehi--Container'>
+      <h1 className = 'Datos-title'>Tus Datos</h1>
       <TusDatos isCotizacion nombre={datos.OwnerNames} apellido={datos.OwnerLastNames} />
       <TuVehiculo marca={datos.CarMake} modelo={datos.RegistrationYear} linea={datos.CarModel} />
     </div>

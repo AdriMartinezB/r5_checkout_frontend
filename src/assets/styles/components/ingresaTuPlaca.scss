@@ -51,3 +51,9 @@
   align-self: center;
   justify-self: center;
 }
+
+.cargando{
+  animation: bounceIn 0.5s infinite;
+  width: 70;
+  height: 46px;
+}

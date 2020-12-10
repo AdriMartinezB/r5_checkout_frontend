@@ -9,8 +9,9 @@ import ListOfProducts from '../containers/ListOfProducts';
 import ButtonComponent from '../components/ButtonComponent';
 import useCookie from '../hooks/useCookie';
 
+import paso2 from '../assets/img/pasoPaso2.png';
 
-const Pago = ({ data, auth }) => {
+const Pago = ({ data }) => {
   const [error, setError] = React.useState(false);
   const [product, setProduct] = React.useState([]);
   const [cesta, setCesta] = React.useState('');
@@ -63,7 +64,9 @@ const Pago = ({ data, auth }) => {
   const newProducts = [
     { id: 1, product: cesta.ProductName1, discount: cesta.Discount1, price: cesta.Price1 },
     { id: 2, product: cesta.ProductName2 || '', discount: cesta.Discount2 || 0, price: cesta.Price2 || 0 },
-    { id: 3, product: cesta.ProductName3 || '', discount: cesta.Discount3 || 0, price: cesta.Price3 || 0 }];
+    { id: 3, product: cesta.ProductName3 || '', discount: cesta.Discount3 || 0, price: cesta.Price3 || 0 },
+    { id: 4, product: cesta.ProductName4 || '', discount: cesta.Discount4 || 0, price: cesta.Price4 || 0 },
+  ];
 
   if (cesta.message !== 'Ok' && error === false) {
     console.log('data undefined');
@@ -79,6 +82,7 @@ const Pago = ({ data, auth }) => {
   return (
     <section className='pago-container'>
       <div className='pago'>
+        <img className='paso2' src={paso2} alt='Paso 2 pago' />
         <h1 className='pago-title'>Pago</h1>
         <TusDatos
           nombre={soat.OwnerNames}
@@ -108,7 +112,46 @@ const Pago = ({ data, auth }) => {
         <Resumen user={user} products={newProducts} />
 
         <ButtonComponent location='/confirmacion' name='PAGAR $' color='naranja' />
+        <div className='container-total'>
+          <div className='container1'>
+            <div className='containerList'>
+              {
+                error ? <h1>Cesta vacia</h1> :
+                  product.map((data) => {
+                    if (data.product === '') {
+                      return false;
+                    }
+                    return (
+                      <ListOfProducts
+                        isCesta={false}
+                        key={data.id}
+                        product={data.product}
+                        price={data.price - data.discount}
+                      />
+                    );
+                  })
+              }
+            </div>
+          </div>
+          <div className='container2'>
+            <h1 className='Datos-title_'> Tus Datos </h1>
+            <TusDatos
+              className='datos'
+              nombre={soat.OwnerNames}
+              apellido={soat.OwnerLastNames}
+              correo={user.Email}
+              telefono={user.PhoneNumber}
+            />
+            <ButtonComponent location='/TarjetaMetodo' name='Elige tu forma de pago' color='naranja' />
 
+            <Resumen products={newProducts} cesta={cesta} />
+
+          </div>
+
+        </div>
+        <div className='botonPagar'>
+          <ButtonComponent location='/confirmacion' name='PAGAR' color='naranja' />
+        </div>
       </div>
     </section>
   );
@@ -119,7 +162,7 @@ const mapStateToProps = (state) => {
   console.log('datoscesta', state);
   return {
     data: document.cookie || state.data[0],
-    auth: state.autentication[0]
+    auth: state.autentication[0],
   };
 };
 
