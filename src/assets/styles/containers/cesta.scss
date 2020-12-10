@@ -67,7 +67,8 @@
 
 .PasoPaso1 {
   margin: 0;
-  width: 480px;
+  max-width: 480px;
+  width: 90%;
 }
 
 .botonCesta{
@@ -133,7 +134,7 @@
 
 }
 
-@media only screen and (max-width: 360px){
+@media only screen and (max-width: 430px){
 
   .PasoPaso1{
     width: 330px;
