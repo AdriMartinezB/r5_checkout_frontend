@@ -13,23 +13,23 @@ const Resumen = (props) => {
     <section className='Resumen'>
 
       <h1 className='Resumen-title'>RESUMEN DE PEDIDO</h1>
-
-      {
-        error ? <div /> :
-          products.map((data) => {
-            if (data.product === '') {
-              return false;
-            }
-            return (
-              <ResumenList
-                key={data.id}
-                product={data.product}
-                price={new Intl.NumberFormat('de-DE').format(data.price - data.discount)}
-              />
-            );
-          })
-      }
-
+      <ul className='Resumen-info-container'>
+        {
+          error ? <div /> :
+            products.map((data) => {
+              if (data.product === '') {
+                return false;
+              }
+              return (
+                <ResumenList
+                  key={data.id}
+                  product={data.product}
+                  price={new Intl.NumberFormat('de-DE').format(data.price - data.discount)}
+                />
+              );
+            })
+        }
+      </ul>
       <div className='Resumen-total'>
         <h2>TOTAL</h2>
         <p>

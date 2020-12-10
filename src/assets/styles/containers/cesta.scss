@@ -25,6 +25,10 @@
   padding: 15px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 15px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .cesta-listProducts h1{
@@ -34,6 +38,12 @@
   align-self: center;
   color: #391A7D;
   text-shadow: none;
+  
+}
+
+.cesta-listProducts ul{
+  margin: 0;
+    padding: 0;
 }
 
 .cesta-metodos {
@@ -107,6 +117,10 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
+  }
+
+  .cesta-listProducts ul{
+    width: 90%;
   }
 
   .contenedor-cesta{

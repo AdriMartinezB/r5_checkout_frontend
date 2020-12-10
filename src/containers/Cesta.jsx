@@ -28,6 +28,8 @@ const Cesta = (props) => {
     setDatos(props.data);
   }
 
+  console.log('aqui', datos);
+
   const newProducts = [
     { id: 1, product: datos.ProductName1, discount: datos.Discount1, price: datos.Price1 },
     { id: 2, product: datos.ProductName2 || '', discount: datos.Discount2 || 0, price: datos.Price2 || 0 },
@@ -67,26 +69,29 @@ const Cesta = (props) => {
           <div className='contenedor-cesta-1'>
             <div className='cesta-listProducts'>
               <h1 className='cesta-title'>Tus productos</h1>
-              {
-                error ? <img className='cesta_img-carga' src={cesta} alt='cesta' /> :
-                  product.map((data) => {
-                    if (data.product === '') {
-                      return false;
-                    }
-                    return (
-                      <ListOfProducts
-                        isCesta={true}
-                        key={data.id}
-                        product={data.product}
-                        discount={data.discount}
-                        price={data.price}
-                        Email={datos.Email}
-                        PhoneNumber={datos.PhoneNumber}
-                        info={props.history}
-                      />
-                    );
-                  })
-              }
+              <ul>
+                {
+                  error ? <img className='cesta_img-carga' src={cesta} alt='cesta' /> :
+                    product.map((data) => {
+                      if (data.product === '') {
+                        return false;
+                      }
+                      return (
+                        <ListOfProducts
+                          isCesta={true}
+                          key={data.id}
+                          product={data.product}
+                          discount={data.discount}
+                          price={data.price}
+                          Email={datos.Email}
+                          PhoneNumber={datos.PhoneNumber}
+                          info={props.history}
+                        />
+                      );
+                    })
+                }
+
+              </ul>
             </div>
             <div className='cesta-metodos'>
               <PagoSeguro />
