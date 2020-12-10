@@ -35,7 +35,7 @@ const Pse = () => {
               <option value='1'>Selecciona tu banco</option>
               <option value='2'>Bancolombia</option>
               <option value='3'>Colpatria</option>
-              <option value='3'>Dvivienda</option>
+              <option value='3'>Davivienda</option>
               <option value='3'>Banco de Bogotá</option>
             </select>
             <div className='pagoseguro'>
