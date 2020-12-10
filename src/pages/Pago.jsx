@@ -51,7 +51,9 @@ const Pago = ({ data }) => {
   const newProducts = [
     { id: 1, product: cesta.ProductName1, discount: cesta.Discount1, price: cesta.Price1 },
     { id: 2, product: cesta.ProductName2 || '', discount: cesta.Discount2 || 0, price: cesta.Price2 || 0 },
-    { id: 3, product: cesta.ProductName3 || '', discount: cesta.Discount3 || 0, price: cesta.Price3 || 0 }];
+    { id: 3, product: cesta.ProductName3 || '', discount: cesta.Discount3 || 0, price: cesta.Price3 || 0 },
+    { id: 4, product: cesta.ProductName4 || '', discount: cesta.Discount4 || 0, price: cesta.Price4 || 0 },
+  ];
 
   if (cesta.message !== 'Ok' && error === false) {
     console.log('data undefined');
@@ -95,7 +97,7 @@ const Pago = ({ data }) => {
         </div>
         <Resumen products={newProducts} cesta={cesta} />
 
-        <ButtonComponent location='/confirmacion/' name='PAGAR $' color='naranja' />
+        <ButtonComponent location='/confirmacion/' name='PAGAR' color='naranja' />
 
       </div>
     </section>
@@ -106,7 +108,7 @@ const Pago = ({ data }) => {
 const mapStateToProps = (state) => {
   console.log('datoscesta', state);
   return {
-    data: document.cookie || state,
+    data: document.cookie || state.data[0],
   };
 };
 

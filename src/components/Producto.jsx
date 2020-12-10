@@ -77,7 +77,7 @@ const Producto = (props) => {
           <p>
             COP $
             {' '}
-            {price}
+            {new Intl.NumberFormat('de-DE').format(price)}
           </p>
           {isCesta ? (
             <div>
@@ -87,7 +87,7 @@ const Producto = (props) => {
                 <p className='subtotal-price'>
                   $
                   {' '}
-                  {discount}
+                  {new Intl.NumberFormat('de-DE').format(discount)}
                 </p>
               </div>
               <ButtonComponent name='Agregar bono de descuento' color='verde' location='/popBono' />
@@ -102,7 +102,7 @@ const Producto = (props) => {
           <p>
             Total $
             {' '}
-            {priceTotal}
+            {new Intl.NumberFormat('de-DE').format(priceTotal)}
           </p>
         </div>
       ) : (<div />) }
