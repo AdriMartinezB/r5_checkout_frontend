@@ -6,19 +6,23 @@ import PagoExitoso from '../components/PagoExitoso';
 import '../assets/styles/pages/confirmacion.scss';
 
 const Confirmacion = () => {
-  sessionStorage.clear();
   const [del, setDel] = React.useState(true);
-  const deleteAllCookies = () => {
-    const cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-      const spcook = cookies[i].split('=');
-      document.cookie = `${spcook[0]}=;expires=Thu, 21 Sep 1979 00:00:01 UTC;`;
+  if (document.cookie) {
+    window.location.reload(true);
+    sessionStorage.clear();
+    const deleteAllCookies = () => {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+        const spcook = cookies[i].split('=');
+        document.cookie = `${spcook[0]}=;expires=Thu, 21 Sep 1979 00:00:01 UTC;`;
+      }
+      setDel(false);
+    };
+    if (del) {
+      deleteAllCookies();
     }
-    setDel(false);
-  };
-  if (del) {
-    deleteAllCookies();
   }
+
   return (
     <section className='confirmacion'>
       <div className='confirmacion__contenido'>
