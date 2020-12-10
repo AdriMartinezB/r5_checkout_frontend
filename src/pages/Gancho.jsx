@@ -8,14 +8,17 @@ import '../assets/styles/pages/gancho.scss';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { getDataCesta, updateDataCesta } from '../actions';
+import useCookie from '../hooks/useCookie';
 
 import ButtonComponent from '../components/ButtonComponent';
 import Bono from '../components/Bono';
 
 const Gancho = (props) => {
+  const { data } = props;
   const [loading, setLoading] = React.useState(true);
   const [services, setServices] = React.useState([]);
-  const [datos, setDatos] = React.useState('');
+  const [user, setUser] = React.useState('');
+  const [cesta, setCesta] = React.useState('');
   const [enable] = React.useState(false);
 
   const changeValues = (id) => {
@@ -24,19 +27,31 @@ const Gancho = (props) => {
     elem.textContent = 'Añadido';
   };
 
-  if (props.data.id === undefined && datos === '') {
-    const dataJSON1 = props.data.replace(/=/g, ':');
-    const dataJSON = dataJSON1.replace(/}; {/g, ',');
-    const newData = JSON.parse(dataJSON);
-    setDatos(newData.dataUser);
-  } else if (datos === '') {
-    setDatos(props.data);
-  }
+  const User = (data, user, setUser) => {
+    if (data.id === undefined && user === '') {
+      return setUser(useCookie(data).dataUser);
+    } if (user === '') {
+      return setUser(data);
+    }
+  };
+
+  const Cesta = (data, cesta, setCesta) => {
+    if (data.id === undefined && cesta === '') {
+      return setCesta(useCookie(data).dataCesta);
+    } if (cesta === '') {
+      return setCesta(data);
+    }
+  };
+
+  Cesta(data, cesta, setCesta);
+  User(data, user, setUser);
+
+  console.log('aqui cesta', cesta);
 
   const upData = {
     data: {
-      Email: datos.Email,
-      PhoneNumber: datos.PhoneNumber,
+      Email: user.Email,
+      PhoneNumber: user.PhoneNumber,
     },
     history: props.history,
   };
@@ -84,13 +99,21 @@ const Gancho = (props) => {
     } else if (id === 4) {
       changeValues(`${data.id}.button`);
       const upData4 = {
-        ProductName2: data.SureName,
-        Discount2: data.Discount || 0,
-        Price2: data.Price,
+        ProductName4: data.SureName,
+        Discount4: data.Discount || 0,
+        Price4: data.Price,
       };
       props.updateDataCesta(upData4, upData);
     }
   };
+
+  console.log('aqui services', services);
+
+  services.map((data) => {
+    if (data.SureName === (cesta.ProductName1 || cesta.ProductName2 || cesta.ProductName3 || cesta.ProductName4)) {
+      changeValues(`${data.id}.button`);
+    }
+  });
 
   return (
     loading ? <section className='gancho'><h6 className='loading'>Loading...</h6></section> : (
