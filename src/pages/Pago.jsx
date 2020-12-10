@@ -76,6 +76,7 @@ const Pago = ({ data }) => {
         <div className = 'container-total'>
             <div className = 'container1'>
               <div className='containerList'>
+              <h1 className='cesta-title'>Tus productos</h1>
               {
                 error ? <h1>Cesta vacia</h1> :
                   product.map((data) => {
@@ -102,17 +103,17 @@ const Pago = ({ data }) => {
             correo={user.Email}
             telefono={user.PhoneNumber}
             />
-            <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='naranja' />
+            <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='verde' />
             
             <Resumen products={newProducts} cesta={cesta} />
 
-            
+            <div className = 'botonPagar'>
+              <ButtonComponent location='/confirmacion/' name='PAGAR' color='naranja' />
+            </div>
           </div>
           
         </div>
-        <div className = 'botonPagar'>
-          <ButtonComponent location='/confirmacion/' name='PAGAR' color='naranja' />
-        </div>
+        
       </div>
     </section>
   );
