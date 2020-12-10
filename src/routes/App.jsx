@@ -21,15 +21,15 @@ const App = () => (
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/cotizacion' component={Cotizacion} />
-        <Route exact path='/ingresaPlaca/' component={IngresaPlaca} />
-        <Route exact path='/descuento/' component={Descuento} />
+        <Route exact path='/ingresaPlaca' component={IngresaPlaca} />
+        <Route exact path='/descuento' component={Descuento} />
         <Route exact path='/gancho/' component={Gancho} />
         <Route exact path='/popBono' component={PopBono} />
-        <Route exact path='/confirmacion/' component={Confirmacion} />
-        <Route exact path='/pago/' component={Pago} />
-        <Route exact path='/TarjetaMetodo/' component={TarjetaMetodo} />
-        <Route exact path='/cesta/' component={TuCesta} />
-        <Route exact path='/ups/' component={PageUps} />
+        <Route exact path='/confirmacion' component={Confirmacion} />
+        <Route exact path='/pago' component={Pago} />
+        <Route exact path='/TarjetaMetodo' component={TarjetaMetodo} />
+        <Route exact path='/cesta' component={TuCesta} />
+        <Route exact path='/ups' component={PageUps} />
       </Switch>
     </Layout>
   </BrowserRouter>
