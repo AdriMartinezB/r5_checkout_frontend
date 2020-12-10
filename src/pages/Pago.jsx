@@ -110,7 +110,7 @@ const Pago = ({ data }) => {
               correo={user.Email}
               telefono={user.PhoneNumber}
             />
-            <ButtonComponent location='/TarjetaMetodo' name='Elige tu forma de pago' color='verde' disabled={enable} />
+            <ButtonComponent location='/TarjetaMetodo' name='Elige tu forma de pago' color='naranja' disabled={enable} />
 
             <Resumen products={newProducts} cesta={cesta} />
 
