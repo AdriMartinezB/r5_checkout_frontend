@@ -17,19 +17,17 @@ const Pago = ({ data }) => {
   const [cesta, setCesta] = React.useState('');
   const [soat, setSoat] = React.useState('');
   const [user, setUser] = React.useState('');
-  // const [enable, setEnable] = React.useState(false);
-  // const [count, setCount] = React.useState(0);
+  const [enable, setEnable] = React.useState(false);
+  const [count, setCount] = React.useState(0);
+  const auth = sessionStorage.getItem('message');
 
-  // if (auth.message !== 'ok' && count === 0) {
-  //   setEnable(false);
-  //   setCount(1);
-  // } else if (auth.message === 'ok' && count === 0) {
-  //   setEnable(true);
-  //   setCount(1);
-  //   console.log('auht', auth);
-  // }
-
-  console.log('esta jhair data', data);
+  if (auth !== 'acessOk' && count === 0) {
+    setEnable(false);
+    setCount(1);
+  } else if (auth === 'acessOk' && count === 0) {
+    setEnable(true);
+    setCount(1);
+  }
 
   const Soat = (data, soat, setSoat) => {
     if (data.id === undefined && soat === '') {
@@ -57,10 +55,6 @@ const Pago = ({ data }) => {
   Cesta(data, cesta, setCesta);
   User(data, user, setUser);
 
-  console.log('soat jhair', soat.OwnerLastNames);
-  console.log('cesta jhair', cesta);
-  console.log('user jhair', user);
-
   const newProducts = [
     { id: 1, product: cesta.ProductName1 || '', discount: cesta.Discount1 || 0, price: cesta.Price1 || 0 },
     { id: 2, product: cesta.ProductName2 || '', discount: cesta.Discount2 || 0, price: cesta.Price2 || 0 },
@@ -74,7 +68,6 @@ const Pago = ({ data }) => {
   } else {
     newProducts;
     if (product.length === 0) {
-      console.log(newProducts);
       setProduct(newProducts);
       setError(false);
     }
@@ -114,7 +107,7 @@ const Pago = ({ data }) => {
               correo={user.Email}
               telefono={user.PhoneNumber}
             />
-            <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='naranja' />
+            <ButtonComponent location='/TarjetaMetodo/' name='Elige tu forma de pago' color='naranja' disabled={enable} />
 
             <Resumen products={newProducts} cesta={cesta} />
 
@@ -122,7 +115,7 @@ const Pago = ({ data }) => {
 
         </div>
         <div className='botonPagar'>
-          <ButtonComponent location='/confirmacion/' name='PAGAR' color='naranja' />
+          <ButtonComponent location='/confirmacion/' name='PAGAR' color='naranja' disabled={!enable} />
         </div>
       </div>
     </section>
@@ -131,7 +124,6 @@ const Pago = ({ data }) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log('datoscesta', state);
   return {
     data: document.cookie || state.data[0],
     auth: state.autentication[0],

@@ -5,6 +5,7 @@ import Soat from '../containers/Soat';
 import BenefitsList from '../containers/BenefitsList';
 
 const IngresaPlaca = () => {
+  sessionStorage.setItem('message', 'undefined');
   return (
     <div className='ingresaPlaca'>
       <section className='ingresaPlaca__container'>

@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -5,7 +6,7 @@ import { getDataRequest } from '../actions';
 
 import '../assets/styles/containers/cesta.scss';
 import PasoPaso1 from '../assets/img/pasoPaso1.png';
-import cesta from '../assets/img/cesta_vacia.png'
+import cesta from '../assets/img/cesta_vacia.png';
 import ButtonComponent from '../components/ButtonComponent';
 import MetodoDePago from '../components/MetodoDePago';
 
@@ -50,7 +51,6 @@ const Cesta = (props) => {
   } else {
     newProducts;
     if (product.length === 0) {
-      console.log(newProducts);
       setProduct(newProducts);
       setError(false);
       setEnable(false);
@@ -68,7 +68,7 @@ const Cesta = (props) => {
             <div className='cesta-listProducts'>
               <h1 className='cesta-title'>Tus productos</h1>
               {
-                error ? <img className = 'cesta_img-carga' src={cesta} alt="cesta"/> :
+                error ? <img className='cesta_img-carga' src={cesta} alt='cesta' /> :
                   product.map((data) => {
                     if (data.product === '') {
                       return false;
@@ -95,7 +95,7 @@ const Cesta = (props) => {
                 <ButtonComponent disabled={enable} location='/pago' color='naranja' name={ButtonDescription} />
               </div>
             </div>
-            
+
           </div>
         </div>
 
@@ -105,7 +105,6 @@ const Cesta = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log('datoscesta', state);
   return {
     data: document.cookie || state.dataCesta[0],
   };
