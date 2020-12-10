@@ -101,7 +101,7 @@ const Gancho = (props) => {
               {
                 services.map((data) => (
                   <div className='losbonos' key={data.id}>
-                    <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />
+                    <Bono image={data.Image} description={data.Description} name={data.SureName} price={data.Price} />                
                     <button className='naranjab' onClick={() => handleAdd(data)}>Añadir a cesta</button>
                   </div>
                 ))

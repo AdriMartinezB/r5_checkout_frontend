@@ -90,7 +90,7 @@ const Producto = (props) => {
                   {discount}
                 </p>
               </div>
-              <ButtonComponent name='Agregar bono de descuento' color='verde' location='/popBono' />
+              
             </div>
           ) : (<div />)}
         </div>

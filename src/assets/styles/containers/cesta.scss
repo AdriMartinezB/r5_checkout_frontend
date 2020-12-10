@@ -21,11 +21,29 @@
   align-items: center;
   justify-content: center;
   margin: 0px;
-  padding: 5px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+}
+
+.cesta-listProducts h1{
+  margin: 0 0 10px 0;
+  font-size: 36px;
+  font-weight: bold;
+  align-self: center;
+  color: #391A7D;
+  text-shadow: none;
+}
+
+.cesta-metodos {
+  padding: 10px;
+  border-radius: 15px;
+  margin-left: 30px;
+  position: static;
 }
 
 .contenedor-cesta{
-  background: rgba(255, 255, 255, 0.7);
+  /* background: rgba(255, 255, 255, 0.7); */
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -45,14 +63,6 @@
   height: auto; //
 }
 
-.contenedor-cesta-2 {
-  width: 100%;
-}
-
-.contenedor-cesta-2 button {
-  width: 98%;
-}
-
 .pasoAPaso{
   width: 500px;
 }
@@ -60,6 +70,23 @@
 .PasoPaso1 {
   margin: 0;
   width: 480px;
+}
+
+.botonCesta{
+  width: 100%;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.botonCesta button{
+  font-size: 30px;
+  height: 50px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 0 0 0;
+  border-radius: 15;
+  padding: 0;
 }
 
 @media only screen and (max-width: 930px){
@@ -80,7 +107,7 @@
   }
 
   .contenedor-cesta{
-    background: rgba(255, 255, 255, 0.7);
+    /* background: rgba(255, 255, 255, 0.7); */
     border-radius: 20px;
     align-items: center;
     justify-content: center;
@@ -96,4 +123,31 @@
     flex-direction: column;
   }
 
+  .cesta-metodos{
+    padding: 15px 0;
+    margin: 0;
+  }
+
+}
+
+@media only screen and (max-width: 360px){
+
+  .PasoPaso1{
+    width: 360px;
+  }
+
+  .cesta{
+    max-width: 360px;
+  }
+
+  .contenedor-cesta-1{
+    max-width: 360px;
+    margin: 0px;
+  }
+
+  .cesta-metodos{
+    width: 360px;
+    margin: 0;
+    padding: 20px 0;
+  }
 }

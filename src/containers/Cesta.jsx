@@ -47,6 +47,7 @@ const Cesta = (props) => {
         <div className='contenedor-cesta'>
           <div className='contenedor-cesta-1'>
             <div className='cesta-listProducts'>
+            <h1 className='cesta-title'>Tus productos</h1>
               {
                 error ? <h1>Cesta vacia</h1> :
                   product.map((data) => {
@@ -68,14 +69,12 @@ const Cesta = (props) => {
                   })
               }
             </div>
-            <div className='cesta-listProducts'>
+            <div className='cesta-metodos'>
               <PagoSeguro />
               <MetodoDePago />
-            </div>
-          </div>
-          <div className='contenedor-cesta-2'>
-            <div className='botonCesta'>
-              <ButtonComponent location='/pago' color='naranja' name='COMPRAR' />
+              <div className='botonCesta'>
+                <ButtonComponent location='/pago' color='naranja' name='COMPRAR' />
+              </div>
             </div>
           </div>
         </div>
